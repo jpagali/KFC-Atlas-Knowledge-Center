@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
-import { useLocation } from '@docusaurus/router';
 import AtlasChat from '@site/src/components/AtlasChat';
 
 function ImageZoom() {
-  const location = useLocation();
-
   useEffect(() => {
     // Create overlay once
     let overlay = document.getElementById('img-zoom-overlay');
@@ -17,24 +14,18 @@ function ImageZoom() {
       overlay.addEventListener('click', () => overlay.classList.remove('active'));
     }
 
-    // Attach click handlers to all markdown images
+    // Use event delegation — one listener on document handles all pages/navigations
     const handler = (e) => {
+      const img = e.target.closest('.markdown img');
+      if (!img) return;
       const overlayEl = document.getElementById('img-zoom-overlay');
-      overlayEl.querySelector('img').src = e.currentTarget.src;
+      overlayEl.querySelector('img').src = img.src;
       overlayEl.classList.add('active');
     };
 
-    const attach = () => {
-      document.querySelectorAll('.markdown img').forEach((img) => {
-        img.removeEventListener('click', handler);
-        img.addEventListener('click', handler);
-      });
-    };
-
-    // Slight delay to let Docusaurus render the page content
-    const t = setTimeout(attach, 300);
-    return () => clearTimeout(t);
-  }, [location.pathname]);
+    document.addEventListener('click', handler);
+    return () => document.removeEventListener('click', handler);
+  }, []);
 
   return null;
 }
