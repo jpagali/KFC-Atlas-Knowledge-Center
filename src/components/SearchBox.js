@@ -1,6 +1,7 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import clsx from 'clsx';
 
 const MAX_RESULTS = 8;
@@ -47,7 +48,9 @@ export default function SearchBox({
 }) {
   const {
     i18n: {currentLocale},
+    siteConfig,
   } = useDocusaurusContext();
+  const searchIndexUrl = useBaseUrl('/search-index.json', {forcePrependBaseUrl: true});
   const [searchIndex, setSearchIndex] = useState([]);
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +59,7 @@ export default function SearchBox({
   useEffect(() => {
     let active = true;
 
-    fetch('/search-index.json')
+    fetch(searchIndexUrl)
       .then((response) => response.json())
       .then((data) => {
         if (active) setSearchIndex(Array.isArray(data) ? data : []);
@@ -68,7 +71,12 @@ export default function SearchBox({
     return () => {
       active = false;
     };
-  }, []);
+  }, [searchIndexUrl]);
+
+  function buildSiteUrl(path) {
+    const cleanBaseUrl = (siteConfig.baseUrl || '/').replace(/\/$/, '');
+    return `${cleanBaseUrl}${path}`;
+  }
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -109,7 +117,7 @@ export default function SearchBox({
 
   function handleSubmit(event) {
     if (event.key !== 'Enter' || results.length === 0) return;
-    window.location.href = results[0].url;
+    window.location.assign(buildSiteUrl(results[0].url));
   }
 
   return (
@@ -134,7 +142,7 @@ export default function SearchBox({
               <Link
                 key={result.url}
                 className={clsx('navbar-search__result', resultClassName)}
-                to={result.url}
+                to={buildSiteUrl(result.url)}
                 onClick={() => setIsOpen(false)}>
                 <span className={clsx('navbar-search__title', titleClassName)}>{result.title}</span>
                 <span className={clsx('navbar-search__meta', metaClassName)}>
