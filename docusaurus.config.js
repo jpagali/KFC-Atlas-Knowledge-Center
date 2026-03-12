@@ -67,7 +67,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'admin/index',
+            docId: 'admin-portal-guide/index',
             position: 'left',
             label: 'Admin Portal (KFC)',
           },
@@ -99,10 +99,10 @@ const config = {
           {
             title: '⚙️ Admin Portal Guide',
             items: [
-              { label: 'Overview', to: '/docs/admin/overview' },
-              { label: 'Restaurant Profile Setup', to: '/docs/admin/restaurant-profile' },
-              { label: 'Menu Management', to: '/docs/admin/menu-management' },
-              { label: 'Users & Permissions', to: '/docs/admin/users-permissions' },
+              { label: 'Overview', to: '/docs/admin-portal-guide/index' },
+              { label: 'Stores', to: '/docs/admin-portal-guide/stores/index' },
+              { label: 'Menus', to: '/docs/admin-portal-guide/menus/index' },
+              { label: 'Products', to: '/docs/admin-portal-guide/products/index' },
             ],
           },
           {
