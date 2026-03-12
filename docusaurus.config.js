@@ -1,6 +1,9 @@
 // @ts-check
 
 /** @type {import('@docusaurus/types').Config} */
+const isGitHubPagesBuild =
+  process.env.GITHUB_PAGES === 'true' || process.env.GITHUB_ACTIONS === 'true';
+
 const config = {
   title: 'KFC Atlas Knowledge Center',
   tagline: 'Everything you need to operate the KFC Atlas Platform.',
@@ -8,10 +11,13 @@ const config = {
     ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
   },
   favicon: 'img/atlas-favicon.png',
+  organizationName: 'jpagali',
+  projectName: 'KFC-Atlas-Knowledge-Center',
 
-  // Update this after Vercel deployment
-  url: 'https://kfc-atlas-portal.vercel.app',
-  baseUrl: '/',
+  url: isGitHubPagesBuild
+    ? 'https://jpagali.github.io'
+    : 'https://kfc-atlas-portal.vercel.app',
+  baseUrl: isGitHubPagesBuild ? '/KFC-Atlas-Knowledge-Center/' : '/',
 
   onBrokenLinks: 'warn',
   markdown: {
@@ -92,7 +98,13 @@ const config = {
             label: '📋 Playbooks',
           },
           {
-            type: 'search',
+            type: 'doc',
+            docId: 'about-knowledge-center',
+            position: 'left',
+            label: 'About',
+          },
+          {
+            type: 'custom-search',
             position: 'right',
           },
           {
@@ -135,9 +147,15 @@ const config = {
             title: '📋 Playbooks',
             items: [
               { label: 'Create Promotions', to: '/docs/playbooks/onboarding' },
-              { label: 'Buy 1 Get 1 Promo', to: '/docs/playbooks/buy-one-get-one-promo' },
+              { label: 'Promotion Recipes', to: '/docs/playbooks/promotions-setup-guide' },
               { label: 'Braze Welcome Reward Canvas', to: '/docs/playbooks/runbook' },
               { label: 'Troubleshooting & Escalation', to: '/docs/playbooks/troubleshooting' },
+            ],
+          },
+          {
+            title: 'About',
+            items: [
+              { label: 'About the Knowledge Center', to: '/docs/about-knowledge-center' },
             ],
           },
         ],
