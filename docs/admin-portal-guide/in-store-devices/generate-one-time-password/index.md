@@ -1,6 +1,6 @@
 ---
-title: "Generate One-Time Password"
-sidebar_label: "Generate One-Time Password"
+title: Generate One-Time Password
+sidebar_label: Generate One-Time Password
 ---
 
 # Generate One-Time Password

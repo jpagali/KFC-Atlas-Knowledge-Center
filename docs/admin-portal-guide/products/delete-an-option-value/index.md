@@ -1,6 +1,6 @@
 ---
-title: "Delete an Option Value"
-sidebar_label: "Delete an Option Value"
+title: Delete an Option Value
+sidebar_label: Delete an Option Value
 ---
 
 # Delete an Option Value

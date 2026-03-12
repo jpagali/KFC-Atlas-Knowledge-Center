@@ -8,93 +8,174 @@ const PAGE_CONTEXT = {
   '/docs/frontend/customer-journey':    'Customer Journey — the 6-step ordering flow, loyalty & promotions per market (Japan points-based, Australia voucher-based), market configuration matrix.',
   '/docs/frontend/order-channels':      'Order Channels — Dine-in, Delivery, Takeaway configuration per restaurant, channel capabilities, Japan and Australia channel status.',
   '/docs/frontend/market-configurations': 'Market Configurations — feature flag architecture, what can be configured per market, Japan and Australia current settings, how to request changes.',
-  '/docs/admin/overview':               'Admin Portal Overview — what the Yum Commerce Admin Portal does, access levels (Franchisee Admin, Regional/BMU Admin, Read-only), portal URLs per market.',
-  '/docs/admin/restaurant-profile':     'Restaurant Profile Setup — editing name, address, hours, public holiday overrides, temporary closure, GPS coordinates, field edit restrictions.',
-  '/docs/admin/menu-management':        'Menu Management — activating/deactivating items, updating pricing, channel-specific menus, Japan JPY pricing with tax, Australia AUD with GST, delivery pricing.',
-  '/docs/admin/users-permissions':      'Users & Permissions — role-based access model, adding/removing users, audit log, franchisee vs regional admin permissions.',
-  '/docs/playbooks/onboarding':         'Onboarding a New Restaurant — 4-phase playbook: platform setup, menu setup, access setup, go-live. 12-step checklist.',
+  '/docs/admin-portal-guide/':          'Admin Portal Guide — operational guide for stores, menus, products, promotions, and support workflows.',
+  '/docs/admin-portal-guide/stores/':   'Stores — store setup, menu publishing, order toggles, taxes, and beneficiary management.',
+  '/docs/admin-portal-guide/menus/':    'Menus — named prices, categories, patches, and menu publication workflows.',
+  '/docs/admin-portal-guide/products/': 'Products — products, options, modifiers, slots, weights, and variants.',
+  '/docs/playbooks/onboarding':         'Create Promotions — KFC campaign setup playbook covering promotion structure, rules, store-group assignment, QA, and launch monitoring.',
+  '/docs/playbooks/promotion-recipes/buy-1-get-1-free-bogo': 'Recipe 1 - Buy 1 Get 1 Free (BOGO) — exact KFC BOGO setup using Item Presence and Item Level pricing effects.',
   '/docs/playbooks/troubleshooting':    'Troubleshooting & Escalation — common issues and fixes, escalation path, severity levels (P1–P4), JIRA Service Desk, emergency Slack channel.',
-  '/docs/playbooks/runbook':            'Platform Runbook — daily opening/closing checklists, weekly/monthly tasks, Japan-specific operations (loyalty, aggregator pause), Australia-specific operations.',
+  '/docs/playbooks/runbook':            'Braze Welcome Reward Canvas — KFC welcome reward journey setup covering audience entry, trigger timing, message flow, reward logic, and QA.',
 };
 
-const SUGGESTED_QUESTIONS = {
-  '/docs/frontend/customer-journey':    ['How does loyalty work in Japan?', 'Can customers use a promo code and loyalty together?', 'What happens if a customer goes offline at checkout?'],
-  '/docs/frontend/order-channels':      ['How do I disable delivery for one restaurant?', 'What aggregators are integrated in Australia?', 'Can Dine-in have different hours to Delivery?'],
-  '/docs/admin/restaurant-profile':     ['How do I set public holiday hours?', 'How quickly do profile changes appear in the app?', 'Who can change GPS coordinates?'],
-  '/docs/admin/menu-management':        ['How do I make an item delivery-only?', 'How quickly do price changes apply?', 'What happens if I deactivate an item in a combo?'],
-  '/docs/playbooks/onboarding':         ['What is the full onboarding checklist?', 'Who sets the GPS coordinates?', 'How do I create a franchisee admin account?'],
-  '/docs/playbooks/troubleshooting':    ['What is a P1 issue?', 'How do I escalate a production outage?', 'Customer can\'t complete checkout — what do I check?'],
-  '/docs/playbooks/runbook':            ['What should I check at opening every day?', 'How do I pause Uber Eats orders in Japan?', 'How often should I review user access?'],
+const SUGGESTED_ARTICLES = {
+  '/docs/frontend/customer-journey': [
+    { label: 'How does loyalty work in Japan?', to: '/docs/frontend/customer-journey' },
+    { label: 'What order channels are available?', to: '/docs/frontend/order-channels' },
+    { label: 'What can be configured by market?', to: '/docs/frontend/market-configurations' },
+  ],
+  '/docs/frontend/order-channels': [
+    { label: 'Read order channel details', to: '/docs/frontend/order-channels' },
+    { label: 'See the customer journey', to: '/docs/frontend/customer-journey' },
+    { label: 'Review market configurations', to: '/docs/frontend/market-configurations' },
+  ],
+  '/docs/admin-portal-guide/stores/': [
+    { label: 'How do I create a store?', to: '/docs/admin-portal-guide/stores/create-a-store/' },
+    { label: 'How do I edit store details?', to: '/docs/admin-portal-guide/stores/edit-store-details/' },
+    { label: 'How do I assign a new menu?', to: '/docs/admin-portal-guide/stores/assign-new-menu/' },
+  ],
+  '/docs/admin-portal-guide/menus/': [
+    { label: 'How do I create a menu?', to: '/docs/admin-portal-guide/menus/create-a-menu/' },
+    { label: 'How do I assign a menu?', to: '/docs/admin-portal-guide/menus/assign-a-menu/' },
+    { label: 'How do I publish a menu?', to: '/docs/admin-portal-guide/menus/publish-a-menu/' },
+  ],
+  '/docs/playbooks/onboarding': [
+    { label: 'How do I create a KFC promotion in Atlas?', to: '/docs/playbooks/onboarding' },
+    { label: 'How do I configure Buy 1 Get 1?', to: '/docs/playbooks/promotion-recipes/buy-1-get-1-free-bogo' },
+    { label: 'How do I assign promotions to store groups?', to: '/docs/admin-portal-guide/promotions/assign-promotions-to-store-groups/' },
+  ],
+  '/docs/playbooks/promotion-recipes/buy-1-get-1-free-bogo': [
+    { label: 'Read the BOGO recipe', to: '/docs/playbooks/promotion-recipes/buy-1-get-1-free-bogo' },
+    { label: 'How do I create a promotion?', to: '/docs/admin-portal-guide/promotions/create-a-promotion/' },
+    { label: 'How do I edit a promotion?', to: '/docs/admin-portal-guide/promotions/edit-a-promotion/' },
+  ],
+  '/docs/playbooks/troubleshooting': [
+    { label: 'Open troubleshooting playbook', to: '/docs/playbooks/troubleshooting' },
+    { label: 'Check store guide', to: '/docs/admin-portal-guide/stores/' },
+    { label: 'Check menu guide', to: '/docs/admin-portal-guide/menus/' },
+  ],
+  '/docs/playbooks/runbook': [
+    { label: 'Read the Braze welcome reward canvas playbook', to: '/docs/playbooks/runbook' },
+    { label: 'How do I create a promotion?', to: '/docs/admin-portal-guide/promotions/create-a-promotion/' },
+    { label: 'View all playbooks', to: '/docs/playbooks/onboarding' },
+  ],
 };
 
-const DEFAULT_SUGGESTIONS = [
-  'What markets does Atlas support?',
-  'How do I onboard a new restaurant?',
-  'What can a franchisee admin do?',
-];
+const LOCALE_COPY = {
+  'en-US': {
+    assistantName: 'Atlas Assistant',
+    online: 'AI inactive',
+    expand: 'Expand',
+    minimise: 'Minimise',
+    close: 'Close',
+    buttonTitle: 'Ask the Atlas Assistant',
+    placeholder: 'AI chat coming soon',
+    genericWelcome: 'Hi! I\'m the Atlas Assistant — your guide to the KFC Atlas Platform.',
+    contextualWelcome: (topic) => `Hi! I'm the Atlas Assistant. I can see you're reading about **${topic}**.`,
+    inactiveNotice: 'AI-powered chat is not active yet. It will be available once the API key is funded.\n\nFor now, use the quick links below to jump to the right article.',
+    defaultSuggestions: [
+      { label: 'Front-end overview', to: '/docs/frontend/overview' },
+      { label: 'Admin Portal Guide', to: '/docs/admin-portal-guide/' },
+      { label: 'Create Promotions playbook', to: '/docs/playbooks/onboarding' },
+    ],
+  },
+  'ja-JP': {
+    assistantName: 'Atlas Assistant',
+    online: 'AI停止中',
+    expand: '開く',
+    minimise: '最小化',
+    close: '閉じる',
+    buttonTitle: 'Atlas Assistantに質問する',
+    placeholder: 'AIチャットは準備中です',
+    genericWelcome: 'こんにちは。Atlas Assistantです。KFC Atlas Platform のガイド役として案内します。',
+    contextualWelcome: (topic) => `こんにちは。Atlas Assistantです。現在 **${topic}** をご覧になっています。`,
+    inactiveNotice: 'AI チャットはまだ有効ではありません。API キーへの入金後に利用可能になります。\n\nそれまでは、下のクイックリンクから該当記事を確認してください。',
+    defaultSuggestions: [
+      { label: 'フロントエンド概要', to: '/docs/frontend/overview' },
+      { label: 'Admin Portal Guide', to: '/docs/admin-portal-guide/' },
+      { label: 'プロモーションを作成する', to: '/docs/playbooks/onboarding' },
+    ],
+  },
+};
 
-const SYSTEM_PROMPT = `You are the Atlas Assistant — the AI guide for the KFC Atlas Platform knowledge portal. You help KFC franchisees, restaurant managers, and regional office staff understand and operate the Atlas Platform across Japan and Australia.
-
-Your personality:
-- Friendly, clear, and direct — not corporate-speak
-- You speak to people who are busy running restaurants, not reading tech docs
-- You give practical, actionable answers
-- You are concise — short paragraphs, not walls of text
-- When steps are involved, use numbered lists
-
-What you know:
-- The KFC Atlas Platform is the digital commerce platform for KFC across Asia Pacific
-- Markets currently live: Japan (Nihon KFC Holdings) and Australia (Collins Foods)
-- The platform has a customer-facing front-end (ordering) and the Yum Commerce Admin Portal (operations)
-- There are three user roles: Franchisee Admin, Regional/BMU Admin, Read-only
-- Key features: restaurant profile management, menu management, order channels (Dine-in, Delivery, Takeaway), market configurations, loyalty (Japan: points-based, Australia: vouchers)
-- Escalation path: Franchisee → Regional/BMU Admin → Atlas Platform Support (JIRA) → Yum! Brands Tech Emergency
-
-Rules:
-- If you don't know something, say so clearly and suggest they contact their regional office or raise a JIRA ticket
-- Never make up feature names, portal URLs, or process steps
-- Keep responses under 200 words unless a step-by-step process genuinely requires more
-- Do not refer to yourself as Claude — you are the Atlas Assistant`;
+const JAPANESE_SUGGESTED_ARTICLES = {
+  '/docs/frontend/customer-journey': [
+    { label: '日本のロイヤルティについて読む', to: '/docs/frontend/customer-journey' },
+    { label: '注文チャネルを確認する', to: '/docs/frontend/order-channels' },
+    { label: '市場設定を見る', to: '/docs/frontend/market-configurations' },
+  ],
+  '/docs/frontend/order-channels': [
+    { label: '注文チャネル詳細を読む', to: '/docs/frontend/order-channels' },
+    { label: 'カスタマージャーニーを見る', to: '/docs/frontend/customer-journey' },
+    { label: '市場設定を確認する', to: '/docs/frontend/market-configurations' },
+  ],
+  '/docs/admin-portal-guide/stores/': [
+    { label: '店舗を作成する', to: '/docs/admin-portal-guide/stores/create-a-store/' },
+    { label: '店舗詳細を編集する', to: '/docs/admin-portal-guide/stores/edit-store-details/' },
+    { label: '新しいメニューを割り当てる', to: '/docs/admin-portal-guide/stores/assign-new-menu/' },
+  ],
+  '/docs/admin-portal-guide/menus/': [
+    { label: 'メニューを作成する', to: '/docs/admin-portal-guide/menus/create-a-menu/' },
+    { label: 'メニューを割り当てる', to: '/docs/admin-portal-guide/menus/assign-a-menu/' },
+    { label: 'メニューを公開する', to: '/docs/admin-portal-guide/menus/publish-a-menu/' },
+  ],
+  '/docs/playbooks/onboarding': [
+    { label: 'KFCのプロモーション作成手順を読む', to: '/docs/playbooks/onboarding' },
+    { label: 'BOGO レシピを見る', to: '/docs/playbooks/promotion-recipes/buy-1-get-1-free-bogo' },
+    { label: 'プロモーションをストアグループに割り当てる', to: '/docs/admin-portal-guide/promotions/assign-promotions-to-store-groups/' },
+  ],
+  '/docs/playbooks/promotion-recipes/buy-1-get-1-free-bogo': [
+    { label: 'BOGO レシピを読む', to: '/docs/playbooks/promotion-recipes/buy-1-get-1-free-bogo' },
+    { label: 'プロモーションを作成する', to: '/docs/admin-portal-guide/promotions/create-a-promotion/' },
+    { label: 'プロモーションを編集する', to: '/docs/admin-portal-guide/promotions/edit-a-promotion/' },
+  ],
+  '/docs/playbooks/troubleshooting': [
+    { label: 'トラブル対応プレイブックを開く', to: '/docs/playbooks/troubleshooting' },
+    { label: '店舗ガイドを見る', to: '/docs/admin-portal-guide/stores/' },
+    { label: 'メニューガイドを見る', to: '/docs/admin-portal-guide/menus/' },
+  ],
+  '/docs/playbooks/runbook': [
+    { label: 'Braze 歓迎特典キャンバスを読む', to: '/docs/playbooks/runbook' },
+    { label: 'プロモーションを作成する', to: '/docs/admin-portal-guide/promotions/create-a-promotion/' },
+    { label: 'プレイブック一覧を見る', to: '/docs/playbooks/onboarding' },
+  ],
+};
 
 export default function AtlasChat() {
+  const { i18n } = useDocusaurusContext();
+  const locale = LOCALE_COPY[i18n.currentLocale] ? i18n.currentLocale : 'en-US';
+  const copy = LOCALE_COPY[locale];
+  const isJapanese = locale === 'ja-JP';
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
   const [isMinimised, setIsMinimised] = useState(false);
   const messagesEndRef = useRef(null);
-  const inputRef = useRef(null);
   const location = useLocation();
-  
 
-  const currentPath = location.pathname.replace(/\/$/, '');
-  const pageContext = PAGE_CONTEXT[currentPath] || null;
-  const suggestions = SUGGESTED_QUESTIONS[currentPath] || DEFAULT_SUGGESTIONS;
-
-  // Scroll to bottom on new message
-  useEffect(() => {
-    if (isOpen && messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages, isOpen]);
-
-  // Focus input when opened
-  useEffect(() => {
-    if (isOpen && !isMinimised && inputRef.current) {
-      setTimeout(() => inputRef.current?.focus(), 100);
-    }
-  }, [isOpen, isMinimised]);
+  const rawPath = location.pathname.replace(/\/$/, '') || '/';
+  const localePrefix = `/${locale}`;
+  const currentPath = rawPath.startsWith(localePrefix) ? (rawPath.slice(localePrefix.length) || '/') : rawPath;
+  const normalizedPath = currentPath.endsWith('/docs/admin-portal-guide') ? '/docs/admin-portal-guide/' : currentPath;
+  const pageContext = PAGE_CONTEXT[normalizedPath] || null;
+  const suggestionsMap = isJapanese ? JAPANESE_SUGGESTED_ARTICLES : SUGGESTED_ARTICLES;
+  const suggestions = suggestionsMap[normalizedPath] || copy.defaultSuggestions;
 
   // Reset to greeting when page changes
   useEffect(() => {
     setMessages([]);
   }, [currentPath]);
 
+  useEffect(() => {
+    if (isOpen && messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, isOpen]);
+
   const getWelcomeMessage = () => {
     if (pageContext) {
-      return `Hi! I'm the Atlas Assistant. I can see you're reading about **${pageContext.split('—')[0].trim()}**.\n\nWhat would you like to know?`;
+      return `${copy.contextualWelcome(pageContext.split('—')[0].trim())}\n\n${copy.inactiveNotice}`;
     }
-    return `Hi! I'm the Atlas Assistant — your guide to the KFC Atlas Platform.\n\nAsk me anything about operating the platform, configuring your restaurant, or navigating the Admin Portal.`;
+    return `${copy.genericWelcome}\n\n${copy.inactiveNotice}`;
   };
 
   const handleOpen = () => {
@@ -105,69 +186,12 @@ export default function AtlasChat() {
     }
   };
 
-  const handleSend = async (text) => {
-    const userMessage = (text || input).trim();
-    if (!userMessage || isLoading) return;
-
-    setInput('');
-    const newMessages = [...messages, { role: 'user', content: userMessage }];
-    setMessages(newMessages);
-    setIsLoading(true);
-
-    try {
-      // Build clean API messages — skip initial assistant welcome, inject page context
-      const apiMessages = [];
-      for (const m of newMessages) {
-        if (apiMessages.length === 0 && m.role === 'assistant') continue;
-        apiMessages.push({ role: m.role, content: m.content });
-      }
-      if (pageContext && apiMessages.length > 0) {
-        const last = apiMessages[apiMessages.length - 1];
-        if (last.role === 'user') {
-          last.content = '[Context: ' + pageContext + ']\n\n' + last.content;
-        }
-      }
-
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-headers: {
-  'Content-Type': 'application/json',
-  // 'x-api-key': process.env.ANTHROPIC_API_KEY || '',
-  // 'anthropic-version': '2023-06-01',
-  // 'anthropic-dangerous-direct-browser-access': 'true',
-},
-        body: JSON.stringify({
-          model: 'claude-haiku-4-5-20251001',
-          max_tokens: 1000,
-          system: SYSTEM_PROMPT,
-          messages: apiMessages,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`API error: ${response.status}`);
-      }
-
-      const data = await response.json();
-      const assistantMessage = data.content?.[0]?.text || 'Sorry, I couldn\'t get a response. Please try again.';
-
-      setMessages([...newMessages, { role: 'assistant', content: assistantMessage }]);
-    } catch (err) {
-      console.error('Atlas Chat error:', err);
-      setMessages([...newMessages, {
-        role: 'assistant',
-        content: 'Sorry, something went wrong. Please check your connection and try again, or raise a ticket via the JIRA Service Desk.',
-      }]);
-    } finally {
-      setIsLoading(false);
+  const getLocalizedPath = (path) => {
+    if (locale === 'en-US') {
+      return path;
     }
-  };
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSend();
-    }
+    return `/${locale}${path}`;
   };
 
   // ── Render markdown-lite (bold + line breaks)
@@ -192,7 +216,7 @@ headers: {
       {!isOpen && (
         <button
           onClick={handleOpen}
-          title="Ask the Atlas Assistant"
+          title={copy.buttonTitle}
           style={{
             position: 'fixed', bottom: 28, right: 28, zIndex: 9999,
             width: 56, height: 56, borderRadius: '50%',
@@ -254,10 +278,10 @@ headers: {
                 </svg>
               </div>
               <div>
-                <div style={{ color: 'white', fontWeight: 700, fontSize: '0.88rem', lineHeight: 1.2 }}>Atlas Assistant</div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginTop: 2 }}>
-                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#22c55e' }} />
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.72rem' }}>Online</span>
+                <div style={{ color: 'white', fontWeight: 700, fontSize: '0.88rem', lineHeight: 1.2 }}>{copy.assistantName}</div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginTop: 2 }}>
+                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#f59e0b' }} />
+                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.72rem' }}>{copy.online}</span>
                 </div>
               </div>
             </div>
@@ -265,14 +289,14 @@ headers: {
               <button
                 onClick={() => setIsMinimised(!isMinimised)}
                 style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.5)', padding: '4px 6px', borderRadius: 4, fontSize: '1rem', lineHeight: 1 }}
-                title={isMinimised ? 'Expand' : 'Minimise'}
+                title={isMinimised ? copy.expand : copy.minimise}
               >
                 {isMinimised ? '▲' : '▼'}
               </button>
               <button
                 onClick={() => setIsOpen(false)}
                 style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.5)', padding: '4px 6px', borderRadius: 4, fontSize: '1.1rem', lineHeight: 1 }}
-                title="Close"
+                title={copy.close}
               >
                 ×
               </button>
@@ -308,26 +332,6 @@ headers: {
                   </div>
                 ))}
 
-                {isLoading && (
-                  <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                    <div style={{
-                      padding: '10px 14px', borderRadius: '14px 14px 14px 4px',
-                      background: 'white', border: '1px solid #ece6dc',
-                      display: 'flex', gap: 4, alignItems: 'center',
-                      boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
-                    }}>
-                      {[0, 1, 2].map(i => (
-                        <div key={i} style={{
-                          width: 7, height: 7, borderRadius: '50%', background: '#E4002B',
-                          animation: 'atlasTyping 1.2s infinite',
-                          animationDelay: `${i * 0.2}s`,
-                          opacity: 0.4,
-                        }} />
-                      ))}
-                    </div>
-                  </div>
-                )}
-
                 <div ref={messagesEndRef} />
               </div>
 
@@ -339,8 +343,8 @@ headers: {
                   background: 'white',
                   display: 'flex', flexWrap: 'wrap', gap: 6,
                 }}>
-                  {suggestions.map((q, i) => (
-                    <button key={i} onClick={() => handleSend(q)} style={{
+                  {suggestions.map((suggestion, i) => (
+                    <button key={i} onClick={() => window.location.href = getLocalizedPath(suggestion.to)} style={{
                       background: 'rgba(228,0,43,0.06)', border: '1px solid rgba(228,0,43,0.18)',
                       borderRadius: 20, padding: '5px 11px', fontSize: '0.75rem',
                       color: '#c20025', cursor: 'pointer', fontFamily: 'inherit',
@@ -349,13 +353,13 @@ headers: {
                     onMouseEnter={e => e.currentTarget.style.background = 'rgba(228,0,43,0.12)'}
                     onMouseLeave={e => e.currentTarget.style.background = 'rgba(228,0,43,0.06)'}
                     >
-                      {q}
+                      {suggestion.label}
                     </button>
                   ))}
                 </div>
               )}
 
-              {/* Input */}
+              {/* Inactive input state */}
               <div style={{
                 padding: '10px 14px 14px',
                 borderTop: '1px solid #ece6dc',
@@ -363,53 +367,28 @@ headers: {
                 display: 'flex', gap: 8, alignItems: 'flex-end',
                 flexShrink: 0,
               }}>
-                <textarea
-                  ref={inputRef}
-                  value={input}
-                  onChange={e => setInput(e.target.value)}
-                  onKeyDown={handleKeyDown}
-                  placeholder="Ask a question..."
-                  rows={1}
-                  style={{
-                    flex: 1, border: '1.5px solid #ece6dc', borderRadius: 8,
-                    padding: '9px 12px', fontSize: '0.875rem', fontFamily: 'inherit',
-                    resize: 'none', outline: 'none', lineHeight: 1.5,
-                    color: '#2a2018', background: '#faf8f5',
-                    transition: 'border-color 0.15s',
-                    maxHeight: 80, overflowY: 'auto',
-                  }}
-                  onFocus={e => e.target.style.borderColor = '#E4002B'}
-                  onBlur={e => e.target.style.borderColor = '#ece6dc'}
-                />
-                <button
-                  onClick={() => handleSend()}
-                  disabled={!input.trim() || isLoading}
-                  style={{
-                    width: 36, height: 36, borderRadius: 8, flexShrink: 0,
-                    background: input.trim() && !isLoading ? '#E4002B' : '#ddd',
-                    border: 'none', cursor: input.trim() && !isLoading ? 'pointer' : 'default',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    transition: 'background 0.15s',
-                  }}
-                >
+                <div style={{
+                  flex: 1, border: '1.5px solid #ece6dc', borderRadius: 8,
+                  padding: '10px 12px', fontSize: '0.84rem', fontFamily: 'inherit',
+                  lineHeight: 1.5, color: '#8a7f76', background: '#f5f2ee',
+                }}>
+                  {copy.placeholder}
+                </div>
+                <div style={{
+                  width: 36, height: 36, borderRadius: 8, flexShrink: 0,
+                  background: '#ddd', display: 'flex', alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="22" y1="2" x2="11" y2="13"/>
                     <polygon points="22 2 15 22 11 13 2 9 22 2"/>
                   </svg>
-                </button>
+                </div>
               </div>
             </>
           )}
         </div>
       )}
-
-      {/* Typing animation keyframes */}
-      <style>{`
-        @keyframes atlasTyping {
-          0%, 60%, 100% { opacity: 0.4; transform: translateY(0); }
-          30% { opacity: 1; transform: translateY(-4px); }
-        }
-      `}</style>
     </>
   );
 }

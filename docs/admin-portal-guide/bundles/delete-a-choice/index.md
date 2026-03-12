@@ -1,6 +1,6 @@
 ---
-title: "Delete a Choice"
-sidebar_label: "Delete a Choice"
+title: Delete a Choice
+sidebar_label: Delete a Choice
 ---
 
 # Delete a Choice

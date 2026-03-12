@@ -1,6 +1,6 @@
 ---
-title: “Copy a Product”
-sidebar_label: “Copy a Product”
+title: Copy a Product
+sidebar_label: Copy a Product
 ---
 
 # Copy a Product

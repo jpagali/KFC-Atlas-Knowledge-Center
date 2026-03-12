@@ -1,6 +1,6 @@
 ---
-title: "View a Store’s Beneficiaries"
-sidebar_label: "View a Store’s Beneficiaries"
+title: View a Store’s Beneficiaries
+sidebar_label: View a Store’s Beneficiaries
 ---
 
 # View a Store’s Beneficiaries

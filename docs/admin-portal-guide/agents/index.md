@@ -1,11 +1,11 @@
 ---
-title: "Agents"
-sidebar_label: "Agents"
+title: Agents
+sidebar_label: Agents
 ---
 
 # Agents
 
-This section covers all tasks for creating and managing user agents (staff members with portal access) in the Atlas Admin Portal.
+This section covers all tasks for creating and managing user agents (staff members with portal access) in the Byte Commerce Admin Portal.
 
 ## Topics
 

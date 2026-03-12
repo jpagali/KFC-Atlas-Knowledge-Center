@@ -1,6 +1,6 @@
 ---
-title: “Add Metafields to a Product”
-sidebar_label: “Add Metafields to a Product”
+title: Add Metafields to a Product
+sidebar_label: Add Metafields to a Product
 ---
 
 # Add Metafields to a Product

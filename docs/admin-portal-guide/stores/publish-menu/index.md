@@ -1,6 +1,6 @@
 ---
-title: “Publish Menu”
-sidebar_label: “Publish Menu”
+title: Publish Menu
+sidebar_label: Publish Menu
 ---
 
 # Publish Menu

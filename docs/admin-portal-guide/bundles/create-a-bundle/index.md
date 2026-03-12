@@ -1,6 +1,6 @@
 ---
-title: “Create a Bundle”
-sidebar_label: “Create a Bundle”
+title: Create a Bundle
+sidebar_label: Create a Bundle
 ---
 
 # Create a Bundle

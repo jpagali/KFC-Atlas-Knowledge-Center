@@ -1,6 +1,6 @@
 ---
-title: "Customer Search"
-sidebar_label: "Customer Search"
+title: Customer Search
+sidebar_label: Customer Search
 ---
 
 # Customer Search

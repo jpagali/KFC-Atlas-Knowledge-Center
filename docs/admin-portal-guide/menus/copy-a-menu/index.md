@@ -1,6 +1,6 @@
 ---
-title: "Copy a Menu"
-sidebar_label: "Copy a Menu"
+title: Copy a Menu
+sidebar_label: Copy a Menu
 ---
 
 # Copy a Menu

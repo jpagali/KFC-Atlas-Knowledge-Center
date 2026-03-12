@@ -1,6 +1,6 @@
 ---
-title: “Add Metadata to Promotion”
-sidebar_label: “Add Metadata to Promotion”
+title: Add Metadata to Promotion
+sidebar_label: Add Metadata to Promotion
 ---
 
 # Add Metadata to Promotion

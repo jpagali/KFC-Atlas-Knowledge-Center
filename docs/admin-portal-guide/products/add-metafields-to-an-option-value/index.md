@@ -1,6 +1,6 @@
 ---
-title: “Add Metafields to an Option Value”
-sidebar_label: “Add Metafields to an Option Value”
+title: Add Metafields to an Option Value
+sidebar_label: Add Metafields to an Option Value
 ---
 
 # Add Metafields to an Option Value

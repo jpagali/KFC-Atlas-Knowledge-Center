@@ -1,6 +1,6 @@
 ---
-title: “Item Snooze”
-sidebar_label: “Item Snooze”
+title: Item Snooze
+sidebar_label: Item Snooze
 ---
 
 # Item Snooze

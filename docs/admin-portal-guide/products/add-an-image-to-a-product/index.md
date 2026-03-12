@@ -1,6 +1,6 @@
 ---
-title: "Add an Image to a Product"
-sidebar_label: "Add an Image to a Product"
+title: Add an Image to a Product
+sidebar_label: Add an Image to a Product
 ---
 
 # Add an Image to a Product

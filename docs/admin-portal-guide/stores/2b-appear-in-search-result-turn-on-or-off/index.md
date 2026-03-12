@@ -1,6 +1,6 @@
 ---
-title: “Appear in Search Result (Turn On or Off)”
-sidebar_label: “Appear in Search Result (Turn On or Off)”
+title: Appear in Search Result (Turn On or Off)
+sidebar_label: Appear in Search Result (Turn On or Off)
 ---
 
 # Appear in Search Result (Turn On or Off)

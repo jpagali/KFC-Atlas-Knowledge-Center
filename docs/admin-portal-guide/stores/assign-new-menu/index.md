@@ -1,6 +1,6 @@
 ---
-title: “Assign New Menu”
-sidebar_label: “Assign New Menu”
+title: Assign New Menu
+sidebar_label: Assign New Menu
 ---
 
 # Assign New Menu

@@ -1,11 +1,11 @@
 ---
-title: "Menus"
-sidebar_label: "Menus"
+title: Menus
+sidebar_label: Menus
 ---
 
 # Menus
 
-This section covers all menu management tasks in the Atlas Admin Portal, including creating menus, organizing them into categories, configuring targeted overrides with patches, and managing pricing structures.
+This section covers all menu management tasks in the Byte Commerce Admin Portal, including creating menus, organizing them into categories, configuring targeted overrides with patches, and managing pricing structures.
 
 ## Menus
 

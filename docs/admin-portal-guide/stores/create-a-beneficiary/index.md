@@ -1,6 +1,6 @@
 ---
-title: “Create a Beneficiary”
-sidebar_label: “Create a Beneficiary”
+title: Create a Beneficiary
+sidebar_label: Create a Beneficiary
 ---
 
 # Create a Beneficiary

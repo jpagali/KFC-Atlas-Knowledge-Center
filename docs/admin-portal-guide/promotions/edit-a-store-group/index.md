@@ -1,6 +1,6 @@
 ---
-title: "Edit a Store Group"
-sidebar_label: "Edit a Store Group"
+title: Edit a Store Group
+sidebar_label: Edit a Store Group
 ---
 
 # Edit a Store Group

@@ -1,6 +1,6 @@
 ---
-title: "Create a Named Price"
-sidebar_label: "Create a Named Price"
+title: Create a Named Price
+sidebar_label: Create a Named Price
 ---
 
 # Create a Named Price

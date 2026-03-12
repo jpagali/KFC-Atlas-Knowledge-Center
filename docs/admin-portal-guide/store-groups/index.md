@@ -1,11 +1,11 @@
 ---
-title: "Store Groups"
-sidebar_label: "Store Groups"
+title: Store Groups
+sidebar_label: Store Groups
 ---
 
 # Store Groups
 
-This section covers all store groups-related tasks in the Atlas Admin Portal.
+This section covers all store groups-related tasks in the Byte Commerce Admin Portal.
 
 ## Topics
 

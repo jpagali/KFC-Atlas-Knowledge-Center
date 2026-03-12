@@ -1,6 +1,6 @@
 ---
-title: "View In-Store Device Details"
-sidebar_label: "View In-Store Device Details"
+title: View In-Store Device Details
+sidebar_label: View In-Store Device Details
 ---
 
 # View In-Store Device Details

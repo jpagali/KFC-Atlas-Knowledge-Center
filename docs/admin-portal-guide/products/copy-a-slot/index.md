@@ -1,6 +1,6 @@
 ---
-title: “Copy a Slot”
-sidebar_label: “Copy a Slot”
+title: Copy a Slot
+sidebar_label: Copy a Slot
 ---
 
 # Copy a Slot

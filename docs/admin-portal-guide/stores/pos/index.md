@@ -1,6 +1,6 @@
 ---
-title: "POS"
-sidebar_label: "POS"
+title: POS
+sidebar_label: POS
 ---
 
 # POS

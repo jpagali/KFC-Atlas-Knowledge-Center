@@ -1,6 +1,6 @@
 ---
-title: “Copy a Modifier”
-sidebar_label: “Copy a Modifier”
+title: Copy a Modifier
+sidebar_label: Copy a Modifier
 ---
 
 # Copy a Modifier

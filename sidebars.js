@@ -2,7 +2,7 @@
 const sidebars = {
 
   // ─── FRONT-END GUIDE ───────────────────────────────────────────────────────
-  // For franchisees + BMUs who need to understand the customer-facing product
+  // For restaurant teams + BMUs who need to understand the customer-facing product
   frontendSidebar: [
     {
       type: 'category',
@@ -71,7 +71,7 @@ const sidebars = {
   ],
 
   // ─── ADMIN PORTAL GUIDE ────────────────────────────────────────────────────
-  // For franchisees + regional office — how to operate Yum Commerce Admin
+  // For restaurant teams + regional office — how to operate Byte Commerce Admin
   adminSidebar: [
     {
       type: 'category',
@@ -86,6 +86,7 @@ const sidebars = {
             {
               type: 'category',
               label: 'Stores',
+              key: 'admin-root-stores',
               link: { type: 'doc', id: 'admin-portal-guide/stores/index' },
               items: [
                 {
@@ -98,6 +99,7 @@ const sidebars = {
                 {
                   type: 'category',
                   label: 'Stores',
+                  key: 'admin-stores-section',
                   items: [
                     'admin-portal-guide/stores/create-a-store/index',
                     'admin-portal-guide/stores/edit-store-details/index',
@@ -132,6 +134,7 @@ const sidebars = {
             {
               type: 'category',
               label: 'Menus',
+              key: 'admin-root-menus',
               link: { type: 'doc', id: 'admin-portal-guide/menus/index' },
               items: [
                 {
@@ -169,6 +172,7 @@ const sidebars = {
                 {
                   type: 'category',
                   label: 'Menus',
+                  key: 'admin-menus-section',
                   items: [
                     'admin-portal-guide/menus/publish-a-menu/index',
                     'admin-portal-guide/menus/create-a-menu/index',
@@ -183,11 +187,13 @@ const sidebars = {
             {
               type: 'category',
               label: 'Products',
+              key: 'admin-root-products',
               link: { type: 'doc', id: 'admin-portal-guide/products/index' },
               items: [
                 {
                   type: 'category',
                   label: 'Products',
+                  key: 'admin-products-section',
                   items: [
                     'admin-portal-guide/products/edit-a-product/index',
                     'admin-portal-guide/products/copy-a-product/index',
@@ -265,11 +271,13 @@ const sidebars = {
             {
               type: 'category',
               label: 'Promotions',
+              key: 'admin-root-promotions',
               link: { type: 'doc', id: 'admin-portal-guide/promotions/index' },
               items: [
                 {
                   type: 'category',
                   label: 'Promotions',
+                  key: 'admin-promotions-section',
                   items: [
                     'admin-portal-guide/promotions/create-a-promotion/index',
                     'admin-portal-guide/promotions/edit-a-promotion/index',
@@ -285,6 +293,7 @@ const sidebars = {
                 {
                   type: 'category',
                   label: 'Store Groups',
+                  key: 'admin-promotions-store-groups-section',
                   items: [
                     'admin-portal-guide/promotions/create-a-store-group/index',
                     'admin-portal-guide/promotions/edit-a-store-group/index',
@@ -305,6 +314,7 @@ const sidebars = {
             {
               type: 'category',
               label: 'Store Groups',
+              key: 'admin-root-store-groups',
               link: { type: 'doc', id: 'admin-portal-guide/store-groups/index' },
               items: [
                 'admin-portal-guide/store-groups/create-a-store-group/index',
@@ -345,11 +355,13 @@ const sidebars = {
             {
               type: 'category',
               label: 'Bundles',
+              key: 'admin-root-bundles',
               link: { type: 'doc', id: 'admin-portal-guide/bundles/index' },
               items: [
                 {
                   type: 'category',
                   label: 'Bundles',
+                  key: 'admin-bundles-section',
                   items: [
                     'admin-portal-guide/bundles/create-a-bundle/index',
                     'admin-portal-guide/bundles/edit-a-bundle/index',
@@ -412,19 +424,33 @@ const sidebars = {
   playbooksSidebar: [
     {
       type: 'category',
-      label: 'Onboarding',
+      label: 'Promotions',
       collapsed: false,
-      items: ['playbooks/onboarding'],
+      items: [
+        'playbooks/onboarding',
+        'playbooks/promotions-setup-guide',
+        {
+          type: 'category',
+          label: 'Promotion Recipes',
+          collapsed: false,
+          items: [
+            'playbooks/promotion-recipes/buy-1-get-1-free-bogo',
+            'playbooks/promotion-recipes/minimum-spend-discount',
+            'playbooks/promotion-recipes/app-exclusive-deal',
+            'playbooks/promotion-recipes/lunch-special-time-limited',
+            'playbooks/promotion-recipes/free-delivery-on-large-orders',
+            'playbooks/promotion-recipes/registered-customer-exclusive',
+            'playbooks/promotion-recipes/coupon-code-discount',
+            'playbooks/promotion-recipes/drive-thru-only-deal',
+            'playbooks/promotion-recipes/daily-deal-once-per-customer-per-day',
+            'playbooks/promotion-recipes/stacked-multi-condition-promotion',
+          ],
+        },
+      ],
     },
     {
       type: 'category',
-      label: 'Troubleshooting',
-      collapsed: false,
-      items: ['playbooks/troubleshooting'],
-    },
-    {
-      type: 'category',
-      label: 'Platform Runbook',
+      label: 'Braze & Rewards',
       collapsed: false,
       items: ['playbooks/runbook'],
     },

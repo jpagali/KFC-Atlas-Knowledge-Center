@@ -1,6 +1,6 @@
 ---
-title: “Copy Promotion”
-sidebar_label: “Copy Promotion”
+title: Copy Promotion
+sidebar_label: Copy Promotion
 ---
 
 # Copy Promotion

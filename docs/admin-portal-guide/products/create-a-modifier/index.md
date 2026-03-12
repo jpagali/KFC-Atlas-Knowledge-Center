@@ -1,6 +1,6 @@
 ---
-title: “Create a Modifier”
-sidebar_label: “Create a Modifier”
+title: Create a Modifier
+sidebar_label: Create a Modifier
 ---
 
 # Create a Modifier

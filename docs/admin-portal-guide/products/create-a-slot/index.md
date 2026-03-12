@@ -1,6 +1,6 @@
 ---
-title: “Create a Slot”
-sidebar_label: “Create a Slot”
+title: Create a Slot
+sidebar_label: Create a Slot
 ---
 
 # Create a Slot

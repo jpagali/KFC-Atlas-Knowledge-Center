@@ -1,6 +1,6 @@
 ---
-title: "Create Tax Rules"
-sidebar_label: "Create Tax Rules"
+title: Create Tax Rules
+sidebar_label: Create Tax Rules
 ---
 
 # Create Tax Rules

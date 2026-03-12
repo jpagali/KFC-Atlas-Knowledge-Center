@@ -1,6 +1,6 @@
 ---
-title: “Edit a Slot”
-sidebar_label: “Edit a Slot”
+title: Edit a Slot
+sidebar_label: Edit a Slot
 ---
 
 # Edit a Slot

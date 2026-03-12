@@ -1,6 +1,6 @@
 ---
-title: "Assign Promotions"
-sidebar_label: "Assign Promotions"
+title: Assign Promotions
+sidebar_label: Assign Promotions
 ---
 
 # Assign Promotions

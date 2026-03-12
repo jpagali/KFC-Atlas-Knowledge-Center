@@ -1,6 +1,6 @@
 ---
-title: “Edit a Patch”
-sidebar_label: “Edit a Patch”
+title: Edit a Patch
+sidebar_label: Edit a Patch
 ---
 
 # Edit a Patch

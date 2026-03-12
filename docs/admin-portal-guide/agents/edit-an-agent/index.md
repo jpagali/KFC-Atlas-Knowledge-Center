@@ -1,6 +1,6 @@
 ---
-title: "Edit an Agent"
-sidebar_label: "Edit an Agent"
+title: Edit an Agent
+sidebar_label: Edit an Agent
 ---
 
 # Edit an Agent

@@ -1,6 +1,6 @@
 ---
-title: “Add Metafields to a Slot”
-sidebar_label: “Add Metafields to a Slot”
+title: Add Metafields to a Slot
+sidebar_label: Add Metafields to a Slot
 ---
 
 # Add Metafields to a Slot

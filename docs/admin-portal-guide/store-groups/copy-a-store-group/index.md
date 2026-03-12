@@ -1,6 +1,6 @@
 ---
-title: "Copy a Store Group"
-sidebar_label: "Copy a Store Group"
+title: Copy a Store Group
+sidebar_label: Copy a Store Group
 ---
 
 # Copy a Store Group

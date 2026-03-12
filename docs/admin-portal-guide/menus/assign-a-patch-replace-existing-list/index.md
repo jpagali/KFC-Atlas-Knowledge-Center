@@ -1,6 +1,6 @@
 ---
-title: "Assign a Patch (Replace Existing List)"
-sidebar_label: "Assign a Patch (Replace Existing List)"
+title: Assign a Patch (Replace Existing List)
+sidebar_label: Assign a Patch (Replace Existing List)
 ---
 
 # Assign a Patch (Replace Existing List)

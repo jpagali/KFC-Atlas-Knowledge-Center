@@ -1,11 +1,11 @@
 ---
-title: "Stores"
-sidebar_label: "Stores"
+title: Stores
+sidebar_label: Stores
 ---
 
 # Stores
 
-This section covers all stores-related tasks in the Atlas Admin Portal, including store setup, menu management, item visibility, and donation handling.
+This section covers all stores-related tasks in the Byte Commerce Admin Portal, including store setup, menu management, item visibility, and donation handling.
 
 ## Topics
 

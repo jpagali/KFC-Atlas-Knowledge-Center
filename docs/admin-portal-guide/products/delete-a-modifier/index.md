@@ -1,6 +1,6 @@
 ---
-title: "Delete a Modifier"
-sidebar_label: "Delete a Modifier"
+title: Delete a Modifier
+sidebar_label: Delete a Modifier
 ---
 
 # Delete a Modifier

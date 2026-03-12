@@ -1,6 +1,6 @@
 ---
-title: "Delete a Slot"
-sidebar_label: "Delete a Slot"
+title: Delete a Slot
+sidebar_label: Delete a Slot
 ---
 
 # Delete a Slot

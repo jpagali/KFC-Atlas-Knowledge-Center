@@ -1,6 +1,6 @@
 ---
-title: "Copy a Category"
-sidebar_label: "Copy a Category"
+title: Copy a Category
+sidebar_label: Copy a Category
 ---
 
 # Copy a Category

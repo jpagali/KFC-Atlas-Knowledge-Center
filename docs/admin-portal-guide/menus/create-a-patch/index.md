@@ -1,6 +1,6 @@
 ---
-title: “Create a Patch”
-sidebar_label: “Create a Patch”
+title: Create a Patch
+sidebar_label: Create a Patch
 ---
 
 # Create a Patch

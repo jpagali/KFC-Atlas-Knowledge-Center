@@ -1,6 +1,6 @@
 ---
-title: “Create an Option Value”
-sidebar_label: “Create an Option Value”
+title: Create an Option Value
+sidebar_label: Create an Option Value
 ---
 
 # Create an Option Value

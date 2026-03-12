@@ -1,6 +1,6 @@
 ---
-title: "Assign a Patch (Add to Patch List)"
-sidebar_label: "Assign a Patch (Add to Patch List)"
+title: Assign a Patch (Add to Patch List)
+sidebar_label: Assign a Patch (Add to Patch List)
 ---
 
 # Assign a Patch (Add to Patch List)

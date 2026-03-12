@@ -1,6 +1,6 @@
 ---
-title: "Delete a Category"
-sidebar_label: "Delete a Category"
+title: Delete a Category
+sidebar_label: Delete a Category
 ---
 
 # Delete a Category

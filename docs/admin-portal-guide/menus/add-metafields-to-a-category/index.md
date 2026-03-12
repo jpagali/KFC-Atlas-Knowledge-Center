@@ -1,6 +1,6 @@
 ---
-title: "Add Metafields to a Category"
-sidebar_label: "Add Metafields to a Category"
+title: Add Metafields to a Category
+sidebar_label: Add Metafields to a Category
 ---
 
 # Add Metafields to a Category

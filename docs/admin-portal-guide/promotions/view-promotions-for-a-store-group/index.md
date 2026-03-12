@@ -1,6 +1,6 @@
 ---
-title: “View Promotions for a Store Group”
-sidebar_label: “View Promotions for a Store Group”
+title: View Promotions for a Store Group
+sidebar_label: View Promotions for a Store Group
 ---
 
 # View Promotions for a Store Group

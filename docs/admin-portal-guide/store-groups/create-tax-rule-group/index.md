@@ -1,6 +1,6 @@
 ---
-title: "Create Tax Rule Group"
-sidebar_label: "Create Tax Rule Group"
+title: Create Tax Rule Group
+sidebar_label: Create Tax Rule Group
 ---
 
 # Create Tax Rule Group

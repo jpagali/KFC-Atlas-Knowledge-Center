@@ -1,6 +1,6 @@
 ---
-title: "Edit a Choice"
-sidebar_label: "Edit a Choice"
+title: Edit a Choice
+sidebar_label: Edit a Choice
 ---
 
 # Edit a Choice

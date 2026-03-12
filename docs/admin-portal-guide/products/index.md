@@ -1,11 +1,11 @@
 ---
-title: "Products"
-sidebar_label: "Products"
+title: Products
+sidebar_label: Products
 ---
 
 # Products
 
-This section covers all product management tasks in the KFC Atlas Admin Portal, including creating and editing products, managing product variants, options, modifiers, slots, weights, and related configurations.
+This section covers all product management tasks in the Byte Commerce Admin Portal, including creating and editing products, managing product variants, options, modifiers, slots, weights, and related configurations.
 
 ## Products
 

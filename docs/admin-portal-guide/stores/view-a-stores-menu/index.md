@@ -1,6 +1,6 @@
 ---
-title: "View a Store’s Menu"
-sidebar_label: "View a Store’s Menu"
+title: View a Store’s Menu
+sidebar_label: View a Store’s Menu
 ---
 
 # View a Store’s Menu

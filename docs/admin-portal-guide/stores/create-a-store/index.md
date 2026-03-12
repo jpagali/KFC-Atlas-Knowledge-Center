@@ -1,6 +1,6 @@
 ---
-title: “Create a Store”
-sidebar_label: “Create a Store”
+title: Create a Store
+sidebar_label: Create a Store
 ---
 
 # Create a Store

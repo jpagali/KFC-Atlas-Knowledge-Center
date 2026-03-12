@@ -1,6 +1,6 @@
 ---
-title: "Order Search"
-sidebar_label: "Order Search"
+title: Order Search
+sidebar_label: Order Search
 ---
 
 # Order Search

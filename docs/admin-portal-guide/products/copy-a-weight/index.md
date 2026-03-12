@@ -1,6 +1,6 @@
 ---
-title: “Copy a Weight”
-sidebar_label: “Copy a Weight”
+title: Copy a Weight
+sidebar_label: Copy a Weight
 ---
 
 # Copy a Weight

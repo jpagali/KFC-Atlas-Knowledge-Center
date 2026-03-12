@@ -1,6 +1,6 @@
 ---
-title: “Edit/Delete a Beneficiary”
-sidebar_label: “Edit/Delete a Beneficiary”
+title: Edit/Delete a Beneficiary
+sidebar_label: Edit/Delete a Beneficiary
 ---
 
 # Edit/Delete a Beneficiary

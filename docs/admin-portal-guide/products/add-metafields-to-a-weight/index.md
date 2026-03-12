@@ -1,6 +1,6 @@
 ---
-title: “Add Metafields to a Weight”
-sidebar_label: “Add Metafields to a Weight”
+title: Add Metafields to a Weight
+sidebar_label: Add Metafields to a Weight
 ---
 
 # Add Metafields to a Weight

@@ -1,6 +1,6 @@
 ---
-title: “Edit a Modifier”
-sidebar_label: “Edit a Modifier”
+title: Edit a Modifier
+sidebar_label: Edit a Modifier
 ---
 
 # Edit a Modifier

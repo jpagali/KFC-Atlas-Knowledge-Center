@@ -1,6 +1,6 @@
 ---
-title: "Delete a Bundle"
-sidebar_label: "Delete a Bundle"
+title: Delete a Bundle
+sidebar_label: Delete a Bundle
 ---
 
 # Delete a Bundle

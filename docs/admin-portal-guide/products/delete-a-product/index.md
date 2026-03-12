@@ -1,6 +1,6 @@
 ---
-title: "Delete a Product"
-sidebar_label: "Delete a Product"
+title: Delete a Product
+sidebar_label: Delete a Product
 ---
 
 # Delete a Product

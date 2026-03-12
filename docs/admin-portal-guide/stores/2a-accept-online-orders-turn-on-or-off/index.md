@@ -1,6 +1,6 @@
 ---
-title: “Accept Online Orders (Turn On or Off)”
-sidebar_label: “Accept Online Orders (Turn On or Off)”
+title: Accept Online Orders (Turn On or Off)
+sidebar_label: Accept Online Orders (Turn On or Off)
 ---
 
 # Accept Online Orders (Turn On or Off)

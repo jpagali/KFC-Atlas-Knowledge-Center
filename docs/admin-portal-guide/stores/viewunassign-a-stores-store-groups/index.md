@@ -1,6 +1,6 @@
 ---
-title: "View/Unassign a Store's Store Groups"
-sidebar_label: "View/Unassign a Store's Store Groups"
+title: View/Unassign a Store's Store Groups
+sidebar_label: View/Unassign a Store's Store Groups
 ---
 
 # View/Unassign a Store's Store Groups

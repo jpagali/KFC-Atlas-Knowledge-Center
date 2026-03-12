@@ -1,6 +1,6 @@
 ---
-title: “Edit a Promotion”
-sidebar_label: “Edit a Promotion”
+title: Edit a Promotion
+sidebar_label: Edit a Promotion
 ---
 
 # Edit a Promotion

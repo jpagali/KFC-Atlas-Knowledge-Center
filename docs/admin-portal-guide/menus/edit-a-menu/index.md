@@ -1,6 +1,6 @@
 ---
-title: "Edit a Menu"
-sidebar_label: "Edit a Menu"
+title: Edit a Menu
+sidebar_label: Edit a Menu
 ---
 
 # Edit a Menu

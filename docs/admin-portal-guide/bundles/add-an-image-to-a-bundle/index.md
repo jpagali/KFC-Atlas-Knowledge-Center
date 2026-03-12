@@ -1,6 +1,6 @@
 ---
-title: "Add an Image to a Bundle"
-sidebar_label: "Add an Image to a Bundle"
+title: Add an Image to a Bundle
+sidebar_label: Add an Image to a Bundle
 ---
 
 # Add an Image to a Bundle

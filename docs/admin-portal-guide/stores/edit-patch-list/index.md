@@ -1,6 +1,6 @@
 ---
-title: “Edit Patch List”
-sidebar_label: “Edit Patch List”
+title: Edit Patch List
+sidebar_label: Edit Patch List
 ---
 
 # Edit Patch List

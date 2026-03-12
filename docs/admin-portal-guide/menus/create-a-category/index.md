@@ -1,6 +1,6 @@
 ---
-title: "Create a Category"
-sidebar_label: "Create a Category"
+title: Create a Category
+sidebar_label: Create a Category
 ---
 
 # Create a Category

@@ -1,13 +1,13 @@
 ---
-title: “Create an Agent”
-sidebar_label: “Create an Agent”
+title: Create an Agent
+sidebar_label: Create an Agent
 ---
 
 # Create an Agent
 
 ## What this guide covers
 
-Sets up a new user account with specific roles and permissions, granting market operators or support staff access to manage the KFC Atlas Admin Portal.
+Sets up a new user account with specific roles and permissions, granting market operators or support staff access to manage the Byte Commerce Admin Portal.
 
 ## Steps
 

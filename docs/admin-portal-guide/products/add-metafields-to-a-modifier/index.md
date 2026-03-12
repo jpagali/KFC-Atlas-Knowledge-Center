@@ -1,6 +1,6 @@
 ---
-title: “Add Metafields to a Modifier”
-sidebar_label: “Add Metafields to a Modifier”
+title: Add Metafields to a Modifier
+sidebar_label: Add Metafields to a Modifier
 ---
 
 # Add Metafields to a Modifier

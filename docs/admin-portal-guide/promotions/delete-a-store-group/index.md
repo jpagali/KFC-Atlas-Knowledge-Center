@@ -1,6 +1,6 @@
 ---
-title: "Delete a Store Group"
-sidebar_label: "Delete a Store Group"
+title: Delete a Store Group
+sidebar_label: Delete a Store Group
 ---
 
 # Delete a Store Group

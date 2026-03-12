@@ -1,6 +1,6 @@
 ---
-title: “Edit a Product”
-sidebar_label: “Edit a Product”
+title: Edit a Product
+sidebar_label: Edit a Product
 ---
 
 # Edit a Product

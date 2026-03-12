@@ -1,6 +1,6 @@
 ---
-title: “Copy a Patch”
-sidebar_label: “Copy a Patch”
+title: Copy a Patch
+sidebar_label: Copy a Patch
 ---
 
 # Copy a Patch

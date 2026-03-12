@@ -1,6 +1,6 @@
 ---
-title: “Add Metafields to a Variant”
-sidebar_label: “Add Metafields to a Variant”
+title: Add Metafields to a Variant
+sidebar_label: Add Metafields to a Variant
 ---
 
 # Add Metafields to a Variant

@@ -1,6 +1,6 @@
 ---
-title: "Copy a Bundle"
-sidebar_label: "Copy a Bundle"
+title: Copy a Bundle
+sidebar_label: Copy a Bundle
 ---
 
 # Copy a Bundle

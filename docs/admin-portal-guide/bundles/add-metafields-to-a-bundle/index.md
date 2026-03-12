@@ -1,6 +1,6 @@
 ---
-title: "Add Metafields to a Bundle"
-sidebar_label: "Add Metafields to a Bundle"
+title: Add Metafields to a Bundle
+sidebar_label: Add Metafields to a Bundle
 ---
 
 # Add Metafields to a Bundle

@@ -1,6 +1,6 @@
 ---
-title: “Edit a Weight”
-sidebar_label: “Edit a Weight”
+title: Edit a Weight
+sidebar_label: Edit a Weight
 ---
 
 # Edit a Weight

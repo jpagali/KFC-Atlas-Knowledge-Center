@@ -1,6 +1,6 @@
 ---
-title: "Create a Menu"
-sidebar_label: "Create a Menu"
+title: Create a Menu
+sidebar_label: Create a Menu
 ---
 
 # Create a Menu

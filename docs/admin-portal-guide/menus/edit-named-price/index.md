@@ -1,6 +1,6 @@
 ---
-title: "Edit Named Price"
-sidebar_label: "Edit Named Price"
+title: Edit Named Price
+sidebar_label: Edit Named Price
 ---
 
 # Edit Named Price

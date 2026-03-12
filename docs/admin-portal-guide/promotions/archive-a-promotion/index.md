@@ -1,6 +1,6 @@
 ---
-title: “Archive a Promotion”
-sidebar_label: “Archive a Promotion”
+title: Archive a Promotion
+sidebar_label: Archive a Promotion
 ---
 
 # Archive a Promotion

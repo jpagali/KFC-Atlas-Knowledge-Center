@@ -1,6 +1,6 @@
 ---
-title: "View Promotions"
-sidebar_label: "View Promotions"
+title: View Promotions
+sidebar_label: View Promotions
 ---
 
 # View Promotions

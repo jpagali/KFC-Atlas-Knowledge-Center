@@ -1,6 +1,6 @@
 ---
-title: "Unassign Promotions from Store Group"
-sidebar_label: "Unassign Promotions from Store Group"
+title: Unassign Promotions from Store Group
+sidebar_label: Unassign Promotions from Store Group
 ---
 
 # Unassign Promotions from Store Group

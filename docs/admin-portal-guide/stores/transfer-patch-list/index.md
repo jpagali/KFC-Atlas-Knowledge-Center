@@ -1,6 +1,6 @@
 ---
-title: “Transfer Patch List”
-sidebar_label: “Transfer Patch List”
+title: Transfer Patch List
+sidebar_label: Transfer Patch List
 ---
 
 # Transfer Patch List

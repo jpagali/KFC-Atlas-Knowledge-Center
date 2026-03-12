@@ -1,6 +1,6 @@
 ---
-title: “Edit Item Availability”
-sidebar_label: “Edit Item Availability”
+title: Edit Item Availability
+sidebar_label: Edit Item Availability
 ---
 
 # Edit Item Availability

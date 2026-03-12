@@ -1,6 +1,6 @@
 ---
-title: "Create a Promotion"
-sidebar_label: "Create a Promotion"
+title: Create a Promotion
+sidebar_label: Create a Promotion
 ---
 
 # Create a Promotion

@@ -1,6 +1,6 @@
 ---
-title: "Delete a Weight"
-sidebar_label: "Delete a Weight"
+title: Delete a Weight
+sidebar_label: Delete a Weight
 ---
 
 # Delete a Weight

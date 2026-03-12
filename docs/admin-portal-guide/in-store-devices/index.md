@@ -1,6 +1,6 @@
 ---
-title: "In-Store Devices"
-sidebar_label: "In-Store Devices"
+title: In-Store Devices
+sidebar_label: In-Store Devices
 ---
 
 # In-Store Devices

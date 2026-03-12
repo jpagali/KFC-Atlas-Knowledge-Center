@@ -1,6 +1,6 @@
 ---
-title: “Create a Product”
-sidebar_label: “Create a Product”
+title: Create a Product
+sidebar_label: Create a Product
 ---
 
 # Create a Product

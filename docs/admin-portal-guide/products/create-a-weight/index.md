@@ -1,6 +1,6 @@
 ---
-title: “Create a Weight”
-sidebar_label: “Create a Weight”
+title: Create a Weight
+sidebar_label: Create a Weight
 ---
 
 # Create a Weight

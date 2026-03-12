@@ -21,7 +21,7 @@ Use this playbook when KFC needs to:
 - assign the promotion to the correct stores or store groups
 - complete a basic QA pass before the campaign goes live
 
-If you are specifically creating a Buy 1 Get 1 offer, use the dedicated subpage: [Buy 1 Get 1 Promo](/docs/playbooks/buy-one-get-one-promo).
+If you are specifically creating a Buy 1 Get 1 offer, use the dedicated recipe page: [Recipe 1 - Buy 1 Get 1 Free (BOGO)](/docs/playbooks/promotion-recipes/buy-1-get-1-free-bogo/).
 
 ## Prerequisites
 

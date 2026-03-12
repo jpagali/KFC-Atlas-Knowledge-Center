@@ -1,13 +1,17 @@
 ---
-title: "Promotions"
-sidebar_label: "Promotions"
+title: Promotions
+sidebar_label: Promotions
 ---
 
 # Promotions
 
-This section covers all promotions-related tasks in the Atlas Admin Portal.
+This section covers all promotions-related tasks in the Byte Commerce Admin Portal.
 
 ## Topics
+
+### Guides
+
+- [Promotions Setup Guide](/docs/playbooks/promotions-setup-guide/) — Practical field-by-field reference and common promotion recipes
 
 ### Promotions
 

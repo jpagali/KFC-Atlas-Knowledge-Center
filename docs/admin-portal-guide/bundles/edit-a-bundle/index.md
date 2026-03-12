@@ -1,6 +1,6 @@
 ---
-title: "Edit a Bundle"
-sidebar_label: "Edit a Bundle"
+title: Edit a Bundle
+sidebar_label: Edit a Bundle
 ---
 
 # Edit a Bundle

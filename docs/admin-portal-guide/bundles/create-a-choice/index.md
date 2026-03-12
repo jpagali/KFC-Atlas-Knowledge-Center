@@ -1,6 +1,6 @@
 ---
-title: "Create a Choice"
-sidebar_label: "Create a Choice"
+title: Create a Choice
+sidebar_label: Create a Choice
 ---
 
 # Create a Choice

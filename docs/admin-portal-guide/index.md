@@ -1,11 +1,11 @@
 ---
-title: "Admin Portal Guide"
-sidebar_label: "Admin Portal Guide"
+title: Admin Portal Guide
+sidebar_label: Admin Portal Guide
 ---
 
 # Admin Portal Guide
 
-This guide covers all tasks available in the KFC Atlas Admin Portal. Select a section below to get started.
+This guide covers all tasks available in the Byte Commerce Admin Portal. Select a section below to get started.
 
 ## [Stores](/docs/admin-portal-guide/stores/)
 Manage restaurant locations, menus, and store settings.

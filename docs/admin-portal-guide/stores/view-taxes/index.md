@@ -1,6 +1,6 @@
 ---
-title: "View Taxes"
-sidebar_label: "View Taxes"
+title: View Taxes
+sidebar_label: View Taxes
 ---
 
 # View Taxes

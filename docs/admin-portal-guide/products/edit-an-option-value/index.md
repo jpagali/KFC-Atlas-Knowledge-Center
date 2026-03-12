@@ -1,6 +1,6 @@
 ---
-title: “Edit an Option Value”
-sidebar_label: “Edit an Option Value”
+title: Edit an Option Value
+sidebar_label: Edit an Option Value
 ---
 
 # Edit an Option Value

@@ -1,6 +1,6 @@
 ---
-title: “Allow Future Orders (Turn On or Off)”
-sidebar_label: “Allow Future Orders (Turn On or Off)”
+title: Allow Future Orders (Turn On or Off)
+sidebar_label: Allow Future Orders (Turn On or Off)
 ---
 
 # Allow Future Orders (Turn On or Off)

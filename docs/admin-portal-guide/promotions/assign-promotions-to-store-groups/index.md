@@ -1,6 +1,6 @@
 ---
-title: "Assign Promotions to Store Groups"
-sidebar_label: "Assign Promotions to Store Groups"
+title: Assign Promotions to Store Groups
+sidebar_label: Assign Promotions to Store Groups
 ---
 
 # Assign Promotions to Store Groups

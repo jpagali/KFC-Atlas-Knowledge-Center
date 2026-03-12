@@ -1,6 +1,6 @@
 ---
-title: "Delete a Menu"
-sidebar_label: "Delete a Menu"
+title: Delete a Menu
+sidebar_label: Delete a Menu
 ---
 
 # Delete a Menu

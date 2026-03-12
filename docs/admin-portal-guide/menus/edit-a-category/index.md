@@ -1,6 +1,6 @@
 ---
-title: "Edit a Category"
-sidebar_label: "Edit a Category"
+title: Edit a Category
+sidebar_label: Edit a Category
 ---
 
 # Edit a Category

@@ -1,6 +1,6 @@
 ---
-title: “Create Serialized Code”
-sidebar_label: “Create Serialized Code”
+title: Create Serialized Code
+sidebar_label: Create Serialized Code
 ---
 
 # Create Serialized Code

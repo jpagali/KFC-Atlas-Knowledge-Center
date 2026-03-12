@@ -1,6 +1,6 @@
 ---
-title: “Edit Store Details”
-sidebar_label: “Edit Store Details”
+title: Edit Store Details
+sidebar_label: Edit Store Details
 ---
 
 # Edit Store Details

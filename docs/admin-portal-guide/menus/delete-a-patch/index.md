@@ -1,6 +1,6 @@
 ---
-title: "Delete a Patch"
-sidebar_label: "Delete a Patch"
+title: Delete a Patch
+sidebar_label: Delete a Patch
 ---
 
 # Delete a Patch

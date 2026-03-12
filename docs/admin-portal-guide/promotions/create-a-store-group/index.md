@@ -1,6 +1,6 @@
 ---
-title: “Create a Store Group”
-sidebar_label: “Create a Store Group”
+title: Create a Store Group
+sidebar_label: Create a Store Group
 ---
 
 # Create a Store Group

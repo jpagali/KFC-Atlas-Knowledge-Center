@@ -1,6 +1,6 @@
 ---
-title: "View Stores in a Store Group"
-sidebar_label: "View Stores in a Store Group"
+title: View Stores in a Store Group
+sidebar_label: View Stores in a Store Group
 ---
 
 # View Stores in a Store Group

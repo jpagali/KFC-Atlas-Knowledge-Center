@@ -1,11 +1,11 @@
 ---
-title: "Bundles"
-sidebar_label: "Bundles"
+title: Bundles
+sidebar_label: Bundles
 ---
 
 # Bundles
 
-This section covers all tasks for managing bundles (meal deals and combos) and their configurable choices in the Atlas Admin Portal.
+This section covers all tasks for managing bundles (meal deals and combos) and their configurable choices in the Byte Commerce Admin Portal.
 
 ## Topics
 

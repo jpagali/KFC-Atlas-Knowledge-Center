@@ -1,6 +1,6 @@
 ---
-title: "Deactivate In-Store"
-sidebar_label: "Deactivate In-Store"
+title: Deactivate In-Store
+sidebar_label: Deactivate In-Store
 ---
 
 # Deactivate In-Store

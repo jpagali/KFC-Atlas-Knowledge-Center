@@ -1,6 +1,6 @@
 ---
-title: "Delete Named Price"
-sidebar_label: "Delete Named Price"
+title: Delete Named Price
+sidebar_label: Delete Named Price
 ---
 
 # Delete Named Price

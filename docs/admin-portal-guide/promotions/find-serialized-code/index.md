@@ -1,6 +1,6 @@
 ---
-title: “Find Serialized Code”
-sidebar_label: “Find Serialized Code”
+title: Find Serialized Code
+sidebar_label: Find Serialized Code
 ---
 
 # Find Serialized Code

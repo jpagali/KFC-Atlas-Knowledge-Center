@@ -1,11 +1,11 @@
 ---
-title: "Customer Support"
-sidebar_label: "Customer Support"
+title: Customer Support
+sidebar_label: Customer Support
 ---
 
 # Customer Support
 
-This section covers customer and order management tools for support agents in the Atlas Admin Portal.
+This section covers customer and order management tools for support agents in the Byte Commerce Admin Portal.
 
 ## Topics
 

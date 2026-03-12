@@ -1,6 +1,6 @@
 ---
-title: "View a Store’s Publish History / Copy Menu Publish Job ID"
-sidebar_label: "View a Store’s Publish History / Copy Menu Publish Job ID"
+title: View a Store’s Publish History / Copy Menu Publish Job ID
+sidebar_label: View a Store’s Publish History / Copy Menu Publish Job ID
 ---
 
 # View a Store’s Publish History / Copy Menu Publish Job ID

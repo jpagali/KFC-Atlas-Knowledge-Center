@@ -1,6 +1,6 @@
 ---
-title: "Add Metafields to a Menu"
-sidebar_label: "Add Metafields to a Menu"
+title: Add Metafields to a Menu
+sidebar_label: Add Metafields to a Menu
 ---
 
 # Add Metafields to a Menu

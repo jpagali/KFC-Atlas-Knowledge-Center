@@ -1,6 +1,6 @@
 ---
-title: “Edit a Variant”
-sidebar_label: “Edit a Variant”
+title: Edit a Variant
+sidebar_label: Edit a Variant
 ---
 
 # Edit a Variant

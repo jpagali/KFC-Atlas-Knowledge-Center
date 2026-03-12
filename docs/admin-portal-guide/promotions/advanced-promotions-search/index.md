@@ -1,6 +1,6 @@
 ---
-title: “Advanced Promotions Search”
-sidebar_label: “Advanced Promotions Search”
+title: Advanced Promotions Search
+sidebar_label: Advanced Promotions Search
 ---
 
 # Advanced Promotions Search

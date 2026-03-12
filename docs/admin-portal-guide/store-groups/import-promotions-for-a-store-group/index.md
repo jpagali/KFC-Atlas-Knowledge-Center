@@ -1,6 +1,6 @@
 ---
-title: "Import Promotions for a Store Group"
-sidebar_label: "Import Promotions for a Store Group"
+title: Import Promotions for a Store Group
+sidebar_label: Import Promotions for a Store Group
 ---
 
 # Import Promotions for a Store Group

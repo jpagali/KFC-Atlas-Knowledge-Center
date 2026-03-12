@@ -1,6 +1,6 @@
 ---
-title: “Copy an Option”
-sidebar_label: “Copy an Option”
+title: Copy an Option
+sidebar_label: Copy an Option
 ---
 
 # Copy an Option
