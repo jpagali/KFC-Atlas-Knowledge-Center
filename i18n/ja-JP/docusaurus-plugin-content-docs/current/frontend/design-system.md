@@ -1,6 +1,6 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# KFC Atlas Design System
+# KFC Atlasデザインシステム
 ### プラットフォームがどう作られているか — ビジュアルアイデンティティから画面表示まで
 
 ---

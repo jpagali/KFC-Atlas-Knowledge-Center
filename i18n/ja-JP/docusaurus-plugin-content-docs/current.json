@@ -11,6 +11,58 @@
     "message": "顧客体験",
     "description": "The label for category 'Customer Experience' in sidebar 'frontendSidebar'"
   },
+  "sidebar.frontendSidebar.category.Customer Journey": {
+    "message": "カスタマージャーニー",
+    "description": "The label for category 'Customer Journey' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Step 1 - Setup Order": {
+    "message": "ステップ1 - 注文設定",
+    "description": "The label for category 'Step 1 - Setup Order' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Step 2 - Find Products": {
+    "message": "ステップ2 - 商品を探す",
+    "description": "The label for category 'Step 2 - Find Products' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Step 3 - Find Deals and Rewards": {
+    "message": "ステップ3 - ディールと特典を探す",
+    "description": "The label for category 'Step 3 - Find Deals and Rewards' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Step 4 - Preview Product and Customize": {
+    "message": "ステップ4 - 商品確認とカスタマイズ",
+    "description": "The label for category 'Step 4 - Preview Product and Customize' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Step 5 - Order and Get": {
+    "message": "ステップ5 - 注文と受け取り",
+    "description": "The label for category 'Step 5 - Order and Get' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Step 6 - Track Order": {
+    "message": "ステップ6 - 注文追跡",
+    "description": "The label for category 'Step 6 - Track Order' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Supporting Journeys": {
+    "message": "補助ジャーニー",
+    "description": "The label for category 'Supporting Journeys' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Access Account and Manage Profile": {
+    "message": "アカウントとプロフィール管理",
+    "description": "The label for category 'Access Account and Manage Profile' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Get Help": {
+    "message": "ヘルプを受ける",
+    "description": "The label for category 'Get Help' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Find a Store": {
+    "message": "店舗を探す",
+    "description": "The label for category 'Find a Store' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Learn About KFC": {
+    "message": "KFCを知る",
+    "description": "The label for category 'Learn About KFC' in sidebar 'frontendSidebar'"
+  },
+  "sidebar.frontendSidebar.category.Customer Engagement Surveys": {
+    "message": "顧客エンゲージメント調査",
+    "description": "The label for category 'Customer Engagement Surveys' in sidebar 'frontendSidebar'"
+  },
   "sidebar.frontendSidebar.category.Market Configurations": {
     "message": "市場設定",
     "description": "The label for category 'Market Configurations' in sidebar 'frontendSidebar'"
