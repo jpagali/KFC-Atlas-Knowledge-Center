@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import AtlasChat from '@site/src/components/AtlasChat';
+import AccessGate from '@site/src/components/AccessGate';
 
 function ImageZoom() {
   useEffect(() => {
@@ -33,10 +34,10 @@ function ImageZoom() {
 // Root wraps the entire app — AtlasChat appears on every page
 export default function Root({ children }) {
   return (
-    <>
+    <AccessGate>
       {children}
       <ImageZoom />
       <AtlasChat />
-    </>
+    </AccessGate>
   );
 }

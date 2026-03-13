@@ -249,6 +249,101 @@ table tr:nth-child(even) td {
   font-size: 0.78rem;
 }
 
+/* ── ACCESS GATE ── */
+.access-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top, rgba(228, 0, 43, 0.18), transparent 34%),
+    linear-gradient(135deg, #0a0705 0%, #140906 48%, #0c0705 100%);
+}
+
+.access-gate__panel {
+  width: min(100%, 460px);
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: rgba(19, 16, 12, 0.94);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+}
+
+.access-gate__eyebrow {
+  margin-bottom: 12px;
+  color: #e4002b;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.access-gate__title {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  line-height: 1.05;
+}
+
+.access-gate__subtitle {
+  margin: 0 0 24px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.access-gate__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.access-gate__label {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.access-gate__input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font: inherit;
+}
+
+.access-gate__input:focus {
+  outline: 2px solid rgba(228, 0, 43, 0.45);
+  outline-offset: 2px;
+}
+
+.access-gate__input::placeholder {
+  color: rgba(255, 255, 255, 0.36);
+}
+
+.access-gate__error {
+  margin: 0;
+  color: #ff8d9e;
+  font-size: 0.88rem;
+}
+
+.access-gate__button {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #e4002b;
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.access-gate__button:hover {
+  background: #cd0027;
+}
+
 /* ── PAGINATION ── */
 .pagination-nav__link {
   border: 1.5px solid #ece6dc;
