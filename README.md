@@ -24,6 +24,19 @@ npm run start:ja
 
 That starts the Japanese Docusaurus development server on `http://localhost:3002/ja-JP/`.
 
+Locale switching in local development assumes:
+- English on `http://localhost:3001/`
+- Japanese on `http://localhost:3002/ja-JP/`
+
+If you want EN/JP switching to work within one local site instance, use:
+
+```bash
+npm run build
+npm run preview
+```
+
+This serves both locales together on `http://localhost:3005/`.
+
 If you need to verify that both locales are generated correctly, use:
 
 ```bash
