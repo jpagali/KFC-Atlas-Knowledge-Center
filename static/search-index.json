@@ -2886,11 +2886,28 @@
   },
   {
     "locale": "en-US",
+    "title": "Release 2026.03.15",
+    "headings": [
+      "Highlights",
+      "What Changed",
+      "Navigation and Entry Points",
+      "What's New Experience",
+      "Localization",
+      "Layout Polish",
+      "In Plain English"
+    ],
+    "body": "Release 2026.03.15 Released on March 15, 2026 . This release introduced a dedicated experience for the Atlas Knowledge Center and connected it to the main site chrome so launch communication is easier to discover. The work also ensured the new entry points and page experience behave correctly for both English and Japanese users. Highlights A new page is now live The Knowledge Center now has a dedicated launch page that surfaces featured releases, new features, recent improvements, and upcoming work in a more structured product marketing format. is now part of the main navigation A new top nav entry was added beside , while was removed from the top navigation but kept available in the footer. The footer now includes a twin launch card The existing footer callout is now paired with a card so launch updates have a strong desktop entry point. Mobile behavior stays intentionally lightweight On mobile, the page remains discoverable through the hamburger navigation without adding extra footer clutter. Japanese routing and page content are supported The new page and release note coverage were localized so the feature works in both and . What Changed Navigation and Entry Points Added a item to the top navbar Removed from the top navbar Kept reachable from the footer Added a desktop footer twin card entry point for Kept mobile access focused on the hamburger navigation What's New Experience Added a new page in the app Styled the page as a dark KFC branded launch hub Structured the page around: roadmap snapshot featured launch new features recent improvements coming soon Added stronger visual treatment for the featured launch area Localization Added Japanese navbar copy for Added Japanese page content for Added Japanese release notes coverage so launch communication remains navigable in both locales Layout Polish Adjusted footer spacing so the new twin card layout does not overly constrain the footer columns Improved Japanese footer readability by giving link text and CTA copy more breathing room In Plain English This release turned launch communication into a real product surface instead of a hidden changelog. People can now find from the main navigation and footer on desktop, still reach it cleanly on mobile, and use it in both English and Japanese without breaking localization behavior.",
+    "summary": "Release 2026.03.15",
+    "section": "release-notes",
+    "url": "/docs/release-notes/2026-03-15/"
+  },
+  {
+    "locale": "en-US",
     "title": "Changelog",
     "headings": [
       "Recent Releases"
     ],
-    "body": "Changelog This section is the living changelog for the Atlas Knowledge Center. It keeps a simple, human readable record of what changed, when it changed, and what those updates mean in practice. For now, releases are tracked using a lightweight calendar version: for the March 14, 2026 release for the March 12, 2026 release for the March 13, 2026 release As the site matures, this can evolve into a more formal release cadence. For now, the goal is clarity over ceremony. Recent Releases",
+    "body": "Changelog This section is the living changelog for the Atlas Knowledge Center. It keeps a simple, human readable record of what changed, when it changed, and what those updates mean in practice. For now, releases are tracked using a lightweight calendar version: for the March 15, 2026 release for the March 14, 2026 release for the March 12, 2026 release for the March 13, 2026 release As the site matures, this can evolve into a more formal release cadence. For now, the goal is clarity over ceremony. Recent Releases",
     "summary": "Changelog",
     "section": "release-notes",
     "url": "/docs/release-notes/"
@@ -5780,11 +5797,28 @@
   },
   {
     "locale": "ja-JP",
+    "title": "リリース 2026.03.15",
+    "headings": [
+      "ハイライト",
+      "変更内容",
+      "ナビゲーションと導線",
+      "What's New 体験",
+      "ローカライズ",
+      "レイアウト調整",
+      "わかりやすく言うと"
+    ],
+    "body": "リリース 2026.03.15 2026 年 3 月 15 日 に公開されました。 このリリースでは、Atlas Knowledge Center に専用の 体験を追加し、サイトの主要導線からアクセスできるようにしました。あわせて、新しいページと導線が英語・日本語の両方で正しく動作するよう、ローカライズ対応も行いました。 ハイライト 新しい ページを公開 注目リリース、新機能、最近の改善、今後の機能を、より整理された形で確認できる専用ページを追加しました。 をメインナビゲーションに追加 の横に新しいトップナビ項目を追加し、 はトップナビから外しつつフッターでは引き続き利用できるようにしました。 フッターに twin カード導線を追加 既存の に加えて、 カードを並べ、デスクトップでの発見性を高めました。 モバイルは軽量な導線を維持 モバイルでは、不要なフッター混雑を避けるため、 はハンバーガーメニュー経由でアクセスする形を維持しています。 日本語ルーティングとページ内容にも対応 新ページとリリースノート導線を日本語でも利用できるようにし、 と の両方で動作するようにしました。 変更内容 ナビゲーションと導線 トップナビに を追加 トップナビから を削除 はフッターから引き続きアクセス可能 デスクトップ向けに のフッター twin カードを追加 モバイルはハンバーガーメニュー中心の導線を維持 What's New 体験 アプリ内に新しい ページを追加 ダークな KFC ブランドのローンチハブとしてデザイン ページ構成を以下に整理: ロードマップ概要 注目リリース 新機能 最近の改善 近日公開 注目リリース領域のビジュアル表現を強化 ローカライズ ナビバーの に日本語コピーを追加 の日本語ページ内容を追加 リリース関連導線が両ロケールで辿れるよう、日本語の release notes も整備 レイアウト調整 twin カード追加によってフッター列が窮屈になりすぎないよう、余白を調整 日本語フッターのリンクや CTA テキストが読みやすくなるよう、行間と文字サイズを改善 わかりやすく言うと このリリースで、ローンチ情報は見つけにくい changelog ではなく、実際のプロダクト導線として使える体験になりました。デスクトップではナビとフッターから、モバイルではハンバーガーメニューから見つけられ、英語・日本語の両方で安全に使えます。",
+    "summary": "リリース 2026.03.15",
+    "section": "release-notes",
+    "url": "/ja-JP/docs/release-notes/2026-03-15/"
+  },
+  {
+    "locale": "ja-JP",
     "title": "変更履歴",
     "headings": [
       "最近のリリース"
     ],
-    "body": "変更履歴 このセクションでは、Atlas Knowledge Center の更新内容を継続的にまとめています。 何が変わったのか、いつ変わったのか、そして実務上どんな意味があるのかを、読みやすい形で確認できるようにしています。 現時点では、リリースはシンプルな日付ベースのバージョンで管理しています。 は 2026 年 3 月 14 日のリリース は 2026 年 3 月 13 日のリリース は 2026 年 3 月 12 日のリリース 今後サイトが成長するにつれて、より正式なリリース運用へ発展させることもできます。現時点では、厳密さよりも分かりやすさを優先しています。 最近のリリース",
+    "body": "変更履歴 このセクションでは、Atlas Knowledge Center の更新内容を継続的にまとめています。 何が変わったのか、いつ変わったのか、そして実務上どんな意味があるのかを、読みやすい形で確認できるようにしています。 現時点では、リリースはシンプルな日付ベースのバージョンで管理しています。 は 2026 年 3 月 15 日のリリース は 2026 年 3 月 14 日のリリース は 2026 年 3 月 13 日のリリース は 2026 年 3 月 12 日のリリース 今後サイトが成長するにつれて、より正式なリリース運用へ発展させることもできます。現時点では、厳密さよりも分かりやすさを優先しています。 最近のリリース",
     "summary": "変更履歴",
     "section": "release-notes",
     "url": "/ja-JP/docs/release-notes/"
