@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {buildNormalizedSearchFields} from '../src/utils/searchNormalization.mjs';
 
 const rootDir = process.cwd();
 const docsDir = path.join(rootDir, 'docs');
@@ -141,6 +142,11 @@ function createRecord(locale, filePath) {
     summary,
     section,
     url: toDocUrl(locale, filePath),
+    ...buildNormalizedSearchFields({
+      title,
+      headings: headings.slice(1),
+      body,
+    }),
   };
 }
 

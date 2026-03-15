@@ -3,21 +3,14 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import clsx from 'clsx';
+import {normalizeText} from '@site/src/utils/searchNormalization.mjs';
 
 const MAX_RESULTS = 8;
 
-function normalizeText(value) {
-  return (value || '')
-    .normalize('NFKC')
-    .toLocaleLowerCase()
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
 function scoreRecord(record, query, tokens) {
-  const title = normalizeText(record.title);
-  const headings = normalizeText(record.headings.join(' '));
-  const body = normalizeText(record.body);
+  const title = record.normalizedTitle || '';
+  const headings = record.normalizedHeadings || '';
+  const body = record.normalizedBody || '';
   let score = 0;
 
   if (title.startsWith(query)) score += 120;

@@ -1,23 +1,370 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+.hero {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  padding: 80px 24px 64px;
+  text-align: center;
+  background: linear-gradient(135deg, #0a0705 0%, #1a0a08 50%, #0f0705 100%);
+  border-bottom: 3px solid #e4002b;
+}
+
+.heroTexture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(228, 0, 43, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(228, 0, 43, 0.05) 0%, transparent 40%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 16px;
+  margin-bottom: 28px;
+  background: rgba(228, 0, 43, 0.15);
+  border: 1px solid rgba(228, 0, 43, 0.3);
+  border-radius: 20px;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  background: #e4002b;
+  border-radius: 50%;
+}
+
+.badgeText {
+  color: #e4002b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.localeJa {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.heroTitle {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.heroTitle.localeJa {
+  font-size: clamp(2rem, 4.6vw, 3.2rem);
+  line-height: 1.25;
+}
+
+.heroTitleAccent {
+  color: #e4002b;
+}
+
+.heroSummary {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  color: #999;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.heroSummary.localeJa {
+  font-size: 1rem;
+}
+
+.searchWrap {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto 30px;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.buttonPrimary {
+  color: #fff;
+  background: #e4002b;
+}
+
+.buttonPrimary:hover {
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(228, 0, 43, 0.2);
+}
+
+.buttonSecondary {
+  color: #13100c;
+  background: #fff;
+  border: 1.5px solid #fff;
+  font-weight: 600;
+}
+
+.buttonSecondary:hover {
+  color: #13100c;
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.12);
+}
+
+.statsBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  justify-content: center;
+  padding: 20px 24px;
+  background: #e4002b;
+}
+
+.statCard {
+  text-align: center;
+}
+
+.statValue {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.statLabel {
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.statSub {
+  margin-top: 1px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.72rem;
+}
+
+.marketsSection {
+  padding: 48px 24px;
+  text-align: center;
+  background: #13100c;
+}
+
+.sectionLabel {
+  margin-bottom: 12px;
+  color: #e4002b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sectionLabel.localeJa {
+  letter-spacing: 0.6px;
+}
+
+.marketsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.marketCard {
+  padding: 16px 32px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.marketFlag {
+  font-size: 32px;
+}
+
+.marketName {
+  margin-top: 6px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sectionsSection {
+  padding: 64px 24px;
+  background: #f8f4ee;
+}
+
+.sectionsInner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.sectionHeader .sectionLabel {
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #13100c;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.sectionTitle.localeJa {
+  font-size: 1.8rem;
+}
+
+.sectionGrid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.sectionCard {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  background: #fff;
+  border: 1.5px solid #ece6dc;
+  border-top: 4px solid #e4002b;
+  border-radius: 10px;
+}
+
+.sectionEmoji {
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.cardLabel {
+  margin-bottom: 6px;
+  color: #e4002b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cardLabel.localeJa {
+  letter-spacing: 0.6px;
+}
+
+.cardTitle {
+  margin: 0 0 10px;
+  color: #13100c;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.cardTitle.localeJa {
+  font-size: 1.02rem;
+}
+
+.cardDescription {
+  flex: 1;
+  margin: 0 0 20px;
+  color: #666;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.cardList {
+  margin: 0 0 24px;
+  padding-left: 16px;
+}
+
+.cardListItem {
+  color: #444;
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+.cardButton {
+  align-self: flex-start;
+  padding: 10px 20px;
+  color: #fff;
+  background: #13100c;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cardButton:hover {
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(19, 16, 12, 0.12);
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+  .hero {
+    padding: 64px 20px 56px;
+  }
+
+  .statsBar {
+    gap: 32px;
+  }
+
+  .marketsGrid {
+    gap: 20px;
+  }
+
+  .marketCard {
+    min-width: 160px;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 640px) {
+  .heroTitle,
+  .heroTitle.localeJa {
+    font-size: 2rem;
+  }
+
+  .heroSummary,
+  .heroSummary.localeJa {
+    font-size: 0.98rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .statsBar {
+    gap: 24px;
+  }
+
+  .sectionGrid {
+    grid-template-columns: 1fr;
+  }
 }
