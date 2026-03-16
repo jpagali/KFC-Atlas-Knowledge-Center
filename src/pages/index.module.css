@@ -236,7 +236,14 @@
 }
 
 .marketCard {
-  padding: 16px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 196px;
+  min-height: 140px;
+  padding: 18px 20px;
   text-align: center;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -244,14 +251,34 @@
 }
 
 .marketFlag {
-  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.marketFlagImage {
+  display: block;
+  width: 32px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .marketName {
-  margin-top: 6px;
+  margin-top: 10px;
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .marketsSublabel {
@@ -289,6 +316,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  min-height: 52px;
   padding: 10px 20px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -297,8 +325,24 @@
 }
 
 .upcomingMarketFlag {
-  font-size: 20px;
-  filter: grayscale(40%);
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.upcomingMarketFlagImage {
+  display: block;
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 3px;
+  filter: grayscale(12%);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .upcomingMarketName {
@@ -441,7 +485,7 @@
   }
 
   .marketCard {
-    min-width: 160px;
+    width: 196px;
   }
 }
 

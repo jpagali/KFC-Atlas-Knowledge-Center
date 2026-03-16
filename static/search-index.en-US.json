@@ -3552,6 +3552,25 @@
   },
   {
     "locale": "en-US",
+    "title": "Release 2026.03.16",
+    "headings": [
+      "Highlights",
+      "What Changed",
+      "Homepage Experience",
+      "Navigation and Information Architecture",
+      "Responsive Behavior",
+      "In Plain English"
+    ],
+    "summary": "Release 2026.03.16",
+    "section": "release-notes",
+    "url": "/docs/release-notes/2026-03-16/",
+    "normalizedTitle": "release 2026 03 16",
+    "normalizedHeadings": "highlights what changed homepage experience navigation and information architecture responsive behavior in plain english",
+    "normalizedSummary": "release 2026 03 16",
+    "normalizedSection": "release notes"
+  },
+  {
+    "locale": "en-US",
     "title": "Changelog",
     "headings": [
       "Recent Releases"

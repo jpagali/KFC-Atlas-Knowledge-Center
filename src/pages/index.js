@@ -23,11 +23,11 @@ const HOME_CONTENT = {
     marketsSublabel: 'Onboarding — rolling out through end of 2026',
     upcomingMarketsLabel: 'Coming after',
     upcomingMarkets: [
-      { flag: '🇨🇦', name: 'Canada' },
-      { flag: '🇫🇷', name: 'France' },
-      { flag: '🇩🇪', name: 'Germany' },
-      { flag: '🇪🇸', name: 'Spain' },
-      { flag: '🇹🇭', name: 'Thailand' },
+      { flagCode: 'ca', name: 'Canada' },
+      { flagCode: 'fr', name: 'France' },
+      { flagCode: 'de', name: 'Germany' },
+      { flagCode: 'es', name: 'Spain' },
+      { flagCode: 'th', name: 'Thailand' },
     ],
     stats: [
       { value: 2000, suffix: '+', label: 'Stores', sub: 'Stores Onboard' },
@@ -64,8 +64,8 @@ const HOME_CONTENT = {
       },
     ],
     markets: [
-      { flag: '🇯🇵', name: 'Japan' },
-      { flag: '🇦🇺', name: 'Australia' },
+      { flagCode: 'jp', name: 'Japan' },
+      { flagCode: 'au', name: 'Australia' },
     ],
   },
   'ja-JP': {
@@ -84,11 +84,11 @@ const HOME_CONTENT = {
     marketsSublabel: 'Onboarding — rolling out through end of 2026',
     upcomingMarketsLabel: 'Coming after',
     upcomingMarkets: [
-      { flag: '🇨🇦', name: 'Canada' },
-      { flag: '🇫🇷', name: 'France' },
-      { flag: '🇩🇪', name: 'Germany' },
-      { flag: '🇪🇸', name: 'Spain' },
-      { flag: '🇹🇭', name: 'Thailand' },
+      { flagCode: 'ca', name: 'Canada' },
+      { flagCode: 'fr', name: 'France' },
+      { flagCode: 'de', name: 'Germany' },
+      { flagCode: 'es', name: 'Spain' },
+      { flagCode: 'th', name: 'Thailand' },
     ],
     stats: [
       { value: 2000, suffix: '+', label: '店舗数', sub: '導入済み店舗' },
@@ -125,8 +125,8 @@ const HOME_CONTENT = {
       },
     ],
     markets: [
-      { flag: '🇯🇵', name: '日本' },
-      { flag: '🇦🇺', name: 'オーストラリア' },
+      { flagCode: 'jp', name: '日本' },
+      { flagCode: 'au', name: 'オーストラリア' },
     ],
   },
 };
@@ -141,6 +141,18 @@ function formatStatValue(stat, locale) {
 
 function localeClass(baseClass, isJapanese) {
   return isJapanese ? `${baseClass} ${styles.localeJa}` : baseClass;
+}
+
+function MarketFlag({ flagCode, name, compact = false }) {
+  const flagSrc = useBaseUrl(`/img/flags/${flagCode}.svg`);
+  const frameClassName = compact ? styles.upcomingMarketFlag : styles.marketFlag;
+  const imageClassName = compact ? styles.upcomingMarketFlagImage : styles.marketFlagImage;
+
+  return (
+    <div className={frameClassName}>
+      <img className={imageClassName} src={flagSrc} alt={`${name} flag`} loading="lazy" />
+    </div>
+  );
 }
 
 export default function Home() {
@@ -217,7 +229,7 @@ export default function Home() {
         <div className={styles.marketsGrid}>
           {content.markets.map((market) => (
             <div key={market.name} className={styles.marketCard}>
-              <div className={styles.marketFlag}>{market.flag}</div>
+              <MarketFlag flagCode={market.flagCode} name={market.name} />
               <div className={styles.marketName}>{market.name}</div>
             </div>
           ))}
@@ -227,7 +239,7 @@ export default function Home() {
         <div className={styles.upcomingMarketsGrid}>
           {content.upcomingMarkets.map((market) => (
             <div key={market.name} className={styles.upcomingMarketCard}>
-              <div className={styles.upcomingMarketFlag}>{market.flag}</div>
+              <MarketFlag flagCode={market.flagCode} name={market.name} compact />
               <div className={styles.upcomingMarketName}>{market.name}</div>
             </div>
           ))}
