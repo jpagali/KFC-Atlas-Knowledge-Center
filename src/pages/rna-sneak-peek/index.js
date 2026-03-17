@@ -44,7 +44,26 @@ export default function RnaSneakPeekPage() {
   const { i18n } = useDocusaurusContext();
   const locale = PAGE_CONTENT[i18n.currentLocale] ? i18n.currentLocale : 'en-US';
   const content = PAGE_CONTENT[locale];
-  const prototypeSrc = useBaseUrl('/rna-sneak-peek-prototype.html');
+  const [prototypeTheme, setPrototypeTheme] = React.useState('dark');
+
+  React.useEffect(() => {
+    const root = document.documentElement;
+
+    const syncTheme = () => {
+      setPrototypeTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+    };
+
+    syncTheme();
+
+    const observer = new MutationObserver(syncTheme);
+    observer.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const prototypeSrc = useBaseUrl(
+    `/rna-sneak-peek-prototype.html?theme=${prototypeTheme}&locale=${encodeURIComponent(locale)}`,
+  );
 
   return (
     <Layout title={content.title} description={content.description}>
