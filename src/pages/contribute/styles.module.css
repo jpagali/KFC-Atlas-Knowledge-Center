@@ -1,10 +1,68 @@
 .page {
+  --studio-bg:
+    radial-gradient(circle at top left, rgba(228, 0, 43, 0.14), transparent 22%),
+    radial-gradient(circle at top right, rgba(210, 165, 92, 0.1), transparent 24%),
+    linear-gradient(180deg, var(--kc-canvas) 0%, var(--kc-surface-strong) 55%, var(--kc-canvas) 100%);
+  --studio-hero-bg:
+    linear-gradient(135deg, var(--kc-surface), var(--kc-surface-alt)),
+    linear-gradient(120deg, rgba(228, 0, 43, 0.08), transparent);
+  --studio-hero-text: var(--kc-ink);
+  --studio-hero-muted: var(--kc-ink-muted);
+  --studio-eyebrow: var(--ifm-color-primary);
+  --studio-surface: var(--kc-surface);
+  --studio-surface-alt: var(--kc-surface-alt);
+  --studio-surface-strong: var(--kc-surface-strong);
+  --studio-border: var(--kc-border);
+  --studio-border-strong: var(--kc-border-strong);
+  --studio-text: var(--kc-ink);
+  --studio-muted: var(--kc-ink-muted);
+  --studio-soft: var(--kc-ink-soft);
+  --studio-pill-bg: var(--kc-pill-bg);
+  --studio-pill-text: var(--ifm-color-primary-dark);
+  --studio-input-bg: var(--kc-surface);
+  --studio-input-text: var(--kc-ink);
+  --studio-input-placeholder: rgba(46, 38, 32, 0.4);
+  --studio-toolbar-bg: var(--kc-surface-strong);
+  --studio-toolbar-button-bg: linear-gradient(180deg, var(--kc-surface), var(--kc-surface-alt));
+  --studio-toolbar-button-text: var(--kc-ink);
+  --studio-preview-bg: linear-gradient(180deg, #fff8f4, #f7f0e8);
+  --studio-modal-backdrop: rgba(46, 38, 32, 0.34);
+  --studio-modal-bg: linear-gradient(180deg, #fff, #f9f3ea);
   min-height: 100vh;
   padding: 2rem 1.5rem 4rem;
-  background:
+  background: var(--studio-bg);
+}
+
+:global([data-theme='dark']) .page {
+  --studio-bg:
     radial-gradient(circle at top left, rgba(228, 0, 43, 0.2), transparent 22%),
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.05), transparent 24%),
     linear-gradient(180deg, #050505 0%, #0c0807 55%, #120909 100%);
+  --studio-hero-bg:
+    linear-gradient(135deg, rgba(10, 7, 5, 0.96), rgba(51, 14, 18, 0.92)),
+    linear-gradient(120deg, rgba(228, 0, 43, 0.12), transparent);
+  --studio-hero-text: #fff8f2;
+  --studio-hero-muted: rgba(255, 248, 242, 0.82);
+  --studio-eyebrow: #ffb5be;
+  --studio-surface: rgba(18, 14, 12, 0.9);
+  --studio-surface-alt: #161110;
+  --studio-surface-strong: #120f0e;
+  --studio-border: rgba(255, 255, 255, 0.08);
+  --studio-border-strong: rgba(228, 0, 43, 0.35);
+  --studio-text: #fff5f1;
+  --studio-muted: rgba(255, 244, 238, 0.7);
+  --studio-soft: rgba(255, 244, 238, 0.58);
+  --studio-pill-bg: rgba(228, 0, 43, 0.08);
+  --studio-pill-text: #ffb5be;
+  --studio-input-bg: #171211;
+  --studio-input-text: #fff7f3;
+  --studio-input-placeholder: rgba(255, 244, 238, 0.35);
+  --studio-toolbar-bg: #120f0e;
+  --studio-toolbar-button-bg: linear-gradient(180deg, #27201e, #1b1513);
+  --studio-toolbar-button-text: #fff5f1;
+  --studio-preview-bg: linear-gradient(180deg, #fff8f4, #f7f0e8);
+  --studio-modal-backdrop: rgba(10, 7, 5, 0.56);
+  --studio-modal-bg: linear-gradient(180deg, #fff, #f9f3ea);
 }
 
 .hero {
@@ -12,10 +70,8 @@
   margin: 0 auto 1.5rem;
   padding: 2rem;
   border-radius: 28px;
-  background:
-    linear-gradient(135deg, rgba(10, 7, 5, 0.96), rgba(51, 14, 18, 0.92)),
-    linear-gradient(120deg, rgba(228, 0, 43, 0.12), transparent);
-  color: #fff8f2;
+  background: var(--studio-hero-bg);
+  color: var(--studio-hero-text);
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.7fr);
   gap: 1.5rem;
@@ -26,13 +82,13 @@
   margin: 0.5rem 0 0.75rem;
   font-size: clamp(2.7rem, 5vw, 4.5rem);
   line-height: 0.95;
-  color: #fff8f2;
+  color: var(--studio-hero-text);
 }
 
 .heroCopy p {
   max-width: 60ch;
   margin: 0;
-  color: rgba(255, 248, 242, 0.82);
+  color: var(--studio-hero-muted);
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -43,15 +99,15 @@
   font-size: 0.74rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #ffb5be;
+  color: var(--studio-eyebrow);
 }
 
 .heroBadge {
   align-self: end;
   padding: 1.25rem;
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: color-mix(in srgb, var(--studio-surface) 86%, transparent);
+  border: 1px solid var(--studio-border);
   backdrop-filter: blur(10px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
@@ -62,7 +118,7 @@
   font-size: 0.76rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #ffb5be;
+  color: var(--studio-eyebrow);
 }
 
 .heroBadge strong {
@@ -73,8 +129,8 @@
 .templateStrip,
 .panel {
   border-radius: 24px;
-  background: rgba(18, 14, 12, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--studio-surface);
+  border: 1px solid var(--studio-border);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
 
@@ -96,13 +152,13 @@
 .panelHeader h2 {
   margin: 0;
   font-size: 1.15rem;
-  color: #fff5f1;
+  color: var(--studio-text);
 }
 
 .templateStripHeader p {
   margin: 0;
   max-width: 58ch;
-  color: rgba(255, 244, 238, 0.7);
+  color: var(--studio-muted);
   font-size: 0.92rem;
   line-height: 1.6;
 }
@@ -116,8 +172,8 @@
 .templateCard {
   padding: 1rem;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(180deg, #161110, #201614);
+  border: 1px solid var(--studio-border);
+  background: linear-gradient(180deg, var(--studio-surface-alt), var(--studio-surface-strong));
   text-align: left;
   cursor: pointer;
   transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
@@ -126,20 +182,20 @@
 .templateCard:hover,
 .templateCardActive {
   transform: translateY(-2px);
-  border-color: rgba(228, 0, 43, 0.35);
+  border-color: var(--studio-border-strong);
   box-shadow: 0 18px 32px rgba(228, 0, 43, 0.12);
 }
 
 .templateCardLabel {
   display: block;
   font-weight: 800;
-  color: #fff5f1;
+  color: var(--studio-text);
 }
 
 .templateCardMeta {
   display: block;
   margin-top: 0.25rem;
-  color: rgba(255, 244, 238, 0.62);
+  color: var(--studio-muted);
   font-size: 0.86rem;
 }
 
@@ -173,8 +229,8 @@
 .panelPill {
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
-  background: rgba(228, 0, 43, 0.08);
-  color: #b30022;
+  background: var(--studio-pill-bg);
+  color: var(--studio-pill-text);
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -193,24 +249,24 @@
 
 .field span {
   font-weight: 700;
-  color: #fff5f1;
+  color: var(--studio-text);
 }
 
 .field input,
 .field textarea {
   width: 100%;
-  border: 1px solid rgba(112, 90, 72, 0.16);
-  background: #171211;
+  border: 1px solid var(--studio-border);
+  background: var(--studio-input-bg);
   border-radius: 14px;
   padding: 0.85rem 0.95rem;
   font: inherit;
-  color: #fff7f3;
+  color: var(--studio-input-text);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.02);
 }
 
 .field input::placeholder,
 .field textarea::placeholder {
-  color: rgba(255, 244, 238, 0.35);
+  color: var(--studio-input-placeholder);
 }
 
 .field textarea {
@@ -226,7 +282,7 @@
 }
 
 .field small {
-  color: rgba(255, 244, 238, 0.58);
+  color: var(--studio-soft);
   font-size: 0.82rem;
   line-height: 1.5;
 }
@@ -238,8 +294,8 @@
   margin-bottom: 1rem;
   padding: 0.8rem;
   border-radius: 18px;
-  background: #120f0e;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--studio-toolbar-bg);
+  border: 1px solid var(--studio-border);
 }
 
 .toolbarGroup {
@@ -247,7 +303,7 @@
   gap: 0.35rem;
   padding-right: 0.55rem;
   margin-right: 0.15rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid var(--studio-border);
 }
 
 .toolbarGroup:last-child {
