@@ -115,7 +115,7 @@ const TEMPLATES = {
 
 const COPY = {
   'en-US': {
-    title: 'Contribute to the Knowledge Center',
+    title: 'Contribute to Atlas Wiki',
     subtitle:
       'Turn your process, guide, or operating insight into a publish-ready article with a familiar writing surface and a guided submission flow.',
     metadata: 'Article Setup',
@@ -134,7 +134,7 @@ const COPY = {
       team: 'Team / Function',
       summary: 'Summary',
       audience: 'Intended Audience',
-      location: 'Suggested Knowledge Center Location',
+      location: 'Suggested Atlas Wiki Location',
       videoLinks: 'Video Links',
       notes: 'Notes to Reviewer',
     },
@@ -169,7 +169,7 @@ const COPY = {
     previewShow: 'Show Preview',
     previewHide: 'Hide Preview',
     hiddenPreviewHint: 'Preview is hidden so you can focus on writing. Open it anytime to check the final rendering.',
-    heroEyebrow: 'Knowledge Center Publishing Studio',
+    heroEyebrow: 'Atlas Wiki Publishing Studio',
     heroFlow: 'Draft → Preview → Download → Email',
     structuredStarter: 'Structured starter',
     required: 'Required',
@@ -180,7 +180,7 @@ const COPY = {
     emailNone: 'None provided',
   },
   'ja-JP': {
-    title: 'Knowledge Center に寄稿する',
+    title: 'Atlas Wiki に寄稿する',
     subtitle:
       '親しみやすい編集画面で記事を作成し、プレビュー確認後に Markdown とメールで公開依頼を送信できます。',
     metadata: '記事設定',
@@ -205,7 +205,7 @@ const COPY = {
     },
     fieldHelp: {
       location:
-        'この内容を配置したい Knowledge Center のページまたはセクション URL を入力してください。',
+        'この内容を配置したい Atlas Wiki のページまたはセクション URL を入力してください。',
       videoLinks: '録画やデモを参照する場合は、1 行に 1 件ずつ URL を入力してください。',
     },
     readinessItems: {
@@ -234,7 +234,7 @@ const COPY = {
     previewShow: 'プレビューを表示',
     previewHide: 'プレビューを閉じる',
     hiddenPreviewHint: '執筆に集中できるよう、プレビューは閉じています。必要なときに開いて最終表示を確認してください。',
-    heroEyebrow: 'Knowledge Center Publishing Studio',
+    heroEyebrow: 'Atlas Wiki Publishing Studio',
     heroFlow: '下書き → プレビュー → ダウンロード → メール',
     structuredStarter: '構成済みのテンプレート',
     required: '必須',
@@ -1156,7 +1156,7 @@ export default function ContributePage() {
       `Team / Function: ${meta.team}`,
       `Summary: ${meta.summary}`,
       `Intended Audience: ${meta.audience}`,
-      `Suggested Knowledge Center Location: ${meta.location}`,
+      `Suggested Atlas Wiki Location: ${meta.location}`,
       '',
       'Video Links:',
       meta.videoLinks || copy.emailNone,

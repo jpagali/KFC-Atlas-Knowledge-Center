@@ -1,24 +1,24 @@
 [
   {
     "locale": "ja-JP",
-    "title": "ナレッジセンターについて",
+    "title": "Atlas Wiki について",
     "headings": [
-      "Knowledge Center とは何か",
-      "Knowledge Center の作成者",
+      "Atlas Wiki とは何か",
+      "Atlas Wiki の作成者",
       "なぜ作っているのか",
       "誰のためのものか",
-      "Knowledge Center が目指すこと",
+      "Atlas Wiki が目指すこと",
       "主な機能",
       "設計の考え方",
       "長期的な役割",
       "ひとことで言うと"
     ],
-    "summary": "ナレッジセンターについて",
+    "summary": "Atlas Wiki について",
     "section": "about-knowledge-center.md",
     "url": "/ja-JP/docs/about-knowledge-center/",
-    "normalizedTitle": "ナレッジセンターについて",
-    "normalizedHeadings": "knowledge center とは何か knowledge center の作成者 なぜ作っているのか 誰のためのものか knowledge center が目指すこと 主な機能 設計の考え方 長期的な役割 ひとことで言うと",
-    "normalizedSummary": "ナレッジセンターについて",
+    "normalizedTitle": "atlas wiki について",
+    "normalizedHeadings": "atlas wiki とは何か atlas wiki の作成者 なぜ作っているのか 誰のためのものか atlas wiki が目指すこと 主な機能 設計の考え方 長期的な役割 ひとことで言うと",
+    "normalizedSummary": "atlas wiki について",
     "normalizedSection": "about knowledge center md"
   },
   {

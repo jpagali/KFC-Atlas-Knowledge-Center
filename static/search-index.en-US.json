@@ -1,24 +1,24 @@
 [
   {
     "locale": "en-US",
-    "title": "About the Knowledge Center",
+    "title": "About Atlas Wiki",
     "headings": [
-      "What Is the Knowledge Center",
-      "Who Created the Knowledge Center",
+      "What Is Atlas Wiki",
+      "Who Created Atlas Wiki",
       "Why We Are Building It",
       "Who It Aims To Cater To",
-      "What the Knowledge Center Aims To Do",
+      "What Atlas Wiki Aims To Do",
       "Core Features",
       "Design Principles",
       "Long Term Role",
       "In One Sentence"
     ],
-    "summary": "About the Knowledge Center",
+    "summary": "About Atlas Wiki",
     "section": "about-knowledge-center.md",
     "url": "/docs/about-knowledge-center/",
-    "normalizedTitle": "about the knowledge center",
-    "normalizedHeadings": "what is the knowledge center who created the knowledge center why we are building it who it aims to cater to what the knowledge center aims to do core features design principles long term role in one sentence",
-    "normalizedSummary": "about the knowledge center",
+    "normalizedTitle": "about atlas wiki",
+    "normalizedHeadings": "what is atlas wiki who created atlas wiki why we are building it who it aims to cater to what atlas wiki aims to do core features design principles long term role in one sentence",
+    "normalizedSummary": "about atlas wiki",
     "normalizedSection": "about knowledge center md"
   },
   {

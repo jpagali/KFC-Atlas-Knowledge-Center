@@ -8,8 +8,8 @@ import styles from './index.module.css';
 
 const HOME_CONTENT = {
   'en-US': {
-    description: 'KFC Atlas Platform Knowledge Center',
-    badge: 'Atlas Platform · Knowledge Center',
+    description: 'KFC Atlas Platform Wiki',
+    badge: 'Atlas Platform · Wiki',
     titleLead: 'The secret recipe for',
     titleAccent: 'running the platform.',
     summary:
@@ -75,8 +75,8 @@ const HOME_CONTENT = {
     ],
   },
   'ja-JP': {
-    description: 'KFC Atlas Platform Knowledge Center',
-    badge: 'Atlas Platform ・ Knowledge Center',
+    description: 'KFC Atlas Platform Wiki',
+    badge: 'Atlas Platform ・ Wiki',
     titleLead: 'プラットフォーム運用に必要な',
     titleAccent: 'すべてを、ひとつに。',
     summary:

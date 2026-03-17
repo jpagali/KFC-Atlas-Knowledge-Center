@@ -10,7 +10,7 @@ const buildUpdatedDate = new Intl.DateTimeFormat('en-US', {
 }).format(new Date());
 
 const config = {
-  title: 'KFC Atlas Knowledge Center',
+  title: 'KFC Atlas Wiki',
   tagline: 'Everything you need to operate the KFC Atlas Platform.',
   customFields: {
     ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
@@ -70,14 +70,14 @@ const config = {
 
       announcementBar: {
         id: 'welcome',
-        content: '👋 Welcome to the KFC Atlas Knowledge Center — your guide to operating the platform.',
+        content: '👋 Welcome to the KFC Atlas Wiki — your guide to operating the platform.',
         backgroundColor: '#13100C',
         textColor: '#ffffff',
         isCloseable: true,
       },
 
       navbar: {
-        title: 'Atlas Knowledge Center',
+        title: 'Atlas Wiki',
         style: 'dark',
         logo: {
           alt: 'KFC Atlas Logo',
@@ -106,6 +106,12 @@ const config = {
             to: '/whats-new',
             position: 'left',
             label: "What's New",
+          },
+          {
+            to: '/rna-sneak-peek',
+            position: 'left',
+            label: 'RNA Sneak Peek',
+            className: 'navbar__cta navbar__cta--sneak-peek',
           },
           {
             type: 'custom-search',
@@ -168,7 +174,7 @@ const config = {
           {
             title: 'About',
             items: [
-              { label: 'About the Knowledge Center', to: '/docs/about-knowledge-center' },
+              { label: 'About Atlas Wiki', to: '/docs/about-knowledge-center' },
               { label: 'Changelog', to: '/docs/release-notes' },
             ],
           },

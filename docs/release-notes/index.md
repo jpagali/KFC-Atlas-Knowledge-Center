@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Changelog
 
-This section is the living changelog for the Atlas Knowledge Center.
+This section is the living changelog for the Atlas Wiki.
 
 It keeps a simple, human-readable record of what changed, when it changed, and what those updates mean in practice.
 
