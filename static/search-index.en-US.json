@@ -2110,6 +2110,24 @@
   },
   {
     "locale": "en-US",
+    "title": "Deployment Runbook",
+    "headings": [
+      "Default Rule",
+      "Standard Workflow",
+      "Promotion Rules",
+      "Release Notes",
+      "Quick Checklist"
+    ],
+    "summary": "Deployment Runbook",
+    "section": "deployment-runbook.md",
+    "url": "/docs/deployment-runbook/",
+    "normalizedTitle": "deployment runbook",
+    "normalizedHeadings": "default rule standard workflow promotion rules release notes quick checklist",
+    "normalizedSummary": "deployment runbook",
+    "normalizedSection": "deployment runbook md"
+  },
+  {
+    "locale": "en-US",
     "title": "\"Guide: Bundles & Deals\"",
     "headings": [
       "Where You See It in the Front End",

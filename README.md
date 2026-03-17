@@ -78,7 +78,14 @@ Then publish the generated `build` output to GitHub Pages.
 
 ## Release Flow
 
-1. Push changes to `staging` for review/testing.
-2. Merge `staging` into `main`.
-3. Push `main`.
-4. GitHub Actions deploys the site to GitHub Pages automatically.
+Default promotion order:
+
+1. Land the change on `staging` first.
+2. Run verification there:
+   `npm run build`, local preview if needed, and any cloud-stability checks.
+3. Once `staging` looks good, promote the same change to `main`.
+4. Update release notes as part of the `main` promotion unless the change needs a staging-only note.
+5. Push `main`.
+6. GitHub Actions deploys the site to GitHub Pages automatically.
+
+See [docs/deployment-runbook.md](docs/deployment-runbook.md) for the detailed staging-first workflow.
