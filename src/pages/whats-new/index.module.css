@@ -4,7 +4,7 @@
   background:
     radial-gradient(circle at top left, rgba(228, 0, 43, 0.22), transparent 24%),
     radial-gradient(circle at top right, rgba(210, 165, 92, 0.1), transparent 24%),
-    linear-gradient(180deg, var(--kc-canvas) 0%, var(--kc-surface-strong) 55%, var(--kc-canvas) 100%);
+    linear-gradient(180deg, var(--kc-canvas) 0%, var(--kc-canvas) 100%);
 }
 
 .shell {

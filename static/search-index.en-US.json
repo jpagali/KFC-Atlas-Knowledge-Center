@@ -4206,6 +4206,24 @@
   },
   {
     "locale": "en-US",
+    "title": "Release 2026.03.20",
+    "headings": [
+      "Highlights",
+      "What Changed",
+      "System Architecture Diagram",
+      "Embedded Explorer Sizing",
+      "In Plain English"
+    ],
+    "summary": "Release 2026.03.20",
+    "section": "release-notes",
+    "url": "/docs/release-notes/2026-03-20/",
+    "normalizedTitle": "release 2026 03 20",
+    "normalizedHeadings": "highlights what changed system architecture diagram embedded explorer sizing in plain english",
+    "normalizedSummary": "release 2026 03 20",
+    "normalizedSection": "release notes"
+  },
+  {
+    "locale": "en-US",
     "title": "Changelog",
     "headings": [
       "Recent Releases"

@@ -447,8 +447,8 @@
   </style>
 </head>
 <body>
-  <h1>Byte Commerce — System Architecture</h1>
-  <p class="subtitle">Hover any system block for a readable explainer. Click <strong>Pin this note</strong> to keep it open in the sticky layout while you explore, then use <strong>Close</strong> when you are done.</p>
+  <h1 id="pageTitle">Byte Commerce — System Architecture</h1>
+  <p id="pageSubtitle" class="subtitle">Hover any system block for a readable explainer. Click <strong>Pin this note</strong> to keep it open in the sticky layout while you explore, then use <strong>Close</strong> when you are done.</p>
 
   <div class="diagram-wrap">
     <aside id="infoPop" class="info-pop" aria-live="polite">
@@ -461,19 +461,19 @@
       <p id="infoSummary" class="info-summary">Web and mobile front-end where the customer browses, configures, and checks out.</p>
       <div class="info-grid">
         <div class="info-block">
-          <strong>Owns</strong>
+          <strong id="labelOwns">Owns</strong>
           <p id="infoOwns">Customer-facing presentation and intent capture.</p>
         </div>
         <div class="info-block">
-          <strong>Consumes</strong>
+          <strong id="labelConsumes">Consumes</strong>
           <p id="infoConsumes">Identity, menu, pricing, promo, payment, and fulfilment data from downstream services.</p>
         </div>
         <div class="info-block">
-          <strong>Sends / triggers</strong>
+          <strong id="labelOutputs">Sends / triggers</strong>
           <p id="infoOutputs">Cart actions, checkout actions, payment intent, and order tracking requests.</p>
         </div>
         <div class="info-block">
-          <strong>Why it matters</strong>
+          <strong id="labelWhy">Why it matters</strong>
           <p id="infoWhy">This is the surface users blame first, even when the real issue is deeper in the stack.</p>
         </div>
       </div>
@@ -667,12 +667,13 @@
     <div class="legend-item"><div class="legend-dot" style="background:#78350f; border: 1.5px dashed #fbbf24;"></div> Cross-cutting (Context &amp; Pricing)</div>
   </div>
 
-  <p class="footer-note">Source style based on the scratch architecture diagram. Interaction model: hover to preview, pin to keep open, close to release.</p>
+  <p id="footerNote" class="footer-note">Source style based on the scratch architecture diagram. Interaction model: hover to preview, pin to keep open, close to release.</p>
 
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
       const initialTheme = params.get("theme");
+      const initialLocale = params.get("locale");
       if (initialTheme === "dark" || initialTheme === "light") {
         document.documentElement.setAttribute("data-theme", initialTheme);
       }
@@ -692,12 +693,434 @@
         why: document.getElementById("infoWhy"),
         meta: document.getElementById("infoMeta")
       };
+      const uiLabels = {
+        pageTitle: document.getElementById("pageTitle"),
+        pageSubtitle: document.getElementById("pageSubtitle"),
+        labelOwns: document.getElementById("labelOwns"),
+        labelConsumes: document.getElementById("labelConsumes"),
+        labelOutputs: document.getElementById("labelOutputs"),
+        labelWhy: document.getElementById("labelWhy"),
+        pinBtn: document.getElementById("pinBtn"),
+        closeBtn: document.getElementById("closeBtn"),
+        footerNote: document.getElementById("footerNote")
+      };
+      const layerLabels = Array.from(document.querySelectorAll(".layer-label"));
+      const legendItems = Array.from(document.querySelectorAll(".legend-item"));
 
       const boxes = Array.from(document.querySelectorAll(".box"));
       let activeBox = null;
       let pinnedBox = null;
       let popupHover = false;
       let lastReportedHeight = 0;
+      let currentLocale = initialLocale === "ja-JP" ? "ja-JP" : "en-US";
+
+      const localeCopy = {
+        "en-US": {
+          pageTitle: "Byte Commerce — System Architecture",
+          pageSubtitle:
+            'Hover any system block for a readable explainer. Click <strong>Pin this note</strong> to keep it open in the sticky layout while you explore, then use <strong>Close</strong> when you are done.',
+          labelOwns: "Owns",
+          labelConsumes: "Consumes",
+          labelOutputs: "Sends / triggers",
+          labelWhy: "Why it matters",
+          pinBtn: "Pin this note",
+          closeBtn: "Close",
+          footerNote:
+            "Source style based on the scratch architecture diagram. Interaction model: hover to preview, pin to keep open, close to release.",
+          metaPinned: "Pinned note",
+          metaHover: "Hover-based preview"
+        },
+        "ja-JP": {
+          pageTitle: "Byte Commerce - システムアーキテクチャ",
+          pageSubtitle:
+            '各システムブロックにホバーすると説明を読めます。<strong>このノートを固定</strong> をクリックすると、探索中も固定レイアウトで開いたままにできます。終了したら <strong>閉じる</strong> を使ってください。',
+          labelOwns: "担うこと",
+          labelConsumes: "受け取るもの",
+          labelOutputs: "送信 / 発火するもの",
+          labelWhy: "重要な理由",
+          pinBtn: "このノートを固定",
+          closeBtn: "閉じる",
+          footerNote:
+            "表示スタイルは scratch 側のアーキテクチャ図をベースにしています。操作モデルは、ホバーでプレビュー、固定で保持、閉じるで解除です。",
+          metaPinned: "固定中のノート",
+          metaHover: "ホバープレビュー"
+        }
+      };
+
+      const boxTranslations = {
+        "Helium App": {
+          "ja-JP": {
+            layer: "フロントエンド",
+            title: "Helium アプリ",
+            sub: "Web / モバイル フロントエンド · ローカライズ · メニュー PLP / PDP · カート · チェックアウト · デリバリー / 受取 · ゲストチェックアウト · カード / バウチャー / 混合決済 · プロモ · ロイヤルティ導線 · 寄付 / チップ · 注文追跡",
+            summary: "顧客向けの Web / モバイル フロントエンドで、閲覧やチェックアウトの意図を各サービス呼び出しへ変換します。",
+            owns: "UI 描画、ローカライズ表示、カート操作、チェックアウト導線、支払い手段選択、ロイヤルティ導線、寄付、注文追跡 UI。",
+            consumes: "認証状態、コンテキストセッション、メニュー投影、価格、プロモーション適用可否、決済結果、フルフィルメント状態。",
+            outputs: "カート追加、チェックアウト要求、決済意図の引き渡し、プロモーション操作、注文追跡参照。",
+            why: "顧客が最初に触れる面ですが、価格、決済確定、注文状態の真実源ではありません。"
+          }
+        },
+        "Identity / SSO Service": {
+          "ja-JP": {
+            layer: "認証",
+            title: "Identity / SSO サービス",
+            sub: "メール / OTP · Google · Apple Sign-In · セッション管理 · 認証 · プロフィール",
+            summary: "顧客認証を行い、セッションライフサイクルとプロフィールに紐づくアクセスを管理します。",
+            owns: "メール / OTP サインイン、ソーシャルログイン、セッション管理、プロフィール単位の ID 管理。",
+            consumes: "認証情報、トークン交換、アカウント復旧リクエスト。",
+            outputs: "認証済み顧客状態を Helium と下流サービスへ返します。",
+            why: "サインイン UI は Helium に見えますが、認証の真実源は通常ここにあります。"
+          }
+        },
+        "CMP / Legal CMS": {
+          "ja-JP": {
+            layer: "認証",
+            title: "CMP / Legal CMS",
+            sub: "同意画面 · プライバシー文書 · 署名済み文書バージョン · ロケール別管理",
+            summary: "ポリシー文言、同意コンテンツ、署名済み文書バージョンを市場 / ロケール単位で保持します。",
+            owns: "同意記録、プライバシー文書のバージョン、ロケール対応の法務文言公開。",
+            consumes: "Legal チームによる更新と公開フロー。",
+            outputs: "同意 UI と法務コンテンツを Helium へ返します。",
+            why: "同意やプライバシー画面の内容が誤っている場合、原因はフロント実装ではなくここにあることが多いです。"
+          }
+        },
+        "Context Service": {
+          "ja-JP": {
+            layer: "ローカライズ",
+            title: "Context サービス",
+            sub: "市場 / ロケール選択 · デリバリー / 受取モード · コンテキストセッション · チャネル / 店舗 / オケージョン解決",
+            summary: "市場、ロケール、店舗、チャネル、オケージョンを決める購買コンテキストを構築します。",
+            owns: "市場 / ロケールのセッション状態と、他機能が参照する注文モードコンテキスト。",
+            consumes: "顧客選択、端末デフォルト、ルーティング情報。",
+            outputs: "解決済みコンテキストをメニュー投影、価格、適用可否サービスへ渡します。",
+            why: "ここで誤ったコンテキストを解決すると、下流システムが正しく動いていても全体が壊れて見えます。"
+          }
+        },
+        "Geo / Locator": {
+          "ja-JP": {
+            layer: "ローカライズ",
+            title: "Geo / Locator",
+            sub: "配達範囲確認 · 最寄り店舗判定 · Maps / GeoIP · 店舗検索",
+            summary: "顧客位置に対してどの店舗や配達エリアが有効かを判断します。",
+            owns: "配達範囲判定、最寄り店舗検索、地図判断。",
+            consumes: "住所入力、端末位置、地理データ。",
+            outputs: "利用可能な店舗とフルフィルメント候補を Context と Helium に返します。",
+            why: "店舗や受取方式の問題は、カートやチェックアウトより前にここから始まることがあります。"
+          }
+        },
+        "Menu Service": {
+          "ja-JP": {
+            layer: "カタログ",
+            title: "Menu サービス",
+            sub: "PLP カテゴリ / 商品フィード · PDP 商品詳細 / モディファイア · 市場 / メニューグラフ · Menu Projection",
+            summary: "市場に応じた商品カタログと商品詳細構造を提供します。",
+            owns: "カテゴリ / 商品フィード、モディファイア、有効メニュー投影入力。",
+            consumes: "公開済みメニュー、店舗 / チャネルコンテキスト、メニュー割当設定。",
+            outputs: "PLP、PDP、モディファイア情報を Helium とバックエンドへ返します。",
+            why: "メニュー不具合は Helium ではなく、ここが原因であることが多いです。"
+          }
+        },
+        "CMS / CDN": {
+          "ja-JP": {
+            layer: "カタログ",
+            title: "CMS / CDN",
+            sub: "PDP リッチコンテンツ · 画像 · 法務文言 · ブランドアセット · CDN 配信",
+            summary: "メニューや法務体験を補完するリッチコンテンツやブランド資産を配信します。",
+            owns: "画像、リッチコンテンツ、法務文言断片、CDN 配信アセット。",
+            consumes: "ブランド / コンテンツ / Legal チームの公開フロー。",
+            outputs: "メディアや作成済みコンテンツをフロントエンドへ返します。",
+            why: "画像やリッチコンテンツが古い場合、原因は商品フィードよりここにあることが多いです。"
+          }
+        },
+        "Cart Service": {
+          "ja-JP": {
+            layer: "コマースバックエンド",
+            title: "Cart サービス",
+            sub: "カート作成 / 更新 / 取得 · 商品操作 · 価格リクエスト · 注文可否判定 · 競合解決 · カート永続化",
+            summary: "チェックアウトで注文になる前のカート状態と商品単位の操作を管理します。",
+            owns: "カートの作成、更新、取得、永続化、および注文可否判定と価格確認。",
+            consumes: "Helium の操作、コンテキスト、メニューデータ、価格入力。",
+            outputs: "更新済みカート状態をチェックアウトとフロントエンドへ返します。",
+            why: "カート追加や更新が壊れたとき、顧客が最初に影響を感じるバックエンドです。"
+          }
+        },
+        "Checkout Orchestrator": {
+          "ja-JP": {
+            layer: "コマースバックエンド",
+            title: "Checkout Orchestrator",
+            sub: "カート検証 · 価格ロック · 決済ドメイン調整 · 内部注文レコード作成 · カートから注文への橋渡し",
+            summary: "カートの世界から注文の世界へ橋渡しをし、最終取引経路を調整します。",
+            owns: "カート検証、価格ロック、決済調整、注文生成への引き渡し。",
+            consumes: "検証済みカート、顧客情報、フルフィルメント選択、支払い入力。",
+            outputs: "注文作成要求と決済 / フルフィルメントのオーケストレーションイベント。",
+            why: "閲覧意図が商取引として確定する境界線です。"
+          }
+        },
+        "Order Service": {
+          "ja-JP": {
+            layer: "コマースバックエンド",
+            title: "Order サービス",
+            sub: "注文永続化 · 注文ライフサイクル管理（created → confirmed → cancelled） · デジタル注文の真実源",
+            summary: "注文レコードを作成し、注文確定後のライフサイクルを管理します。",
+            owns: "注文の永続化と created / confirmed / cancelled などの状態管理。",
+            consumes: "チェックアウト確定ペイロード、決済結果、フルフィルメントイベント。",
+            outputs: "サポート、履歴、下流連携が参照する正式な注文状態。",
+            why: "システム間で注文状態が食い違うとき、まずここが記録の真実源になります。"
+          }
+        },
+        "Order Query / History": {
+          "ja-JP": {
+            layer: "コマースバックエンド",
+            title: "Order Query / 履歴",
+            sub: "読取最適化ビュー · 顧客注文履歴 · 注文詳細参照 · 論理リードモデル",
+            summary: "顧客やサポート向けに最適化された注文参照ビューを提供します。",
+            owns: "顧客履歴、注文詳細参照、リードモデル向け注文ビュー。",
+            consumes: "注文ライフサイクル更新と永続化済み注文データ。",
+            outputs: "履歴画面やサポート導線向けの高速な注文参照。",
+            why: "トランザクション書込み経路を圧迫せずに履歴体験を高速化します。"
+          }
+        },
+        "Context Resolver": {
+          "ja-JP": {
+            layer: "コマース横断",
+            title: "Context Resolver",
+            sub: "販売チャネル、店舗、ロケール、オケージョンを解決 · メニュー投影、価格、適用可否ルールへ供給",
+            summary: "価格、メニュー投影、適用可否ロジックに必要なコンテキストを正規化します。",
+            owns: "販売チャネル、店舗、ロケール、オケージョンのバックエンド向け解決。",
+            consumes: "ローカライズや注文導線からのコンテキストシグナル。",
+            outputs: "メニュー、価格、プロモーション判定に共通入力を渡します。",
+            why: "ここで誤った店舗やチャネルを解決すると、多くのシステムが同時にずれます。"
+          }
+        },
+        "Pricing & Tax Engine": {
+          "ja-JP": {
+            layer: "コマース横断",
+            title: "Pricing & Tax Engine",
+            sub: "明細 / カート単位の価格計算 · 割引 · 手数料 · 税計算 · チェックアウト時の価格ロック",
+            summary: "明細単位とカート単位の合計を計算し、チェックアウト時の最終金額を固定します。",
+            owns: "割引、手数料、税、最終価格計算。",
+            consumes: "メニューデータ、コンテキスト、市場ルール、プロモーション効果。",
+            outputs: "カート向け価格応答とチェックアウト向けロック済み合計。",
+            why: "見た目上の価格バグの多くは、フロントではなくここや設定に原因があります。"
+          }
+        },
+        "PSP / Payment Gateway": {
+          "ja-JP": {
+            layer: "決済",
+            title: "PSP / Payment Gateway",
+            sub: "カード決済意図と売上確定 · Payment API · 認証と精算調整",
+            summary: "支払い手段選択の裏で実際の決済レールを処理します。",
+            owns: "カード取引の Payment API、認証、売上確定、精算調整。",
+            consumes: "チェックアウト / 決済ドメインからの payment intent とルーティング要求。",
+            outputs: "認証と売上確定結果を注文経路へ返します。",
+            why: "顧客の選択は Helium 上ですが、実際の取引はここで行われます。"
+          }
+        },
+        "Voucher & Gift Card Service": {
+          "ja-JP": {
+            layer: "決済",
+            title: "Voucher & Gift Card サービス",
+            sub: "バウチャー利用 · GC 残高 · 混合決済サポート · 返金",
+            summary: "バウチャー利用、ギフトカード残高、混合決済を支えます。",
+            owns: "バウチャー利用、残高確認、混合決済、関連返金ロジック。",
+            consumes: "支払い手段選択とバウチャー / ギフトカード識別子。",
+            outputs: "利用結果と残高影響をチェックアウトへ返します。",
+            why: "カード以外の複雑さをフロントの主導線から切り離します。"
+          }
+        },
+        "Promo Engine": {
+          "ja-JP": {
+            layer: "プロモーション",
+            title: "Promo Engine",
+            sub: "プロモ適用可否と露出 · プロモ適用 / 解除 · 特典評価 · ルール実行",
+            summary: "オファーが適用されるかを判定し、価格に反映する特典を計算します。",
+            owns: "適用可否ロジック、プロモ適用 / 解除、特典評価。",
+            consumes: "カート、顧客、市場、プログラムルール。",
+            outputs: "フロント表示とバックエンド合計へ影響するプロモ結果。",
+            why: "オファー欠落や無効化は、Helium ではなくここやルール設定が原因のことが多いです。"
+          }
+        },
+        "Loyalty Service / CRM": {
+          "ja-JP": {
+            layer: "プロモーション",
+            title: "Loyalty Service / CRM",
+            sub: "ロイヤルティ登録 · プロモ / 特典プログラム保持 · 顧客設定 · 離脱 / エンゲージメント施策",
+            summary: "ロイヤルティ登録、特典状態、設定情報、キャンペーン用顧客データを管理します。",
+            owns: "ロイヤルティ導線、特典状態、設定記録、キャンペーン連動属性。",
+            consumes: "顧客 ID、エンゲージメントシグナル、プログラム設定。",
+            outputs: "特典、設定状態、キャンペーン文脈を Helium とプロモ導線へ返します。",
+            why: "UI 上で見えるロイヤルティ情報の真実源は通常ここにあります。"
+          }
+        },
+        "POS": {
+          "ja-JP": {
+            layer: "フルフィルメント",
+            title: "POS",
+            sub: "店内 POS · 注文投入 · POS Order API · BCOM への注文状態イベント",
+            summary: "デジタル注文を店舗内で受け取り、注文状態をバックエンドへ返します。",
+            owns: "対応 POS 連携フロー向けの店舗側注文取り込み。",
+            consumes: "Commerce Backend からの確定済みデジタル注文。",
+            outputs: "POS 側の注文状態と受領結果を BCOM へ返します。",
+            why: "デジタル注文が店舗業務へ変わる運用上の受け渡し地点です。"
+          }
+        },
+        "KDS": {
+          "ja-JP": {
+            layer: "フルフィルメント",
+            title: "KDS",
+            sub: "Kitchen Display System · KDS Order Event ストリーム · フルフィルメント状態更新",
+            summary: "注文受領後のキッチン側進行と状態変化を駆動します。",
+            owns: "キッチン作業状態と調理進捗イベント。",
+            consumes: "店舗システムからの運用注文ペイロード。",
+            outputs: "accepted、in-progress、ready などの状態更新。",
+            why: "店舗内の進行が顧客向け追跡表示へつながる地点です。"
+          }
+        },
+        "Aggregator Gateways": {
+          "ja-JP": {
+            layer: "フルフィルメント",
+            title: "Aggregator Gateways",
+            sub: "サードパーティ配達アグリゲーター · 外部チャネル連携 · Aggregator Order API · 状態中継",
+            summary: "外部配達マーケットプレイスとチャネル別統合経路を表します。",
+            owns: "外部注文チャネル連携と状態中継。",
+            consumes: "アグリゲーター注文ペイロードと状態イベント。",
+            outputs: "正規化された注文トラフィックと状態をバックエンドへ渡します。",
+            why: "マーケットプレイス注文は、一次チャネルの Helium 注文とは別経路を通ります。"
+          }
+        },
+        "Order Tracking": {
+          "ja-JP": {
+            layer: "フルフィルメント",
+            title: "Order Tracking",
+            sub: "配達注文状態取得 · リアルタイム追跡表示 · Helium が参照する状態イベント",
+            summary: "フルフィルメントと配達状態に基づき、顧客向け注文進捗を返します。",
+            owns: "顧客向け追跡体験で使う配達 / フルフィルメント状態取得。",
+            consumes: "運用システムからの注文 / フルフィルメントイベント。",
+            outputs: "Helium に表示される追跡更新。",
+            why: "チェックアウト後でも、追跡品質は顧客信頼に大きく影響します。"
+          }
+        },
+        "Telemetry & Logging": {
+          "ja-JP": {
+            layer: "可観測性",
+            title: "Telemetry & Logging",
+            sub: "メトリクス · トレース · 構造化エラーログ · Correlation ID · KPI",
+            summary: "システム健全性を検知、調査、計測するための運用シグナルを集めます。",
+            owns: "メトリクス、トレース、エラーログ、correlation ID、ヘルスシグナル。",
+            consumes: "Helium と各バックエンドサービスからのイベントと計測。",
+            outputs: "障害対応と調査のための運用可視性。",
+            why: "この層がなければ、なぜ失敗したか、どこで遅延しているかを説明できません。"
+          }
+        },
+        "Data / Analytics": {
+          "ja-JP": {
+            layer: "可観測性",
+            title: "Data / Analytics",
+            sub: "RUM · APM · テレメトリエベント · ファネル / 転換 KPI · ヘルスエンドポイント",
+            summary: "分析用イベント解析、転換レポート、体験監視を提供します。",
+            owns: "RUM、APM、テレメトリモデリング、ファネル KPI レポート。",
+            consumes: "フロント / バックエンド導線からの運用イベントと行動イベント。",
+            outputs: "ビジネス / プロダクト洞察と体験監視。",
+            why: "プラットフォームを“動いている”状態から“理解されている”状態へ進める層です。"
+          }
+        }
+      };
+
+      function applyLocale(locale) {
+        currentLocale = locale === "ja-JP" ? "ja-JP" : "en-US";
+        const copy = localeCopy[currentLocale];
+        uiLabels.pageTitle.textContent = copy.pageTitle;
+        uiLabels.pageSubtitle.innerHTML = copy.pageSubtitle;
+        uiLabels.labelOwns.textContent = copy.labelOwns;
+        uiLabels.labelConsumes.textContent = copy.labelConsumes;
+        uiLabels.labelOutputs.textContent = copy.labelOutputs;
+        uiLabels.labelWhy.textContent = copy.labelWhy;
+        uiLabels.pinBtn.textContent = copy.pinBtn;
+        uiLabels.closeBtn.textContent = copy.closeBtn;
+        uiLabels.footerNote.textContent = copy.footerNote;
+        const nextLayerLabels =
+          currentLocale === "ja-JP"
+            ? ["フロントエンド", "認証", "ローカライズ", "カタログ", "コマースバックエンド", "決済", "プロモーション", "フルフィルメント", "可観測性"]
+            : ["Frontend", "Identity", "Localisation", "Catalogue", "Commerce Backend", "Payments", "Promotions", "Fulfilment", "Observability"];
+        layerLabels.forEach((el, index) => {
+          if (nextLayerLabels[index]) el.textContent = nextLayerLabels[index];
+        });
+        const nextLegendLabels =
+          currentLocale === "ja-JP"
+            ? [
+                "フロントエンド（Helium）",
+                "認証と同意",
+                "ローカライズ",
+                "カタログ",
+                "コマースバックエンド",
+                "決済",
+                "プロモーションとロイヤルティ",
+                "フルフィルメント",
+                "可観測性",
+                "横断領域（コンテキストと価格）"
+              ]
+            : [
+                "Frontend (Helium)",
+                "Identity & Consent",
+                "Localisation",
+                "Catalogue",
+                "Commerce Backend",
+                "Payments",
+                "Promotions & Loyalty",
+                "Fulfilment",
+                "Observability",
+                "Cross-cutting (Context & Pricing)"
+              ];
+        legendItems.forEach((el, index) => {
+          const dot = el.querySelector(".legend-dot");
+          if (!dot || !nextLegendLabels[index]) return;
+          el.innerHTML = "";
+          el.appendChild(dot);
+          el.append(" " + nextLegendLabels[index]);
+        });
+
+        boxes.forEach((box) => {
+          const baseTitle = box.dataset.titleEn || box.dataset.title;
+          box.dataset.titleEn = baseTitle;
+          box.dataset.layerEn = box.dataset.layerEn || box.dataset.layer;
+          box.dataset.summaryEn = box.dataset.summaryEn || box.dataset.summary;
+          box.dataset.ownsEn = box.dataset.ownsEn || box.dataset.owns;
+          box.dataset.consumesEn = box.dataset.consumesEn || box.dataset.consumes;
+          box.dataset.outputsEn = box.dataset.outputsEn || box.dataset.outputs;
+          box.dataset.whyEn = box.dataset.whyEn || box.dataset.why;
+          const titleEl = box.querySelector(".box-title");
+          const subEl = box.querySelector(".box-sub");
+          const subEn = box.dataset.subEn || subEl?.innerHTML || "";
+          box.dataset.subEn = subEn;
+
+          const translated = boxTranslations[baseTitle]?.[currentLocale];
+          if (translated) {
+            box.dataset.layer = translated.layer;
+            box.dataset.title = translated.title;
+            box.dataset.summary = translated.summary;
+            box.dataset.owns = translated.owns;
+            box.dataset.consumes = translated.consumes;
+            box.dataset.outputs = translated.outputs;
+            box.dataset.why = translated.why;
+            if (titleEl) titleEl.textContent = translated.title;
+            if (subEl) subEl.innerHTML = translated.sub;
+          } else {
+            box.dataset.layer = box.dataset.layerEn;
+            box.dataset.title = box.dataset.titleEn;
+            box.dataset.summary = box.dataset.summaryEn;
+            box.dataset.owns = box.dataset.ownsEn;
+            box.dataset.consumes = box.dataset.consumesEn;
+            box.dataset.outputs = box.dataset.outputsEn;
+            box.dataset.why = box.dataset.whyEn;
+            if (titleEl) titleEl.textContent = box.dataset.titleEn;
+            if (subEl) subEl.innerHTML = box.dataset.subEn;
+          }
+        });
+
+        if (activeBox) {
+          updateContent(activeBox, Boolean(pinnedBox));
+        }
+      }
 
       function reportHeight() {
         const nextHeight = Math.max(
@@ -729,7 +1152,7 @@
         fields.consumes.textContent = box.dataset.consumes || "";
         fields.outputs.textContent = box.dataset.outputs || "";
         fields.why.textContent = box.dataset.why || "";
-        fields.meta.textContent = pinned ? "Pinned note" : "Hover-based preview";
+        fields.meta.textContent = pinned ? localeCopy[currentLocale].metaPinned : localeCopy[currentLocale].metaHover;
         popup.classList.toggle("pinned", pinned);
       }
 
@@ -882,9 +1305,15 @@
         if (event.data?.type === "byte-stack-architecture-theme") {
           const theme = event.data.theme === "dark" ? "dark" : "light";
           document.documentElement.setAttribute("data-theme", theme);
+          return;
+        }
+
+        if (event.data?.type === "byte-stack-architecture-locale") {
+          applyLocale(event.data.locale);
         }
       });
 
+      applyLocale(currentLocale);
       const resizeObserver = new ResizeObserver(() => {
         syncPinnedOffset();
         reportHeight();

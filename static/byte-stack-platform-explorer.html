@@ -257,15 +257,15 @@
       <div class="header">
         <div class="header-top">
           <div>
-            <span class="eyebrow">Platform Explorer</span>
-            <h1>Platform Hierarchy and System Architecture together</h1>
-            <p>
+            <span class="eyebrow" data-i18n="eyebrow">Platform Explorer</span>
+            <h1 data-i18n="title">Platform Hierarchy and System Architecture together</h1>
+            <p data-i18n="body">
               Switch between the structural hierarchy view and the runtime relationship view. Each tab shows one visual model at a time so the page stays simpler and easier to scan.
             </p>
           </div>
-          <div class="tabs" role="tablist" aria-label="Explorer views">
-            <button class="tab active" role="tab" aria-selected="true" data-view="hierarchy">Hierarchy only</button>
-            <button class="tab" role="tab" aria-selected="false" data-view="architecture">Architecture only</button>
+          <div class="tabs" role="tablist" aria-label="Explorer views" data-i18n-aria-label="tabsAria">
+            <button class="tab active" role="tab" aria-selected="true" data-view="hierarchy" data-i18n="tabHierarchy">Hierarchy only</button>
+            <button class="tab" role="tab" aria-selected="false" data-view="architecture" data-i18n="tabArchitecture">Architecture only</button>
           </div>
         </div>
       </div>
@@ -275,10 +275,10 @@
           <section id="hierarchyPanel" class="panel">
             <div class="panel-head">
               <div>
-                <strong>Platform Hierarchy</strong>
-                <span>Capability map and layered breakdown</span>
+                <strong data-i18n="hierarchyTitle">Platform Hierarchy</strong>
+                <span data-i18n="hierarchyBody">Capability map and layered breakdown</span>
               </div>
-              <span class="panel-tag">Reference view</span>
+              <span class="panel-tag" data-i18n="hierarchyTag">Reference view</span>
             </div>
             <iframe
               id="hierarchyFrame"
@@ -291,10 +291,10 @@
           <section id="architecturePanel" class="panel">
             <div class="panel-head">
               <div>
-                <strong>System Architecture</strong>
-                <span>Relationship map plus hover-based box explainer</span>
+                <strong data-i18n="architectureTitle">System Architecture</strong>
+                <span data-i18n="architectureBody">Relationship map plus hover-based box explainer</span>
               </div>
-              <span class="panel-tag">Interactive view</span>
+              <span class="panel-tag" data-i18n="architectureTag">Interactive view</span>
             </div>
             <iframe
               id="architectureFrame"
@@ -306,7 +306,7 @@
         </div>
       </div>
 
-      <div class="footer">
+      <div class="footer" data-i18n="footer">
         Hover behavior lives inside the architecture panel. Theme changes from the docs page are passed through to both inner views automatically.
       </div>
     </div>
@@ -316,6 +316,7 @@
     (function () {
       const params = new URLSearchParams(window.location.search);
       const initialTheme = params.get("theme");
+      const initialLocale = params.get("locale");
       const hierarchyFrame = document.getElementById("hierarchyFrame");
       const architectureFrame = document.getElementById("architectureFrame");
       const hierarchyPanel = document.getElementById("hierarchyPanel");
@@ -323,6 +324,61 @@
       const panelGrid = document.getElementById("panelGrid");
       const tabs = Array.from(document.querySelectorAll(".tab"));
       let lastReportedHeight = 0;
+      let currentLocale = initialLocale === "ja-JP" ? "ja-JP" : "en-US";
+
+      const copy = {
+        "en-US": {
+          eyebrow: "Platform Explorer",
+          title: "Platform Hierarchy and System Architecture together",
+          body:
+            "Switch between the structural hierarchy view and the runtime relationship view. Each tab shows one visual model at a time so the page stays simpler and easier to scan.",
+          tabsAria: "Explorer views",
+          tabHierarchy: "Hierarchy only",
+          tabArchitecture: "Architecture only",
+          hierarchyTitle: "Platform Hierarchy",
+          hierarchyBody: "Capability map and layered breakdown",
+          hierarchyTag: "Reference view",
+          architectureTitle: "System Architecture",
+          architectureBody: "Relationship map plus hover-based box explainer",
+          architectureTag: "Interactive view",
+          footer:
+            "Hover behavior lives inside the architecture panel. Theme changes from the docs page are passed through to both inner views automatically."
+        },
+        "ja-JP": {
+          eyebrow: "プラットフォームエクスプローラー",
+          title: "プラットフォーム階層とシステムアーキテクチャをまとめて確認",
+          body:
+            "構造的な階層ビューと、実行時の関係性を示すビューを切り替えられます。各タブでは 1 つの視覚モデルだけを表示し、ページ全体を見やすく保ちます。",
+          tabsAria: "エクスプローラービュー",
+          tabHierarchy: "階層のみ",
+          tabArchitecture: "アーキテクチャのみ",
+          hierarchyTitle: "プラットフォーム階層",
+          hierarchyBody: "機能マップとレイヤー構造の整理",
+          hierarchyTag: "参照ビュー",
+          architectureTitle: "システムアーキテクチャ",
+          architectureBody: "関係図とホバー式ボックス説明",
+          architectureTag: "インタラクティブビュー",
+          footer:
+            "ホバー操作はアーキテクチャパネル内で動作します。ドキュメントページ側のテーマ変更は、両方の内部ビューへ自動的に渡されます。"
+        }
+      };
+
+      function applyLocale(locale) {
+        currentLocale = locale === "ja-JP" ? "ja-JP" : "en-US";
+        const localeCopy = copy[currentLocale];
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (localeCopy[key]) {
+            el.textContent = localeCopy[key];
+          }
+        });
+        document.querySelectorAll("[data-i18n-aria-label]").forEach((el) => {
+          const key = el.getAttribute("data-i18n-aria-label");
+          if (localeCopy[key]) {
+            el.setAttribute("aria-label", localeCopy[key]);
+          }
+        });
+      }
 
       function setFrameHeight(frame, height) {
         if (!frame || !height) {
@@ -366,6 +422,7 @@
         [hierarchyFrame, architectureFrame].forEach((frame) => {
           const url = new URL(frame.src, window.location.origin);
           url.searchParams.set("theme", nextTheme);
+          url.searchParams.set("locale", currentLocale);
           if (frame.contentWindow) {
             frame.contentWindow.postMessage(
               {
@@ -385,6 +442,13 @@
           {
             type: frame.id === "hierarchyFrame" ? "byte-stack-hierarchy-theme" : "byte-stack-architecture-theme",
             theme: getTheme()
+          },
+          window.location.origin
+        );
+        frame.contentWindow?.postMessage(
+          {
+            type: frame.id === "hierarchyFrame" ? "byte-stack-hierarchy-locale" : "byte-stack-architecture-locale",
+            locale: currentLocale
           },
           window.location.origin
         );
@@ -417,6 +481,7 @@
       if (initialTheme === "dark" || initialTheme === "light") {
         document.documentElement.setAttribute("data-theme", initialTheme);
       }
+      applyLocale(currentLocale);
 
       window.addEventListener("message", (event) => {
         if (event.origin !== window.location.origin) {

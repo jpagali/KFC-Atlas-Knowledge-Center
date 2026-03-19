@@ -11,6 +11,14 @@
     "message": "🖥️ フロントエンドガイド",
     "description": "Navbar item with label 🖥️ Front-end Guide"
   },
+  "item.label.Byte Capabilities": {
+    "message": "Byte 機能",
+    "description": "Navbar item with label Byte Capabilities"
+  },
+  "item.label.Byte Portal Guide": {
+    "message": "Byte Portal ガイド",
+    "description": "Navbar item with label Byte Portal Guide"
+  },
   "item.label.Admin Portal (KFC)": {
     "message": "Admin Portal（KFC）",
     "description": "Navbar item with label Admin Portal (KFC)"

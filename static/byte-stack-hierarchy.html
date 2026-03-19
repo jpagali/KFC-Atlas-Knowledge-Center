@@ -1225,20 +1225,33 @@ function updateThemeIcon(dark) {
 
 const params = new URLSearchParams(window.location.search);
 const requestedTheme = params.get('theme');
+const requestedLocale = params.get('locale');
+const localeBtn   = document.getElementById('localeToggle');
+const localeLabel = document.getElementById('localeLabel');
 if (requestedTheme === 'light' || requestedTheme === 'dark') {
   applyTheme(requestedTheme);
+}
+if (requestedLocale === 'ja-JP') {
+  html.dataset.locale = 'ja';
+  localeLabel.textContent = 'English';
+  applyLocale('ja');
 }
 
 window.addEventListener('message', (event) => {
   if (event.origin !== window.location.origin) return;
-  if (event.data?.type !== 'byte-stack-hierarchy-theme') return;
-  applyTheme(event.data.theme);
+  if (event.data?.type === 'byte-stack-hierarchy-theme') {
+    applyTheme(event.data.theme);
+    return;
+  }
+  if (event.data?.type === 'byte-stack-hierarchy-locale') {
+    const nextLocale = event.data.locale === 'ja-JP' ? 'ja' : 'en';
+    html.dataset.locale = nextLocale;
+    localeLabel.textContent = nextLocale === 'ja' ? 'English' : '日本語';
+    applyLocale(nextLocale);
+  }
 });
 
 /* ── Locale toggle ─────────────────────────────── */
-const localeBtn   = document.getElementById('localeToggle');
-const localeLabel = document.getElementById('localeLabel');
-
 localeBtn.addEventListener('click', () => {
   const isJa = html.dataset.locale === 'ja';
   const next  = isJa ? 'en' : 'ja';

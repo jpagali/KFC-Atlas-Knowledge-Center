@@ -58,7 +58,7 @@
   --kc-table-head-bg: #2c201b;
   --kc-table-head-text: #fff8f2;
   --kc-table-row-even: #faf6f0;
-  --kc-footer-bg: #efe7de;
+  --kc-footer-bg: var(--kc-canvas);
   --kc-footer-link: #6b5b4e;
   --kc-footer-copy: #8a7869;
   --kc-search-dropdown-bg: rgba(255, 252, 248, 0.98);
@@ -102,7 +102,7 @@
   --kc-table-head-bg: #120f0d;
   --kc-table-head-text: #fff8f2;
   --kc-table-row-even: rgba(255, 255, 255, 0.02);
-  --kc-footer-bg: #120e0c;
+  --kc-footer-bg: var(--kc-canvas);
   --kc-footer-link: rgba(255, 247, 240, 0.64);
   --kc-footer-copy: rgba(255, 247, 240, 0.38);
   --kc-search-dropdown-bg: rgba(28, 22, 19, 0.98);
@@ -123,6 +123,11 @@
 body {
   background: var(--kc-canvas);
   color: var(--kc-ink);
+}
+
+.main-wrapper,
+.theme-layout-main {
+  background: var(--kc-canvas);
 }
 
 /* ── NAVBAR ── */
@@ -278,11 +283,11 @@ div[class*='announcementBarClose'] {
   background: var(--kc-sidebar-bg);
 }
 
-[data-theme='dark'] .theme-doc-markdown,
-[data-theme='dark'] .theme-doc-markdown > *,
-[data-theme='dark'] .docMainContainer,
-[data-theme='dark'] .docItemContainer,
-[data-theme='dark'] .tabs-container {
+.theme-doc-markdown,
+.theme-doc-markdown > *,
+.docMainContainer,
+.docItemContainer,
+.tabs-container {
   background-color: transparent;
 }
 

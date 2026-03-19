@@ -4,8 +4,12 @@
     "description": "The title of the footer links column with title=🖥️ Front-end Guide in the footer"
   },
   "link.title.⚙️ Admin Portal Guide": {
-    "message": "⚙️ Admin Portal Guide",
+    "message": "⚙️ Admin Portal ガイド",
     "description": "The title of the footer links column with title=⚙️ Admin Portal Guide in the footer"
+  },
+  "link.title.🧩 Byte Capabilities": {
+    "message": "🧩 Byte 機能",
+    "description": "The title of the footer links column with title=🧩 Byte Capabilities in the footer"
   },
   "link.title.📋 Playbooks": {
     "message": "📋 プレイブック",
@@ -102,6 +106,30 @@
   "link.item.label.Changelog": {
     "message": "変更履歴",
     "description": "The label of footer link with label=Changelog linking to /docs/release-notes"
+  },
+  "link.item.label.Start Here": {
+    "message": "はじめに",
+    "description": "The label of footer link with label=Start Here linking to /docs/byte-capabilities/"
+  },
+  "link.item.label.Mental Model": {
+    "message": "全体像",
+    "description": "The label of footer link with label=Mental Model linking to /docs/byte-capabilities/mental-model"
+  },
+  "link.item.label.Domains": {
+    "message": "ドメイン",
+    "description": "The label of footer link with label=Domains linking to /docs/byte-capabilities/domains/identity"
+  },
+  "link.item.label.Reality Check": {
+    "message": "現実チェック",
+    "description": "The label of footer link with label=Reality Check linking to /docs/byte-capabilities/enablement/reality-check"
+  },
+  "link.item.label.Market Launch Checklist": {
+    "message": "市場ローンチチェックリスト",
+    "description": "The label of footer link with label=Market Launch Checklist linking to /docs/byte-capabilities/enablement/market-launch-checklist"
+  },
+  "link.item.label.Glossary": {
+    "message": "用語集",
+    "description": "The label of footer link with label=Glossary linking to /docs/byte-capabilities/reference/glossary"
   },
   "copyright": {
     "message": "© 2026 Yum! Brands. KFC Atlas Platform.",

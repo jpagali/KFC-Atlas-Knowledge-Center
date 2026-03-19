@@ -145,16 +145,16 @@ const CONTENT = {
       { value: '3', label: '明確な意図を持つ今後のテーマ' },
     ],
     roadmapTitle: 'ロードマップ概要',
-    roadmapLabel: 'Now / Next / Later',
+    roadmapLabel: '現在 / 次 / 今後',
     roadmap: [
       { title: '現在', items: ['ゲストチェックアウト OTP', 'Admin Portal 一括編集'] },
-      { title: '次', items: ['住所オートコンプリート', 'Promotion Eligibility API'] },
+      { title: '次', items: ['住所オートコンプリート', 'プロモーション適用判定 API'] },
       { title: '今後', items: ['メニューパーソナライズ', 'スマートレコメンド'] },
     ],
     featuredTitle: '注目リリース',
     featuredLabel: '高インパクト',
     featured: {
-      kicker: 'Starred launch',
+      kicker: '注目リリース',
       note: 'KFC ブランドの見せ方で、より視認性の高いローンチストーリーを表現',
       name: 'パスワードレス認証',
       body:
@@ -235,21 +235,21 @@ const CONTENT = {
     coming: [
       {
         status: 'planned',
-        statusLabel: 'Planned',
+        statusLabel: '計画済み',
         title: 'メニューパーソナライズ',
         body: '過去の注文傾向をもとに、より関連性の高いメニュー項目を表示します。',
         tags: ['成長', 'パーソナライズ'],
       },
       {
         status: 'planned',
-        statusLabel: 'In Development',
+        statusLabel: '開発中',
         title: '配達 ETA 改善',
         body: '配達時間予測をより正確にし、顧客の期待値を適切に設定します。',
         tags: ['運用', 'デリバリー'],
       },
       {
         status: 'planned',
-        statusLabel: 'Planned',
+        statusLabel: '計画済み',
         title: 'ローカライズ強化',
         body: '地域チーム向けに、より強い言語対応と市場別コントロールを提供します。',
         tags: ['市場展開', 'ローカライズ'],
@@ -257,6 +257,7 @@ const CONTENT = {
     ],
     note:
       'このページは最新情報の本番導線です。掲載内容の一部は例示を含みますが、実際のアプリ導線とローカライズ済みルーティングに接続されています。',
+    comingSoonLabel: '近日公開',
   },
 };
 
@@ -388,8 +389,8 @@ export default function WhatsNewPage() {
                       <span>{content.featured.fit}</span>
                     </div>
                   </div>
-                  <span className={styles.buttonDisabled} title="Coming soon">
-                    Coming Soon
+                  <span className={styles.buttonDisabled} title={content.comingSoonLabel ?? 'Coming Soon'}>
+                    {content.comingSoonLabel ?? 'Coming Soon'}
                   </span>
                   <div className={styles.visualStack}>
                     <div className={styles.visualCard}>
@@ -434,7 +435,9 @@ export default function WhatsNewPage() {
                       ))}
                     </div>
                     <p><strong>{content.bestForLabel}:</strong> {feature.fit}</p>
-                    <span className={styles.buttonDisabled} title="Coming soon">Coming Soon</span>
+                    <span className={styles.buttonDisabled} title={content.comingSoonLabel ?? 'Coming Soon'}>
+                      {content.comingSoonLabel ?? 'Coming Soon'}
+                    </span>
                   </article>
                 ))}
               </div>

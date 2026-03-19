@@ -169,7 +169,7 @@ const COPY = {
     previewShow: 'Show Preview',
     previewHide: 'Hide Preview',
     hiddenPreviewHint: 'Preview is hidden so you can focus on writing. Open it anytime to check the final rendering.',
-    heroEyebrow: 'Atlas Wiki Publishing Studio',
+    heroEyebrow: 'Atlas Wiki 公開スタジオ',
     heroFlow: 'Draft → Preview → Download → Email',
     structuredStarter: 'Structured starter',
     required: 'Required',

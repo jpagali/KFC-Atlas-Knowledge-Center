@@ -4,13 +4,13 @@
   padding: 32px 20px 56px;
   background:
     radial-gradient(circle at top left, rgba(228, 0, 43, 0.18), transparent 24%),
-    linear-gradient(180deg, #090806 0%, #150d0a 100%);
+    linear-gradient(180deg, var(--kc-canvas) 0%, var(--kc-canvas) 100%);
 }
 
 html[data-theme='light'] .page {
   background:
     radial-gradient(circle at top left, rgba(228, 0, 43, 0.08), transparent 24%),
-    linear-gradient(180deg, #f7f1ea 0%, #efe6de 100%);
+    linear-gradient(180deg, var(--kc-canvas) 0%, var(--kc-canvas) 100%);
 }
 
 .hero,
