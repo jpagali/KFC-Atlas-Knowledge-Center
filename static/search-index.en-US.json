@@ -2110,6 +2110,404 @@
   },
   {
     "locale": "en-US",
+    "title": "Credits",
+    "headings": [],
+    "summary": "Credits",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/credits/",
+    "normalizedTitle": "credits",
+    "normalizedHeadings": "",
+    "normalizedSummary": "credits",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Cart",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Cart",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/cart/",
+    "normalizedTitle": "cart",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "cart",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Checkout",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Checkout",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/checkout/",
+    "normalizedTitle": "checkout",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "checkout",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Content & Legal",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Content & Legal",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/content-legal/",
+    "normalizedTitle": "content legal",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "content legal",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Donations & Tips",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Donations & Tips",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/donations-tips/",
+    "normalizedTitle": "donations tips",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "donations tips",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Engagement & Messaging",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Engagement & Messaging",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/engagement/",
+    "normalizedTitle": "engagement messaging",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "engagement messaging",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Identity & Sign In",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Identity & Sign In",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/identity/",
+    "normalizedTitle": "identity sign in",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "identity sign in",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Localisation & Order Mode",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Localisation & Order Mode",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/localisation/",
+    "normalizedTitle": "localisation order mode",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "localisation order mode",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Menu Browse & PDP",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Menu Browse & PDP",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/menu/",
+    "normalizedTitle": "menu browse pdp",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "menu browse pdp",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Order Tracking & History",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Order Tracking & History",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/order-tracking/",
+    "normalizedTitle": "order tracking history",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "order tracking history",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Payments & Tenders",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Payments & Tenders",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/payments/",
+    "normalizedTitle": "payments tenders",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "payments tenders",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Portal — Admin & Configuration",
+    "headings": [
+      "Feature Table"
+    ],
+    "summary": "Portal — Admin & Configuration",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/portal-admin/",
+    "normalizedTitle": "portal admin configuration",
+    "normalizedHeadings": "feature table",
+    "normalizedSummary": "portal admin configuration",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Promotions & Loyalty",
+    "headings": [
+      "Feature Table",
+      "Technical Sources"
+    ],
+    "summary": "Promotions & Loyalty",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/domains/promotions-loyalty/",
+    "normalizedTitle": "promotions loyalty",
+    "normalizedHeadings": "feature table technical sources",
+    "normalizedSummary": "promotions loyalty",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Capability Boundaries",
+    "headings": [
+      "Ownership Table",
+      "The Core Principle"
+    ],
+    "summary": "🚫 Capability Boundaries",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/enablement/capability-boundaries/",
+    "normalizedTitle": "capability boundaries",
+    "normalizedHeadings": "ownership table the core principle",
+    "normalizedSummary": "capability boundaries",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Market Launch Checklist",
+    "headings": [
+      "How to Use This Checklist",
+      "Phase 1 — Foundation (Must be complete before any testing)",
+      "1.1 Portal Access & Users",
+      "1.2 Store Configuration",
+      "1.3 Menu",
+      "1.4 Tax Configuration",
+      "1.5 Payments / PSP",
+      "Phase 2 — Channels & Experiences (Must be complete before UAT)",
+      "2.1 Localisation",
+      "2.2 Order Modes",
+      "2.3 Identity & Accounts",
+      "2.4 Promotions",
+      "2.5 Loyalty (If market is launching with Loyalty)",
+      "2.6 Delivery Tracking (If market has real time tracking)",
+      "Phase 3 — Content & Legal (Must be complete before launch day)",
+      "3.1 CMS Content",
+      "3.2 Legal & Compliance",
+      "Phase 4 — Operations (Before go live sign off)",
+      "4.1 Feature Flags",
+      "4.2 Webhooks & Integrations (If applicable)",
+      "4.3 Refunds & Ops",
+      "4.4 Observability",
+      "Final Sign Off"
+    ],
+    "summary": "✅ Market Launch Checklist",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/enablement/market-launch-checklist/",
+    "normalizedTitle": "market launch checklist",
+    "normalizedHeadings": "how to use this checklist phase 1 foundation must be complete before any testing 1 1 portal access users 1 2 store configuration 1 3 menu 1 4 tax configuration 1 5 payments psp phase 2 channels experiences must be complete before uat 2 1 localisation 2 2 order modes 2 3 identity accounts 2 4 promotions 2 5 loyalty if market is launching with loyalty 2 6 delivery tracking if market has real time tracking phase 3 content legal must be complete before launch day 3 1 cms content 3 2 legal compliance phase 4 operations before go live sign off 4 1 feature flags 4 2 webhooks integrations if applicable 4 3 refunds ops 4 4 observability final sign off",
+    "normalizedSummary": "market launch checklist",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Reality Check",
+    "headings": [
+      "The Big Misconceptions",
+      "❌ \"Helium owns pricing\"",
+      "❌ \"We can configure the checkout flow in Helium\"",
+      "❌ \"The Portal lets us author our menu\"",
+      "❌ \"Promotions are configured in Helium\"",
+      "❌ \"Real time delivery tracking is always available\"",
+      "❌ \"Loyalty works automatically when a market goes live\"",
+      "Hidden Dependencies",
+      "Common Failure Points During Rollout",
+      "Store configuration issues",
+      "Menu not published",
+      "Promo codes not scoped correctly",
+      "PSP credentials not in vault",
+      "Locale/translation incomplete",
+      "Delivery coverage zone not configured",
+      "Loyalty not enabled for market",
+      "Where Markets Will Struggle Most"
+    ],
+    "summary": "⚠️ Reality Check — What Markets Need to Know",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/enablement/reality-check/",
+    "normalizedTitle": "reality check",
+    "normalizedHeadings": "the big misconceptions helium owns pricing we can configure the checkout flow in helium the portal lets us author our menu promotions are configured in helium real time delivery tracking is always available loyalty works automatically when a market goes live hidden dependencies common failure points during rollout store configuration issues menu not published promo codes not scoped correctly psp credentials not in vault locale translation incomplete delivery coverage zone not configured loyalty not enabled for market where markets will struggle most",
+    "normalizedSummary": "reality check what markets need to know",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Byte Capabilities",
+    "headings": [
+      "How to Use This Section",
+      "The Platform in One Paragraph",
+      "The 12 Capability Domains",
+      "What This Section Doesn't Cover"
+    ],
+    "summary": "🧩 Byte Capabilities",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/",
+    "normalizedTitle": "byte capabilities",
+    "normalizedHeadings": "how to use this section the platform in one paragraph the 12 capability domains what this section doesn t cover",
+    "normalizedSummary": "byte capabilities",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Platform Mental Model",
+    "headings": [
+      "The Three Layers",
+      "Platform Hierarchy",
+      "System Architecture Diagram"
+    ],
+    "summary": "🧠 Platform Mental Model",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/mental-model/",
+    "normalizedTitle": "platform mental model",
+    "normalizedHeadings": "the three layers platform hierarchy system architecture diagram",
+    "normalizedSummary": "platform mental model",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Platform Layers",
+    "headings": [
+      "Layer Responsibilities",
+      "What Each Layer Does in More Detail",
+      "Helium — Front End",
+      "Commerce Backend (BCOM)",
+      "Portal — Admin Control Plane",
+      "Menu Service / Byte Menu",
+      "External Services"
+    ],
+    "summary": "🌍 Platform Layers",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/platform-layers/",
+    "normalizedTitle": "platform layers",
+    "normalizedHeadings": "layer responsibilities what each layer does in more detail helium front end commerce backend bcom portal admin control plane menu service byte menu external services",
+    "normalizedSummary": "platform layers",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "API Versioning & Deprecation",
+    "headings": [
+      "Deprecation Windows by API Domain",
+      "Notes"
+    ],
+    "summary": "🔗 API Versioning & Deprecation Reference",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/reference/api-versioning/",
+    "normalizedTitle": "api versioning deprecation",
+    "normalizedHeadings": "deprecation windows by api domain notes",
+    "normalizedSummary": "api versioning deprecation reference",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Commerce Backend Reference",
+    "headings": [
+      "What It Does",
+      "BCOM Domain Overview",
+      "BCOM Key Data Contracts"
+    ],
+    "summary": "🗂 Commerce Backend — Feature Reference",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/reference/commerce-backend/",
+    "normalizedTitle": "commerce backend reference",
+    "normalizedHeadings": "what it does bcom domain overview bcom key data contracts",
+    "normalizedSummary": "commerce backend feature reference",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Glossary",
+    "headings": [],
+    "summary": "📋 Platform Glossary",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/reference/glossary/",
+    "normalizedTitle": "glossary",
+    "normalizedHeadings": "",
+    "normalizedSummary": "platform glossary",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Performance SLOs",
+    "headings": [
+      "Platform Performance Targets",
+      "Notes"
+    ],
+    "summary": "📐 Performance SLOs",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/reference/performance-slos/",
+    "normalizedTitle": "performance slos",
+    "normalizedHeadings": "platform performance targets notes",
+    "normalizedSummary": "performance slos",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
+    "title": "Feature Tag Index",
+    "headings": [
+      "Tagging Schema",
+      "Master Tag Reference"
+    ],
+    "summary": "🔎 Feature Tag Index",
+    "section": "byte-capabilities",
+    "url": "/docs/byte-capabilities/reference/tag-index/",
+    "normalizedTitle": "feature tag index",
+    "normalizedHeadings": "tagging schema master tag reference",
+    "normalizedSummary": "feature tag index",
+    "normalizedSection": "byte capabilities"
+  },
+  {
+    "locale": "en-US",
     "title": "Deployment Runbook",
     "headings": [
       "Default Rule",
@@ -3610,6 +4008,28 @@
     "normalizedTitle": "release 2026 03 17",
     "normalizedHeadings": "highlights what changed theme infrastructure atlas peek prototype global visual system atlas wiki chrome design system docs homepage and what s new contribution studio documentation readability in plain english",
     "normalizedSummary": "release 2026 03 17",
+    "normalizedSection": "release notes"
+  },
+  {
+    "locale": "en-US",
+    "title": "Release 2026.03.19",
+    "headings": [
+      "Highlights",
+      "What Changed",
+      "Atlas Peek Prototype",
+      "Sidebar Navigation",
+      "Navbar",
+      "Search",
+      "Documentation",
+      "Prototype Consolidation",
+      "In Plain English"
+    ],
+    "summary": "Release 2026.03.19",
+    "section": "release-notes",
+    "url": "/docs/release-notes/2026-03-19/",
+    "normalizedTitle": "release 2026 03 19",
+    "normalizedHeadings": "highlights what changed atlas peek prototype sidebar navigation navbar search documentation prototype consolidation in plain english",
+    "normalizedSummary": "release 2026 03 19",
     "normalizedSection": "release notes"
   },
   {

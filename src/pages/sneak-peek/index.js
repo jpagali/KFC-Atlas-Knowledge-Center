@@ -107,7 +107,7 @@ function SneakPeekContent({content, locale}) {
   }, [prototypeTheme, locale]);
 
   const prototypeSrc = useBaseUrl(
-    `/sneak-peek-prototype.html?theme=${prototypeTheme}&locale=${encodeURIComponent(locale)}`,
+    `/rna-sneak-peek-prototype.html?theme=${prototypeTheme}&locale=${encodeURIComponent(locale)}`,
   );
 
   return (
