@@ -1,6 +1,6 @@
 ---
 title: Market Launch Checklist
-description: A go/no-go checklist for market teams launching on the Atlas / Byte / Helium platform. Built from the reality layer — these are the things that actually fail if skipped.
+description: A go/no-go checklist for market teams launching on the Atlas / Byte Helium platform. Built from the reality layer — these are the things that actually fail if skipped.
 sidebar_label: Market Launch Checklist
 ---
 
@@ -18,16 +18,16 @@ Each item has a **risk level** and a **go/no-go gate**. Items marked 🔴 are ha
 
 ## Phase 1 — Foundation (Must be complete before any testing)
 
-### 1.1 Portal Access & Users
+### 1.1 Byte Portal access & Users
 
 :::danger Go / No-Go Gate
-Testing cannot begin until the team has scoped Portal access.
+Testing cannot begin until the team has scoped Byte Portal access.
 :::
 
-- [ ] Portal environment is provisioned for the market
+- [ ] Byte Portal environment is provisioned for the market
 - [ ] Market admin users invited and assigned correct roles (RBAC)
 - [ ] Scope Guard verified — users cannot access out-of-market data
-- [ ] MFA enabled for all Portal users
+- [ ] MFA enabled for all Byte Portal users
 
 ---
 
@@ -37,7 +37,7 @@ Testing cannot begin until the team has scoped Portal access.
 Customers cannot order if stores are missing or misconfigured.
 :::
 
-- [ ] All launch stores created in Portal with correct store data
+- [ ] All launch stores created in Byte Portal with correct store data
 - [ ] Trading hours entered in the **correct local timezone** (common failure point)
 - [ ] Store real-time state integrated with POS (open/paused/closed reflects live state)
 - [ ] Store groups configured with correct hierarchy — no cycles
@@ -53,7 +53,7 @@ Customers see no menu if the publication pipeline is not complete.
 
 - [ ] Menu content fully authored in **Byte Menu** (not Portal)
 - [ ] Menu version published in Byte Menu for all launch channels
-- [ ] Menu version assigned to the market in Portal
+- [ ] Menu version assigned to the market in Byte Portal
 - [ ] Menu tested: correct items, prices, and modifiers show per store/channel
 - [ ] Delivery-only and collection-only items correctly scoped by channel
 - [ ] Nutrition and allergen data authored in Byte Menu (if required by market)
@@ -68,7 +68,7 @@ Incorrect tax causes incorrect pricing at checkout — a financial and complianc
 
 - [ ] Tax profile created for market with correct rates and categories
 - [ ] Tax rules verified against local tax law with Finance sign-off
-- [ ] Tax profile assigned to market in Portal
+- [ ] Tax profile assigned to market in Byte Portal
 - [ ] End-to-end checkout test shows correct tax breakdown
 
 ---
@@ -80,8 +80,8 @@ Payments cannot process if the PSP is not configured end-to-end.
 :::
 
 - [ ] PSP contract in place for market
-- [ ] PSP credentials stored in the Vault (NOT in Portal directly)
-- [ ] PSP profile created in Portal with correct payment methods enabled
+- [ ] PSP credentials stored in the Vault (NOT in Byte Portal directly)
+- [ ] PSP profile created in Byte Portal with correct payment methods enabled
 - [ ] Routing rules configured (channel/market-specific routing)
 - [ ] Surcharge and fee policies configured (if applicable)
 - [ ] End-to-end card payment tested successfully in staging
@@ -96,7 +96,7 @@ Payments cannot process if the PSP is not configured end-to-end.
 Wrong localisation means customers see incorrect menus, prices, or text.
 :::
 
-- [ ] Market configured in Portal / Config service with correct locale
+- [ ] Market configured in Byte Portal / Config service with correct locale
 - [ ] Language/locale detection tested (geo-IP and explicit selection)
 - [ ] Translation keys complete for all UI strings — run coverage report
 - [ ] Missing translations confirmed to fall back to English correctly (not to blank fields)
@@ -111,7 +111,7 @@ Order mode is the entry point — if this fails, no order can be placed.
 
 - [ ] Collection mode tested end-to-end: store selection → menu → checkout → order placed
 - [ ] Delivery mode tested end-to-end: address entry → coverage check → menu → checkout → order placed
-- [ ] Delivery coverage zones configured in Portal / Geo service (if delivery enabled)
+- [ ] Delivery coverage zones configured in Byte Portal / Geo service (if delivery enabled)
 - [ ] Delivery mode disabled for markets not supporting delivery
 - [ ] Store state (open/closed) correctly blocks ordering from closed stores
 
@@ -133,7 +133,7 @@ Order mode is the entry point — if this fails, no order can be placed.
 Mis-scoped promos can be redeemed by the wrong market or channel.
 :::
 
-- [ ] All launch promotions configured in Portal with correct:
+- [ ] All launch promotions configured in Byte Portal with correct:
   - Market scoping (not global unless intended)
   - Channel scoping (delivery vs. collection where applicable)
   - Date range (start and end dates set)
@@ -190,7 +190,7 @@ Mis-scoped promos can be redeemed by the wrong market or channel.
 
 ### 4.1 Feature Flags
 
-- [ ] All market-specific feature flags reviewed and set correctly in Portal
+- [ ] All market-specific feature flags reviewed and set correctly in Byte Portal
 - [ ] Kill-switch flags identified for critical features
 - [ ] Flag configuration tested in staging — no unexpected features enabled or disabled
 
@@ -206,8 +206,8 @@ Mis-scoped promos can be redeemed by the wrong market or channel.
 
 ### 4.3 Refunds & Ops
 
-- [ ] Refund policy configured in Portal (caps, time limits, approver rules)
-- [ ] Ops team has Portal access to process refunds
+- [ ] Refund policy configured in Byte Portal (caps, time limits, approver rules)
+- [ ] Ops team has Byte Portal access to process refunds
 - [ ] Order search tested with correct role-based PII access
 
 ---
@@ -224,10 +224,10 @@ Mis-scoped promos can be redeemed by the wrong market or channel.
 
 | Area | Owner | Signed Off |
 |---|---|---|
-| Store & Menu configuration | Market Portal Admin | ☐ |
+| Store & Menu configuration | Market Byte Portal Admin | ☐ |
 | Tax configuration | Finance | ☐ |
 | PSP / Payments | Payments team | ☐ |
-| Promotions scoping | Marketing / Portal Admin | ☐ |
+| Promotions scoping | Marketing / Byte Portal Admin | ☐ |
 | Legal & compliance content | Legal team | ☐ |
 | Translation completeness | Localisation team | ☐ |
 | Feature flags | Product team | ☐ |

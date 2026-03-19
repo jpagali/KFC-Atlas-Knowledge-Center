@@ -68,13 +68,13 @@ sidebar_label: Tag Index
 | CMS Pages (About, FAQ, etc.) | Content | Browse | Guest + Logged-in | Medium |
 | Legal Pages (T&Cs, Privacy) | Content | Account | Guest + Logged-in | High |
 | Cookie Settings | Content | Account | Guest + Logged-in | High |
-| Users & Roles | Portal | Admin | Market-Admin | High |
-| Store Configuration | Portal | Admin | Market-Admin | High |
-| Menu Assignment & Patching | Portal | Admin | Market-Admin | High |
-| Promotions Configuration | Portal | Admin | Market-Admin | High |
-| Tax Configuration | Portal | Admin | Market-Admin | High |
-| Payments Configuration | Portal | Admin | Market-Admin | High |
-| Orders & Refunds (Ops) | Portal | Admin | Ops-Admin | High |
-| Feature Flags & Settings | Portal | Admin | Market-Admin | High |
-| Reporting & Exports | Portal | Admin | Market-Admin + Ops-Admin | Medium |
-| Audit & Observability | Portal | Admin | Market-Admin + Ops-Admin | Medium |
+| Users & Roles | Byte Portal | Admin | Market-Admin | High |
+| Store Configuration | Byte Portal | Admin | Market-Admin | High |
+| Menu Assignment & Patching | Byte Portal | Admin | Market-Admin | High |
+| Promotions Configuration | Byte Portal | Admin | Market-Admin | High |
+| Tax Configuration | Byte Portal | Admin | Market-Admin | High |
+| Payments Configuration | Byte Portal | Admin | Market-Admin | High |
+| Orders & Refunds (Ops) | Byte Portal | Admin | Ops-Admin | High |
+| Feature Flags & Settings | Byte Portal | Admin | Market-Admin | High |
+| Reporting & Exports | Byte Portal | Admin | Market-Admin + Ops-Admin | Medium |
+| Audit & Observability | Byte Portal | Admin | Market-Admin + Ops-Admin | Medium |

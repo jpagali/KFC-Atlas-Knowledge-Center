@@ -11,7 +11,7 @@ sidebar_label: Promotions & Loyalty
 **Why it matters:** Loyalty and promos are key revenue and retention levers. Every mis-rendered offer or failed redemption erodes trust. This domain spans the full customer journey — from discovery to order completion.
 
 :::caution Eligibility is always server-side
-Helium never computes promo or reward eligibility locally. All eligibility evaluation happens in the Promo Engine on the server. If an offer appears but fails at redemption, the fix is in the promo configuration in the Portal — not in Helium.
+Byte Helium never computes promo or reward eligibility locally. All eligibility evaluation happens in the Promo Engine on the server. If an offer appears but fails at redemption, the fix is in the promo configuration in Byte Portal — not in Byte Helium.
 :::
 
 ---
@@ -20,7 +20,7 @@ Helium never computes promo or reward eligibility locally. All eligibility evalu
 
 | Feature | Problem It Solves | What It Does | How It Works | Dependencies | Prerequisites | Limitations | Impacted Metrics |
 |---|---|---|---|---|---|---|---|
-| **View Localised Offers & Rewards** | Customer needs to discover what deals are available | Shows personalised offers page for the customer's market and account | Helium fetches offer feed from Promo Engine with market + user context; personalised if signed in | Promo Engine, Loyalty service | Localisation complete | Unauthenticated users see non-personalised offers; offers feed p95 ≤200ms | Offers page visits, offer click rate |
+| **View Localised Offers & Rewards** | Customer needs to discover what deals are available | Shows personalised offers page for the customer's market and account | Byte Helium fetches offer feed from Promo Engine with market + user context; personalised if signed in | Promo Engine, Loyalty service | Localisation complete | Unauthenticated users see non-personalised offers; offers feed p95 ≤200ms | Offers page visits, offer click rate |
 | **Loyalty Onboarding** | New customers don't know about the rewards programme | Introduces the loyalty programme and prompts enrolment | In-app flow guides customer to join; linked to account creation or post-order | Loyalty service | Customer signed in | Loyalty programme must be enabled for market | Loyalty enrolment rate |
 | **Sign Up for Loyalty & Rewards** | Customer wants to join the rewards programme | Enrols customer in the market's loyalty programme | Enrolment call to Loyalty service; points balance initialised | Loyalty service | Customer signed in | Cannot join without an account; programme rules vary by market | Loyalty membership rate |
 | **View Points Balance** | Loyalty member wants to know how many points they have | Displays the customer's current points balance | Loyalty service returns points balance with expiry dates | Loyalty service | Customer signed in and enrolled | Points accuracy depends on Loyalty service sync | Points engagement rate |
@@ -43,7 +43,7 @@ Helium never computes promo or reward eligibility locally. All eligibility evalu
 - **Key Interfaces / APIs:** Offers Feed (personalised), Validate/Apply Promo, Rewards Feed/Detail, Redeem Reward, Challenges Feed/Complete, Comms Prefs Get/Update
 - **Data Contracts:** Offer (id, title, eligibility, value); Reward (id, cost, expiry); Prefs (channel, status, timestamp)
 - **Source Summary:**
-  - Eligibility always server-side — Helium never computes eligibility locally
+  - Eligibility always server-side — Byte Helium never computes eligibility locally
   - Offers feed p95: ≤200ms; reward redemption p99: ≥99.8%
   - Idempotency on redemption (409 returns original token — no double-spend)
   - Expired offer (410): hidden and user notified
@@ -55,6 +55,6 @@ Helium never computes promo or reward eligibility locally. All eligibility evalu
 
 :::tip See it in the wiki
 - How customers find deals and rewards in the front-end → [Find Deals and Rewards](/docs/frontend/customer-journey/find-deals-and-rewards/)
-- Creating and managing promotions in the Portal → [Admin Portal Guide: Promotions](/docs/admin-portal-guide/promotions/) and [Store Groups](/docs/admin-portal-guide/store-groups/)
+- Creating and managing promotions in Byte Portal → [Admin Portal Guide: Promotions](/docs/admin-portal-guide/promotions/) and [Store Groups](/docs/admin-portal-guide/store-groups/)
 - Step-by-step promotion guides → [Playbooks: Promotions Setup Guide](/docs/playbooks/promotions-setup-guide) and [Promotion Recipes](/docs/playbooks/promotion-recipes/buy-1-get-1-free-bogo)
 :::

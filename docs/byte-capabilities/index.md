@@ -1,13 +1,13 @@
 ---
 title: Byte Capabilities
-description: Start here — what the KFC Atlas / Byte / Helium platform does, how it works, and what markets need to know before going live.
+description: Start here — what the KFC Atlas / Byte Helium platform does, how it works, and what markets need to know before going live.
 sidebar_label: Start Here
 ---
 
 # 🧩 Byte Capabilities
 
 > **Audience:** Market Enablement, Launch Teams, Product Managers, Cross-functional Stakeholders
-> **Purpose:** Single source of truth for what the Atlas / Byte / Helium platform does, how it's structured, and what's needed to go live.
+> **Purpose:** Single source of truth for what the Atlas / Byte Helium platform does, how it's structured, and what's needed to go live.
 
 This section lives outside the operational guides by design. The [Front-end Guide](/docs/frontend/overview) and [Admin Portal Guide](/docs/admin-portal-guide/) tell you *how to operate* the platform — Byte Capabilities tells you *what the platform is and what it can do*.
 
@@ -18,7 +18,7 @@ This section lives outside the operational guides by design. The [Front-end Guid
 | If you want to… | Go to… |
 |---|---|
 | Understand the full platform in 5 minutes | [Mental Model](/docs/byte-capabilities/mental-model) |
-| See what each layer (Helium / BCOM / Portal) does | [Platform Layers](/docs/byte-capabilities/platform-layers) |
+| See what each layer (Byte Helium / Byte Commerce Backend / Byte Portal) does | [Platform Layers](/docs/byte-capabilities/platform-layers) |
 | Find a specific feature | [Domains](/docs/byte-capabilities/domains/identity) — pick your domain |
 | Know what can and can't be done | [Capability Boundaries](/docs/byte-capabilities/enablement/capability-boundaries) |
 | Prepare for a market rollout | [Reality Check](/docs/byte-capabilities/enablement/reality-check) |
@@ -30,7 +30,7 @@ This section lives outside the operational guides by design. The [Front-end Guid
 
 ## The Platform in One Paragraph
 
-**KFC Atlas** is a global digital ordering platform with three interdependent layers. **Helium** is what customers see — the web and app front-end. The **Commerce Backend (BCOM)** is the engine that processes every order, calculating pricing, applying tax, routing payments, and injecting orders to in-store systems. The **Portal** is the admin control plane where market and ops teams configure everything: stores, menus, promotions, taxes, payments, and users.
+**KFC Atlas** is a global digital ordering platform with three interdependent layers. **Byte Helium** is what customers see — the web and app front-end. The **Commerce Backend** is the engine that processes every order, calculating pricing, applying tax, routing payments, and injecting orders to in-store systems. The **Byte Portal** is the admin control plane where market and ops teams configure everything: stores, menus, promotions, taxes, payments, and users.
 
 These three layers depend on a set of external services — Menu, Identity/SSO, PSP (payments), Loyalty/Promos, Order Tracking, CMS, and Analytics. Understanding how these layers interact is the foundation for every launch and operational decision.
 

@@ -269,6 +269,17 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Dayparts',
+              items: [
+                'admin-portal-guide/menus/dayparts-overview/index',
+                'admin-portal-guide/menus/create-a-daypart/index',
+                'admin-portal-guide/menus/customizing-dayparts-at-the-store-level/index',
+                'admin-portal-guide/menus/setting-daypart-prices-and-availability/index',
+                'admin-portal-guide/menus/setting-daypart-visibility-on-categories/index',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Categories',
               items: [
                 'admin-portal-guide/menus/create-a-category/index',
@@ -542,7 +553,8 @@ const sidebars = {
         'byte-capabilities/platform-layers',
         {
           type: 'category',
-          label: '🧩 Domains',
+          label: '🎨 Byte Helium',
+          link: { type: 'doc', id: 'byte-capabilities/domains/helium-index' },
           collapsed: false,
           items: [
             'byte-capabilities/domains/identity',
@@ -556,6 +568,23 @@ const sidebars = {
             'byte-capabilities/domains/order-tracking',
             'byte-capabilities/domains/content-legal',
             'byte-capabilities/domains/engagement',
+          ],
+        },
+        {
+          type: 'category',
+          label: '⚙️ Byte Commerce Backend',
+          link: { type: 'doc', id: 'byte-capabilities/domains/bcom-index' },
+          collapsed: false,
+          items: [
+            'byte-capabilities/reference/commerce-backend',
+          ],
+        },
+        {
+          type: 'category',
+          label: '🛠 Byte Portal',
+          link: { type: 'doc', id: 'byte-capabilities/domains/portal-index' },
+          collapsed: false,
+          items: [
             'byte-capabilities/domains/portal-admin',
           ],
         },
@@ -564,6 +593,7 @@ const sidebars = {
           label: '⚠️ Enablement',
           collapsed: false,
           items: [
+            'byte-capabilities/enablement/byte-connect',
             'byte-capabilities/enablement/reality-check',
             'byte-capabilities/enablement/capability-boundaries',
             'byte-capabilities/enablement/market-launch-checklist',
