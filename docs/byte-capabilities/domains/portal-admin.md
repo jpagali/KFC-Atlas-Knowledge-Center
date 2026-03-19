@@ -1,17 +1,17 @@
 ---
-title: Portal — Admin & Configuration
-description: What the Atlas Portal does — the full control plane for market and ops teams covering stores, menus, promotions, taxes, payments, and more.
-sidebar_label: Portal — Admin & Config
+title: Byte Portal — Admin & Configuration
+description: What Byte Portal does — the full control plane for market and ops teams covering stores, menus, promotions, taxes, payments, and more.
+sidebar_label: Byte Portal — Admin & Config
 ---
 
-# Portal — Admin & Configuration
+# Byte Portal — Admin & Configuration
 
-**What it does:** The Portal is the control plane for all markets and ops teams. It is where everything about the platform is configured — from store hours and menus to promotions, taxes, payments, and refunds.
+**What it does:** Byte Portal is the control plane for all markets and ops teams. It is where everything about the platform is configured — from store hours and menus to promotions, taxes, payments, and refunds.
 
-**Why it matters:** Without the Portal, markets cannot go live. Every feature in Helium depends on something being correctly configured in the Portal. Misconfiguration in the Portal has direct customer impact.
+**Why it matters:** Without Byte Portal, markets cannot go live. Every feature in Byte Helium depends on something being correctly configured in Byte Portal. Misconfiguration in Byte Portal has direct customer impact.
 
-:::danger The Portal does not author menus
-Menu authoring (creating items, descriptions, prices, options) happens in **Byte Menu** — a separate tool outside the Atlas platform. The Portal assigns already-published menu versions to markets and channels. It can apply patches and price overrides, but cannot create menu content from scratch.
+:::danger Byte Portal does not author menus
+Menu authoring (creating items, descriptions, prices, options) happens in **Byte Menu** — a separate tool outside the Atlas platform. Byte Portal assigns already-published menu versions to markets and channels. It can apply patches and price overrides, but cannot create menu content from scratch.
 :::
 
 ---
@@ -22,10 +22,10 @@ Menu authoring (creating items, descriptions, prices, options) happens in **Byte
 |---|---|---|---|---|---|---|---|
 | **Users & Roles (RBAC)** | Market teams need scoped access | Invites users, assigns roles, enforces scope-based access (market/group/store) | SSO + MFA for login; RBAC with policy engine; scope guard blocks out-of-scope access | Identity Provider, RBAC service, Audit store | IdP configured per market | Custom roles use approved action whitelist only; all actions audited | Access violation rate, user onboarding time |
 | **Store & Group Configuration** | Markets need to configure their restaurants | Manages store admin data, group hierarchies, trading hours, real-time state, and throttling policies | Stores linked to POS; groups define inheritance; trading hours timezone-aware; state (open/paused/closed) affects channels | POS integration, Shared Catalogues | Store data seeded | No cycles in group hierarchy; state is real-time source of truth for all channels | Store data accuracy, downtime events |
-| **Menu Assignment & Patching** | Markets need to control which menu is shown where | Assigns published menu versions to market/store/channel; applies patches and overrides | Portal consumes Byte Menu published versions; assignments with validity windows; patch templates for price/availability rules | Byte Menu service, Menu Assignment engine | Menu version published in Byte Menu | Portal does NOT author menus — that's Byte Menu. Conflicting patches are blocked. | Menu publish success rate |
+| **Menu Assignment & Patching** | Markets need to control which menu is shown where | Assigns published menu versions to market/store/channel; applies patches, dayparts, and overrides | Byte Portal consumes Byte Menu published versions; assignments with validity windows; patch templates for price/availability rules; dayparts for time-based availability and pricing | Byte Menu service, Menu Assignment engine | Menu version published in Byte Menu | Byte Portal does NOT author menus — that's Byte Menu. Conflicting patches are blocked. Daypart behavior still depends on the published menu structure supporting the target entities. | Menu publish success rate |
 | **Promotions Configuration** | Marketing teams need to create and manage offers | Creates promotions with eligibility, benefits, schedules, codes, and budgets | Promotion definition → evaluation by Commerce Backend at checkout | Commerce Backend, Promo Engine | Promotion configuration complete | Stacking conflicts resolved by policy; expired budgets auto-block new redemptions | Promotion redemption rate, budget burn rate |
 | **Tax Configuration** | Finance teams need to set correct tax rates | Defines tax profiles, categories, rates, rules, and rounding per market | Tax profiles assigned to markets; pricing engine applies at checkout | Tax engine, Pricing service | Tax profile created and assigned | Overlapping rates blocked; must align with local law | Tax accuracy, compliance audit pass rate |
-| **Payments Configuration** | Markets need to set up their payment methods | Configures PSP profiles, payment methods, routing rules, surcharge policies, and risk rules | PSP credentials stored in vault (not in Portal); routing engine uses channel/market rules | PSP, Vault, Routing engine | PSP contract in place; credentials in vault | Secrets never exposed in Portal; routing changes must not interrupt payment flows | Payment method availability, routing error rate |
+| **Payments Configuration** | Markets need to set up their payment methods | Configures PSP profiles, payment methods, routing rules, surcharge policies, and risk rules | PSP credentials stored in vault (not in Byte Portal); routing engine uses channel/market rules | PSP, Vault, Routing engine | PSP contract in place; credentials in vault | Secrets never exposed in Byte Portal; routing changes must not interrupt payment flows | Payment method availability, routing error rate |
 | **Orders & Refunds (Ops)** | Ops teams need to manage customer issues | Search orders (PII-redacted), process refunds, manage non-monetary adjustments | Order search with role-based PII access; refund validated against policy; optional multi-step approval | Orders service, PSP, Audit store | Refund policy configured | Refund caps, time limits, and approver rules set in policy; permanent deletion not allowed | Refund processing time, refund rejection rate |
 | **Localisation & Content Management** | Markets need localised content | Manages locales, translation keys, content blocks, announcements, and legal notices | Translation entries per locale; content blocks scheduled by scope; legal notices versioned | CMS, Legal CMS, CMP | Locale enabled for market | Missing translations fall back to default locale | Translation coverage, locale enablement rate |
 | **Feature Flags & Settings** | Engineering and product need controlled rollouts | Creates feature flags with targeting rules; manages system settings hierarchy | Flags evaluated at runtime by market/channel/segment; settings inherit global → environment → market | Settings service, Feature flag engine | Flag created and targeted | Bad config rollback via version history or flag kill-switch | Flag adoption rate, configuration error rate |
@@ -36,7 +36,7 @@ Menu authoring (creating items, descriptions, prices, options) happens in **Byte
 ---
 
 :::tip See it in the wiki
-The Portal features above map directly to the Admin Portal Guide:
+Byte Portal features above map directly to the Admin Portal Guide:
 
 - [Stores](/docs/admin-portal-guide/stores/) — Store & Group Configuration
 - [Menus](/docs/admin-portal-guide/menus/) and [Products](/docs/admin-portal-guide/products/) — Menu Assignment & Patching

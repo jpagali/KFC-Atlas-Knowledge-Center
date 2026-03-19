@@ -88,31 +88,31 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'frontendSidebar',
+            sidebarId: 'byteCapabilitiesSidebar',
             position: 'left',
-            label: '🖥️ Front-end Guide',
-            className: 'navbar-item--frontend',
+            label: 'Byte Capabilities',
+            className: 'navbar-item--byte-capabilities',
           },
           {
             type: 'doc',
             docId: 'admin-portal-guide/index',
             position: 'left',
-            label: 'Admin Portal (KFC)',
+            label: 'Byte Portal Guide',
             className: 'navbar-item--admin',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'frontendSidebar',
+            position: 'left',
+            label: 'Front-End Guide',
+            className: 'navbar-item--frontend',
           },
           {
             type: 'docSidebar',
             sidebarId: 'playbooksSidebar',
             position: 'left',
-            label: '📋 Playbooks',
+            label: 'Playbooks',
             className: 'navbar-item--playbooks',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'byteCapabilitiesSidebar',
-            position: 'left',
-            label: '🧩 Byte Capabilities',
-            className: 'navbar-item--byte-capabilities',
           },
           {
             to: '/whats-new',

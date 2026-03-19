@@ -100,7 +100,8 @@
 .searchWrap {
   position: relative;
   z-index: 2;
-  max-width: 720px;
+  width: min(100%, 700px);
+  max-width: 700px;
   margin: 0 auto 30px;
 }
 
@@ -163,26 +164,26 @@
 }
 
 .buttonSecondary {
-  color: var(--kc-ink);
-  background: var(--kc-surface);
-  border: 1.5px solid var(--kc-border);
-  font-weight: 600;
+  color: #fff;
+  background: #6e40c9;
+  border: 1.5px solid #6e40c9;
+  font-weight: 700;
 }
 
 .buttonSecondary:hover {
-  color: var(--kc-ink);
-  box-shadow: 0 12px 24px rgba(20, 8, 5, 0.12);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(110, 64, 201, 0.28);
 }
 
 .buttonTertiary {
-  color: var(--kc-ink);
-  background: color-mix(in srgb, var(--kc-surface) 72%, transparent);
-  border: 1px solid var(--kc-border);
+  color: #fff;
+  background: #6e40c9;
+  border: 1px solid #6e40c9;
 }
 
 .buttonTertiary:hover {
-  color: var(--kc-ink);
-  box-shadow: 0 12px 24px rgba(228, 0, 43, 0.16);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(110, 64, 201, 0.28);
 }
 
 .statsBar {

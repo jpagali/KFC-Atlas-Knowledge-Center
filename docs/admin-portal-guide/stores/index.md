@@ -7,6 +7,12 @@ sidebar_label: Stores
 
 This section covers all stores-related tasks in the Byte Commerce Admin Portal, including store setup, menu management, item visibility, and donation handling.
 
+:::note Byte POS Caveat
+Store tasks that mention **POS**, **device authentication**, or **store numbers matching POS records** assume the market is using **Byte POS**.
+
+If the market is not using Byte POS, teams should treat **Byte Connect** as part of Byte Commerce onboarding so the store integration path is **Byte Commerce -> Byte Connect -> POS**.
+:::
+
 ## Topics
 
 ### Store Setup
@@ -22,6 +28,7 @@ This section covers all stores-related tasks in the Byte Commerce Admin Portal, 
 
 - [View a Store’s Menu](/docs/admin-portal-guide/stores/view-a-stores-menu/) — See all assigned menus by channel
 - [Assign New Menu](/docs/admin-portal-guide/stores/assign-new-menu/) — Link a menu to an ordering channel
+- [Defining Dayparts](/docs/admin-portal-guide/stores/create-a-daypart/) — Create an org-level daypart that stores can inherit and override
 - [Publish a Menu](/docs/admin-portal-guide/stores/publish-a-menu/) — Publish menus across multiple stores
 - [Publish Menu](/docs/admin-portal-guide/stores/publish-menu/) — Publish from the store’s menu view
 - [Edit Patch List](/docs/admin-portal-guide/stores/edit-patch-list/) — Add, remove, or reorder menu patches
@@ -31,6 +38,7 @@ This section covers all stores-related tasks in the Byte Commerce Admin Portal, 
 ### Item & Availability Management
 
 - [Item Snooze](/docs/admin-portal-guide/stores/item-snooze/) — Temporarily remove items from the menu
+- [Customizing Dayparts at the Store-level](/docs/admin-portal-guide/menus/customizing-dayparts-at-the-store-level/) — Override org-level daypart behavior for a specific store
 
 ### Store Information & Compliance
 

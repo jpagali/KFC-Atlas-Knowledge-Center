@@ -1,6 +1,6 @@
 ---
 title: Performance SLOs
-description: Quick reference for service level objectives and performance targets across the Atlas / Byte / Helium platform.
+description: Quick reference for service level objectives and performance targets across the Atlas / Byte Helium platform.
 sidebar_label: Performance SLOs
 ---
 
@@ -25,7 +25,7 @@ sidebar_label: Performance SLOs
 | Loyalty reward redemption | Success p99 | ≥99.8% |
 | Order tracking | Availability | 99.9% |
 | In-app message feed freshness | Staleness max | ≤60 seconds |
-| Portal user/role queries | Latency p95 | ≤500ms |
+| Byte Portal user/role queries | Latency p95 | ≤500ms |
 
 ---
 

@@ -1,0 +1,112 @@
+---
+title: Platform Mental Model
+description: The hierarchy, structure, and architecture of the Byte Stack platform in plain English.
+sidebar_label: Mental Model
+---
+
+# 🧠 Platform Mental Model
+
+Understanding the platform starts with understanding the three-layer hierarchy — what each layer is responsible for, and how they relate to each other.
+
+---
+
+## The Three Layers
+
+**Byte Stack** has three major layers:
+
+- **Helium** — The customer-facing front-end (web + app). What customers see and interact with. Helium renders everything but owns very little — pricing, eligibility, and state all come from the backend.
+- **Commerce Backend (BCOM)** — The engine behind every order. Handles cart state, pricing, tax calculation, payment processing, and POS injection. Invisible to customers, critical to everything.
+- **Portal** — The admin control plane. Market and ops teams use this to configure stores, menus, promotions, taxes, payments, users, and content.
+
+These three layers connect to a set of **external services**: Menu, Identity/SSO, PSP (payments), Loyalty/Promos Engine, Order Tracking, CMS, and Analytics.
+
+---
+
+## Platform Hierarchy
+
+<iframe
+  src="/byte-stack-hierarchy.html"
+  title="Byte Stack Platform Hierarchy"
+  width="100%"
+  height="860"
+  style={{border: 'none', borderRadius: '8px', display: 'block'}}
+/>
+
+---
+
+## System Architecture Diagram
+
+This diagram shows how the three platform layers connect to each other and to external services.
+
+```mermaid
+graph TD
+    subgraph Customer["👤 Customer"]
+        U[User — Web / App]
+    end
+
+    subgraph Helium["🎨 HELIUM — Front-End"]
+        HEL_ID[Identity & Sign-In]
+        HEL_LOC[Localisation & Order Mode]
+        HEL_MENU[Menu Browse & PDP]
+        HEL_CART[Cart]
+        HEL_CHK[Checkout]
+        HEL_PAY[Payments & Tenders]
+        HEL_PROMO[Promotions & Loyalty]
+        HEL_TRACK[Order Tracking]
+        HEL_ENG[Engagement & Messaging]
+        HEL_CMS[Content & Legal]
+    end
+
+    subgraph BCOM["⚙️ COMMERCE BACKEND"]
+        BCOM_CART[Cart & Order Engine]
+        BCOM_MENU[Menu / Pricing / Tax]
+        BCOM_PAY[Payment Orchestrator]
+        BCOM_ORDER[Order Service]
+        BCOM_POS[POS/KDS Integration]
+        BCOM_AGG[Aggregator Gateway]
+    end
+
+    subgraph Portal["🛠 PORTAL — Admin"]
+        PORT_MENU[Menu Config]
+        PORT_PROMO[Promos Config]
+        PORT_TAX[Tax Config]
+        PORT_PAY[Payments Config]
+        PORT_OPS[Orders & Refunds]
+        PORT_USER[Users & Roles]
+    end
+
+    subgraph External["🌐 External Systems"]
+        EXT_ID[Identity / SSO]
+        EXT_MENU[Menu Service]
+        EXT_PSP[PSP / Vault]
+        EXT_LOYALTY[Loyalty & Promo Engine]
+        EXT_TRACKING[Order Tracking]
+        EXT_CMS[CMS / Legal CMS / CMP]
+        EXT_GEO[Geo / Store Locator]
+        EXT_POS[POS / KDS]
+        EXT_AGG[Aggregators — Uber Eats etc]
+    end
+
+    U --> Helium
+    Helium --> BCOM
+    Portal --> BCOM
+    Portal --> EXT_MENU
+
+    HEL_ID --> EXT_ID
+    HEL_MENU --> EXT_MENU
+    HEL_PROMO --> EXT_LOYALTY
+    HEL_TRACK --> EXT_TRACKING
+    HEL_CMS --> EXT_CMS
+    HEL_LOC --> EXT_GEO
+
+    BCOM_PAY --> EXT_PSP
+    BCOM_POS --> EXT_POS
+    BCOM_AGG --> EXT_AGG
+    BCOM_MENU --> EXT_MENU
+```
+
+---
+
+:::tip Read next
+See [Platform Layers](/docs/byte-capabilities/platform-layers) for a plain-English breakdown of what each layer does and what markets can configure.
+:::

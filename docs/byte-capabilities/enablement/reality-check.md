@@ -16,27 +16,27 @@ These are the assumptions teams most commonly bring into rollout — and the rea
 
 ---
 
-### ❌ "Helium owns pricing"
+### ❌ "Byte Helium owns pricing"
 
-**Reality:** Helium displays prices — it does not own, calculate, or control them. Pricing is entirely owned by the Commerce Backend and Menu Service. If prices are wrong in the app, the fix is in the backend or menu configuration — not in Helium.
-
----
-
-### ❌ "We can configure the checkout flow in Helium"
-
-**Reality:** Checkout flows (variants, steps, fees) are orchestrated by the Commerce Backend's Checkout Orchestrator. Markets define which variant to use via Portal configuration. Helium renders what the backend tells it.
+**Reality:** Byte Helium displays prices — it does not own, calculate, or control them. Pricing is entirely owned by the Commerce Backend and Menu Service. If prices are wrong in the app, the fix is in the backend or menu configuration — not in Byte Helium.
 
 ---
 
-### ❌ "The Portal lets us author our menu"
+### ❌ "We can configure the checkout flow in Byte Helium"
 
-**Reality:** The Portal assigns and patches already-published menus. Menu authoring (creating items, descriptions, prices) happens in **Byte Menu** — a separate tool outside the Atlas platform. The Portal cannot create menu content from scratch.
+**Reality:** Checkout flows (variants, steps, fees) are orchestrated by the Commerce Backend's Checkout Orchestrator. Markets define which variant to use via Byte Portal configuration. Byte Helium renders what the backend tells it.
 
 ---
 
-### ❌ "Promotions are configured in Helium"
+### ❌ "Byte Portal lets us author our menu"
 
-**Reality:** Promotion rules, eligibility, codes, and budgets are all configured in the **Portal**. Helium only renders what the Promo Engine returns. Eligibility is always computed server-side.
+**Reality:** Byte Portal assigns and patches already-published menus. Menu authoring (creating items, descriptions, prices) happens in **Byte Menu** — a separate tool outside the Atlas platform. Byte Portal cannot create menu content from scratch.
+
+---
+
+### ❌ "Promotions are configured in Byte Helium"
+
+**Reality:** Promotion rules, eligibility, codes, and budgets are all configured in the **Byte Portal**. Byte Helium only renders what the Promo Engine returns. Eligibility is always computed server-side.
 
 ---
 
@@ -65,9 +65,9 @@ These are features that silently depend on other things being in place first. If
 | Challenges & gamification | Loyalty programme enabled per market | Challenges tab doesn't appear |
 | Cookie consent | CMP configured per market | Consent banner may not comply with local law |
 | Webhook subscribers | Idempotent handling on their end | Events may be processed twice (at-least-once delivery) |
-| Refund processing | Refund policy configured in Portal | Refund requests will fail validation |
+| Refund processing | Refund policy configured in Byte Portal | Refund requests will fail validation |
 | Tip feature | Delivery mode active; PSP configured for separate capture | Tip not available to all markets |
-| Tax accuracy | Tax profile assigned to market in Portal | Orders may show incorrect tax or fail at checkout |
+| Tax accuracy | Tax profile assigned to market in Byte Portal | Orders may show incorrect tax or fail at checkout |
 
 ---
 
@@ -77,13 +77,13 @@ These are features that silently depend on other things being in place first. If
 Trading hours set in wrong timezone. Real-time store state not integrated with POS. Result: customers try to order from closed stores.
 
 ### Menu not published
-Menu version authored in Byte Menu but not assigned/published to the market in Portal. Result: customers see no menu.
+Menu version authored in Byte Menu but not assigned/published to the market in Byte Portal. Result: customers see no menu.
 
 ### Promo codes not scoped correctly
 Promos created without correct market/channel/date scoping. Result: promos visible globally when they're meant to be local.
 
 ### PSP credentials not in vault
-Portal configured but PSP secrets not placed in the secrets vault. Result: card payments fail silently.
+Byte Portal configured but PSP secrets not placed in the secrets vault. Result: card payments fail silently.
 
 ### Locale/translation incomplete
 Market launched with incomplete translation keys. Result: customers see English fallback text or empty fields.
@@ -92,7 +92,7 @@ Market launched with incomplete translation keys. Result: customers see English 
 Delivery mode enabled but no coverage zones defined for the market. Result: all delivery addresses rejected.
 
 ### Loyalty not enabled for market
-Loyalty UI visible in Helium but programme not enabled for market in Loyalty service. Result: enrolment fails.
+Loyalty UI visible in Byte Helium but programme not enabled for market in Loyalty service. Result: enrolment fails.
 
 ---
 

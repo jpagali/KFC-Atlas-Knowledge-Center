@@ -16,8 +16,8 @@ const HOME_CONTENT = {
       'Everything you need to launch, operate, and scale Atlas — from customer experience to restaurant operations.',
     heroSearchPlaceholder: 'Search guides, articles, and headings',
     heroPrimaryCta: 'Start with the Front-end Guide →',
-    heroSecondaryCta: 'Start with the Admin Portal Guide →',
-    heroPrototypeCta: 'Atlas Peek →',
+    heroSecondaryCta: 'Start with the Byte Portal Guide →',
+    heroCapabilitiesCta: 'Explore Byte Capabilities →',
     sectionEyebrow: 'Three sections',
     sectionTitle: 'Built for everyone who operates the platform',
     prototypeCardEyebrow: 'Interactive preview',
@@ -83,8 +83,8 @@ const HOME_CONTENT = {
       'KFC Atlas Platformの総合ガイドです。お客様の注文体験から、日々の店舗運営まで、日本とオーストラリアの運用情報をまとめて確認できます。',
     heroSearchPlaceholder: 'ガイド、記事、見出しを検索',
     heroPrimaryCta: 'フロントエンドガイドから始める →',
-    heroSecondaryCta: 'Admin Portal Guideから始める →',
-    heroPrototypeCta: 'Atlas Peek →',
+    heroSecondaryCta: 'Byte Portal Guideから始める →',
+    heroCapabilitiesCta: 'Byte Capabilitiesを見る →',
     sectionEyebrow: '3つのセクション',
     sectionTitle: 'プラットフォームを運用するすべての人のために設計されています',
     prototypeCardEyebrow: 'インタラクティブ プレビュー',
@@ -220,8 +220,8 @@ export default function Home() {
               <Link to="/docs/admin-portal-guide/" className={`${styles.button} ${styles.buttonSecondary}`}>
                 {content.heroSecondaryCta}
               </Link>
-              <Link to="/sneak-peek" className={`${styles.button} ${styles.buttonTertiary}`}>
-                {content.heroPrototypeCta}
+              <Link to="/docs/byte-capabilities/" className={`${styles.button} ${styles.buttonTertiary}`}>
+                {content.heroCapabilitiesCta}
               </Link>
             </div>
           </div>
