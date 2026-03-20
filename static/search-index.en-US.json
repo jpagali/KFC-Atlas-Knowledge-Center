@@ -2234,13 +2234,14 @@
     "title": "Byte Commerce Backend Capabilities",
     "headings": [
       "What Commerce Backend Owns",
-      "Key Data Contracts"
+      "Key Data Contracts",
+      "Technical Sources"
     ],
     "summary": "⚙️ Byte Commerce Backend Capabilities",
     "section": "byte-capabilities",
     "url": "/docs/byte-capabilities/domains/bcom-index/",
     "normalizedTitle": "byte commerce backend capabilities",
-    "normalizedHeadings": "what commerce backend owns key data contracts",
+    "normalizedHeadings": "what commerce backend owns key data contracts technical sources",
     "normalizedSummary": "byte commerce backend capabilities",
     "normalizedSection": "byte capabilities"
   },
@@ -2323,13 +2324,14 @@
     "locale": "en-US",
     "title": "Byte Helium Capabilities",
     "headings": [
-      "Byte Helium Capability Domains"
+      "Byte Helium Capability Domains",
+      "Technical Sources"
     ],
     "summary": "🎨 Byte Helium Capabilities",
     "section": "byte-capabilities",
     "url": "/docs/byte-capabilities/domains/helium-index/",
     "normalizedTitle": "byte helium capabilities",
-    "normalizedHeadings": "byte helium capability domains",
+    "normalizedHeadings": "byte helium capability domains technical sources",
     "normalizedSummary": "byte helium capabilities",
     "normalizedSection": "byte capabilities"
   },
@@ -2426,13 +2428,14 @@
     "locale": "en-US",
     "title": "Byte Portal Capabilities",
     "headings": [
-      "What Byte Portal Owns"
+      "What Byte Portal Owns",
+      "Technical Sources"
     ],
     "summary": "🛠 Byte Portal Capabilities",
     "section": "byte-capabilities",
     "url": "/docs/byte-capabilities/domains/portal-index/",
     "normalizedTitle": "byte portal capabilities",
-    "normalizedHeadings": "what byte portal owns",
+    "normalizedHeadings": "what byte portal owns technical sources",
     "normalizedSummary": "byte portal capabilities",
     "normalizedSection": "byte capabilities"
   },

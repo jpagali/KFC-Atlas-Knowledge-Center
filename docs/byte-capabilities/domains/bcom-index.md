@@ -54,3 +54,21 @@ These are the versioned API/event schemas that govern how Commerce Backend commu
 - Full technical reference → [Commerce Backend Reference](/docs/byte-capabilities/reference/commerce-backend)
 - Need the onboarding caveat? Start with [Byte Connect](/docs/byte-capabilities/enablement/byte-connect)
 :::
+
+---
+
+## Technical Sources
+
+<details>
+<summary>📎 Technical Source: Byte Commerce Backend Capability Overview</summary>
+
+- **FRD References:** FRD-BCOM-001, FRD-BCOM-014, FRD-BCOM-033, FRD-BCOM-057
+- **TRD Domains:** Cart, Pricing, Payments, Order Management, POS Integration, Aggregator Integration
+- **Key Interfaces / APIs:** Cart API, Pricing API, Order API, POS Order API, Aggregator Order API, Status Events
+- **Data Contracts:** Cart, order, pricing response, payment transaction, POS payload, order status event
+- **Source Summary:**
+  - Byte Commerce Backend is the transactional source of truth behind the customer journey rendered by Byte Helium
+  - It owns pricing, taxes, payment orchestration, order lifecycle, and downstream handoff into POS and aggregator channels
+  - Lower-level contract detail is maintained in the dedicated [Commerce Backend Reference](/docs/byte-capabilities/reference/commerce-backend)
+
+</details>

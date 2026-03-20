@@ -33,3 +33,21 @@ In the Atlas context, Helium renders what the backend provides. It does not own 
 :::caution What Byte Helium does not own
 Byte Helium renders but does not own: pricing (Commerce Backend), promo eligibility (Promo Engine), loyalty points (Loyalty service), payment capture (PSP), menu content (Byte Menu), legal content (Legal CMS), or store state (Byte Portal + POS). See [Capability Boundaries](/docs/byte-capabilities/enablement/capability-boundaries) for the full ownership map.
 :::
+
+---
+
+## Technical Sources
+
+<details>
+<summary>📎 Technical Source: Byte Helium Capability Overview</summary>
+
+- **FRD References:** FRD-HEL-001, FRD-HEL-011, FRD-HEL-048, FRD-HEL-072
+- **TRD Domains:** Identity, Localisation, Menu, Cart, Checkout, Payments, Loyalty, Tracking, Content
+- **Key Interfaces / APIs:** App shell, Context/Store selection, Menu, Cart, Checkout, Payment, Order Status
+- **Data Contracts:** Session context, cart, checkout session, payment intent, order summary, order status
+- **Source Summary:**
+  - Byte Helium is the customer-facing front-end foundation and orchestration surface for the KFC digital journey
+  - Backend systems remain the source of truth for pricing, eligibility, order state, and most configuration
+  - Domain-level technical details live in the linked capability pages below, each with its own source notes where needed
+
+</details>

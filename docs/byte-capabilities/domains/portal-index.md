@@ -38,3 +38,21 @@ Step-by-step guides for every Portal task → [Admin Portal Guide](/docs/admin-p
 :::caution Byte Portal does not author menus
 Menu content (items, descriptions, prices, options) is created in **Byte Menu** — a separate tool outside the Atlas platform. Byte Portal assigns already-published menu versions and can apply patches on top, but cannot create menu content from scratch.
 :::
+
+---
+
+## Technical Sources
+
+<details>
+<summary>📎 Technical Source: Byte Portal Capability Overview</summary>
+
+- **FRD References:** FRD-PORTAL-001, FRD-PORTAL-018, FRD-PORTAL-041, FRD-PORTAL-063
+- **TRD Domains:** RBAC, Store Configuration, Menu Assignment, Promotions, Tax, Payments, Reporting, Audit
+- **Key Interfaces / APIs:** Admin UI, RBAC policy engine, configuration services, export jobs, audit events
+- **Data Contracts:** User role scope, store config, menu assignment, promotion config, tax profile, payment profile, audit record
+- **Source Summary:**
+  - Byte Portal is the configuration and operational control plane that determines how the market runs on Atlas
+  - It does not process customer transactions directly, but its settings materially shape what Byte Helium and Commerce Backend do at runtime
+  - Step-by-step operator workflows remain in the [Admin Portal Guide](/docs/admin-portal-guide/)
+
+</details>
