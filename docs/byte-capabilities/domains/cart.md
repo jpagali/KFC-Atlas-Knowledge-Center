@@ -29,7 +29,7 @@ sidebar_label: Cart
 <details>
 <summary>📎 Technical Source: Add Item to Cart / Apply Promo</summary>
 
-- **FRD References:** FRD-HEL-011, FRD-HEL-048
+- **FRD References:** [FRD-HEL-011](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-011), [FRD-HEL-048](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-048)
 - **TRD Domain:** Cart
 - **Key Interfaces / APIs:** Add/Update/Remove Line (App → Cart), Apply/Remove Promo (App → Cart)
 - **Data Contracts:** Cart (id, lines[], totals, benefits[]) — idempotent ops

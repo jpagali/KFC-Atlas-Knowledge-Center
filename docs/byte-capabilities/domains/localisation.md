@@ -29,7 +29,7 @@ sidebar_label: Localisation & Order Mode
 <details>
 <summary>📎 Technical Source: Start Localisation</summary>
 
-- **FRD References:** FRD-HEL-005, FRD-HEL-082
+- **FRD References:** [FRD-HEL-005](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-005), [FRD-HEL-082](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-082)
 - **TRD Domain:** Localisation & Order Mode
 - **Key Interfaces / APIs:** Locale Config, Geo Resolve Market, Set Fulfilment Mode
 - **Data Contracts:** Context (market, language, mode, storeId — signed context IDs)
@@ -45,7 +45,7 @@ sidebar_label: Localisation & Order Mode
 <details>
 <summary>📎 Technical Source: Set Order Mode — Delivery</summary>
 
-- **FRD References:** FRD-HEL-007
+- **FRD References:** [FRD-HEL-007](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-007)
 - **TRD Domain:** Localisation & Order Mode
 - **Key Interfaces / APIs:** Set Fulfilment Mode, Coverage Check, Address Validate
 - **Data Contracts:** Context (mode=delivery, storeId, coverageZoneId)

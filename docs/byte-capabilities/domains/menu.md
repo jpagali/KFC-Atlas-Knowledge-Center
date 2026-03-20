@@ -34,7 +34,7 @@ Byte Helium renders the menu it receives from the Menu Service. Prices, item des
 <details>
 <summary>📎 Technical Source: View Localised Menu (PLP)</summary>
 
-- **FRD References:** FRD-HEL-008
+- **FRD References:** [FRD-HEL-008](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-008)
 - **TRD Domain:** Menu Browse & PDP
 - **Key Interfaces / APIs:** PLP Menu Feed (App → Menu), PDP Item Detail (App → Menu)
 - **Data Contracts:** MenuItem (id, name, price, options[] — market-specific pricing)

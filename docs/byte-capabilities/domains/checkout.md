@@ -29,7 +29,7 @@ sidebar_label: Checkout
 <details>
 <summary>📎 Technical Source: Guest Checkout / Delivery Checkout</summary>
 
-- **FRD References:** FRD-HEL-012, FRD-HEL-013, FRD-HEL-014, FRD-HEL-015
+- **FRD References:** [FRD-HEL-012](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-012), [FRD-HEL-013](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-013), [FRD-HEL-014](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-014), [FRD-HEL-015](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-015)
 - **TRD Domain:** Checkout (Core)
 - **Key Interfaces / APIs:** Start/Resume Checkout, Address Create/Validate, Fees & Taxes Quote, Submit Order
 - **Data Contracts:** CheckoutSession (id, cartRef, mode, steps); OrderIntent (totals, tenders, deliveryInfo — with idempotency keys)

@@ -41,7 +41,7 @@ Byte Helium renders but does not own: pricing (Commerce Backend), promo eligibil
 <details>
 <summary>📎 Technical Source: Byte Helium Capability Overview</summary>
 
-- **FRD References:** FRD-HEL-001, FRD-HEL-011, FRD-HEL-048, FRD-HEL-072
+- **FRD References:** [FRD-HEL-001](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-001), [FRD-HEL-011](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-011), [FRD-HEL-048](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-048), [FRD-HEL-072](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-072)
 - **TRD Domains:** Identity, Localisation, Menu, Cart, Checkout, Payments, Loyalty, Tracking, Content
 - **Key Interfaces / APIs:** App shell, Context/Store selection, Menu, Cart, Checkout, Payment, Order Status
 - **Data Contracts:** Session context, cart, checkout session, payment intent, order summary, order status

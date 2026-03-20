@@ -62,7 +62,7 @@ These are the versioned API/event schemas that govern how Commerce Backend commu
 <details>
 <summary>📎 Technical Source: Byte Commerce Backend Capability Overview</summary>
 
-- **FRD References:** FRD-BCOM-001, FRD-BCOM-014, FRD-BCOM-033, FRD-BCOM-057
+- **FRD References:** [FRD-BCOM-001](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4144136503), [FRD-BCOM-014](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4144464036), FRD-BCOM-033, FRD-BCOM-057
 - **TRD Domains:** Cart, Pricing, Payments, Order Management, POS Integration, Aggregator Integration
 - **Key Interfaces / APIs:** Cart API, Pricing API, Order API, POS Order API, Aggregator Order API, Status Events
 - **Data Contracts:** Cart, order, pricing response, payment transaction, POS payload, order status event

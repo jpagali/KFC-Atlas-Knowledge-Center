@@ -4221,13 +4221,14 @@
       "Embedded Explorer Sizing",
       "Japanese Localisation",
       "Platform Explorer Localisation",
+      "Byte Capability Source Linking",
       "In Plain English"
     ],
     "summary": "Release 2026.03.20",
     "section": "release-notes",
     "url": "/docs/release-notes/2026-03-20/",
     "normalizedTitle": "release 2026 03 20",
-    "normalizedHeadings": "highlights what changed system architecture diagram embedded explorer sizing japanese localisation platform explorer localisation in plain english",
+    "normalizedHeadings": "highlights what changed system architecture diagram embedded explorer sizing japanese localisation platform explorer localisation byte capability source linking in plain english",
     "normalizedSummary": "release 2026 03 20",
     "normalizedSection": "release notes"
   },

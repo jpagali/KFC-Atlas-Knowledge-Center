@@ -34,7 +34,7 @@ Every page in this domain is managed outside Byte Helium. Legal documents are au
 <details>
 <summary>📎 Technical Source: Legal Pages / CMS / Cookie Consent</summary>
 
-- **FRD References:** FRD-HEL-070, FRD-HEL-074, FRD-HEL-075, FRD-HEL-076, FRD-HEL-071, FRD-HEL-072
+- **FRD References:** [FRD-HEL-070](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-070), [FRD-HEL-074](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-074), [FRD-HEL-075](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-075), [FRD-HEL-076](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-076), [FRD-HEL-071](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-071), [FRD-HEL-072](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-072)
 - **TRD Domain:** Content & Legal Pages
 - **Key Interfaces / APIs:** CMS Page List/Render, FAQ List/Search, Legal Docs List/Render, CMP Get/Update
 - **Data Contracts:** Page (id, title, slug, locale, contentUrl); LegalDoc (type, version, effectiveDate); Consent (category, status, ts)

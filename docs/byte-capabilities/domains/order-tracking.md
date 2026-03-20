@@ -34,7 +34,7 @@ Live GPS delivery tracking is **not automatically available** for every market. 
 <details>
 <summary>📎 Technical Source: Delivery Tracking / Order History</summary>
 
-- **FRD References:** FRD-HEL-024, FRD-HEL-025, FRD-HEL-052–056
+- **FRD References:** [FRD-HEL-024](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-024), [FRD-HEL-025](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-025), [FRD-HEL-052](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-052), [FRD-HEL-053](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-053), [FRD-HEL-054](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-054), [FRD-HEL-055](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-055), [FRD-HEL-056](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-056)
 - **TRD Domain:** Order Tracking (Delivery)
 - **Key Interfaces / APIs:** Order List (paginated), Order Detail, Delivery Events/ETA (poll/push), Receipt Render
 - **Data Contracts:** Order (id, status, items[], totals); DeliveryEvent (ts, type, eta); Receipt (url, type, amount)

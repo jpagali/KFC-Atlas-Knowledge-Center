@@ -35,7 +35,7 @@ The PSP SDK captures card details directly — no PAN (card number) ever passes 
 <details>
 <summary>📎 Technical Source: Pay with Card / Split Tender</summary>
 
-- **FRD References:** FRD-HEL-016, FRD-HEL-017, FRD-HEL-018
+- **FRD References:** [FRD-HEL-016](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-016), [FRD-HEL-017](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-017), [FRD-HEL-018](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-018)
 - **TRD Domain:** Payments & Tenders
 - **Key Interfaces / APIs:** Card Tokenise/Pay (PSP SDK), Voucher Apply/Redeem, Submit Payment Intent (Orchestrator)
 - **Data Contracts:** PaymentIntent (amount, currency, tenders[]); TenderCard (token, scheme, 3dsStatus — no PAN in logs)

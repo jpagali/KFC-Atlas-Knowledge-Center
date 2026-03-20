@@ -34,7 +34,7 @@ sidebar_label: Identity & Sign-In
 <details>
 <summary>📎 Technical Source: Create Account with Email</summary>
 
-- **FRD References:** FRD-HEL-001
+- **FRD References:** [FRD-HEL-001](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-001)
 - **TRD Domain:** Identity & Sign-In
 - **Key Interfaces / APIs:** Auth Email, OTP Verify, Session Mint
 - **Data Contracts:** Session (accessToken, refreshToken, expiry)
@@ -50,7 +50,7 @@ sidebar_label: Identity & Sign-In
 <details>
 <summary>📎 Technical Source: Sign In with Google / Apple</summary>
 
-- **FRD References:** FRD-HEL-003, FRD-HEL-004, FRD-HEL-027–030
+- **FRD References:** [FRD-HEL-003](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-003), [FRD-HEL-004](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-004), [FRD-HEL-027](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-027), [FRD-HEL-028](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-028), [FRD-HEL-029](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-029), [FRD-HEL-030](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-030)
 - **TRD Domain:** Identity & Sign-In
 - **Key Interfaces / APIs:** OAuth Google Callback, OAuth Apple Callback, Session Mint
 - **Data Contracts:** Session (accessToken, refreshToken, expiry)
@@ -66,7 +66,7 @@ sidebar_label: Identity & Sign-In
 <details>
 <summary>📎 Technical Source: Delete Account</summary>
 
-- **FRD References:** FRD-HEL-067
+- **FRD References:** [FRD-HEL-067](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-067)
 - **TRD Domain:** Identity & Sign-In + CRM + Loyalty
 - **Key Interfaces / APIs:** Account Delete Request/Status
 - **Data Contracts:** Account erasure request (userId, timestamp, status)

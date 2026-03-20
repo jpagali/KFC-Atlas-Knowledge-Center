@@ -27,7 +27,7 @@ sidebar_label: Engagement & Messaging
 <details>
 <summary>📎 Technical Source: In-App Inbox / Push Preferences</summary>
 
-- **FRD References:** FRD-HEL-051, FRD-HEL-065, FRD-HEL-066
+- **FRD References:** [FRD-HEL-051](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-051), [FRD-HEL-065](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-065), [FRD-HEL-066](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-066)
 - **TRD Domain:** Engagement & Messaging
 - **Key Interfaces / APIs:** In-App Feed (paginated), Message Acknowledge, Push Prefs Get/Update
 - **Data Contracts:** InAppMessage (id, title, body, deeplink, expiry); PushPrefs (enabled, ts, source)

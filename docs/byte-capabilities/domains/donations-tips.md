@@ -27,7 +27,7 @@ sidebar_label: Donations & Tips
 <details>
 <summary>📎 Technical Source: Add-Hope Donation / Driver Tip</summary>
 
-- **FRD References:** FRD-HEL-022, FRD-HEL-023, FRD-HEL-073
+- **FRD References:** [FRD-HEL-022](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-022), [FRD-HEL-023](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-023), [FRD-HEL-073](https://yumbrands.atlassian.net/wiki/spaces/ITBFR/pages/4123951223/ITBFR-Functional+Requirements+-+Helium#FRD-HEL-073)
 - **TRD Domain:** Donations & Tips
 - **Key Interfaces / APIs:** Donation Config/Collect, Add Tip (Bearer auth)
 - **Data Contracts:** DonationLine (amount, causeId); TipTender (amount, method)
