@@ -10,6 +10,10 @@ import ThemeSyncedIframe from '@site/src/components/ThemeSyncedIframe';
 
 このプラットフォームを理解するには、まず 3 層の階層構造を理解することが重要です。各レイヤーが何を担当し、互いにどう関係しているかを把握するところから始まります。
 
+:::note Atlas 内での対象範囲
+Atlas Wiki で **Byte 機能** と言うとき、主な対象は Atlas の **Commerce + Portal** の全体像、つまり **Byte Helium**、**Commerce Backend**、**Byte Portal**、**Byte Connect** です。このセクションでは、それらがローンチと日常のプラットフォーム理解の中でどうつながるかを説明します。
+:::
+
 ---
 
 ## 3 つのレイヤー

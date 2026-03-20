@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Front-end Overview
 
-The **KFC Atlas front-end** is the customer-facing layer of the platform — what your guests interact with when they order online, through the KFC app, or via a third-party aggregator.
+**KFC Atlas** is KFC's global front-end for digital ordering — what your guests interact with when they order online, through the KFC app, or via a third-party aggregator.
 
 This guide is for **restaurant teams and BMUs** who need to understand what the platform delivers to customers, how it behaves in each market, and what is configurable without requiring a product deployment.
 
@@ -20,7 +20,7 @@ The Atlas front-end spans three areas:
 
 ## Design System
 
-The KFC Atlas front-end is built on **Byte Helium**, Yum!'s enterprise design system — a shared set of design tokens, UI components, and style rules that ensures consistency across every market, platform, and device.
+The KFC Atlas front-end is built on **Byte Helium**, Yum!'s enterprise design system and front-end foundation. Helium provides the shared design tokens, UI components, and structural patterns; Atlas applies the KFC brand on top of that foundation so the experience feels KFC-native while still using the shared Yum! system underneath.
 
 See [Design System](/docs/frontend/design-system) for a full explanation of how the visual identity flows from Figma all the way to the screen.
 

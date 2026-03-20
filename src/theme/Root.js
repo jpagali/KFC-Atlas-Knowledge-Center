@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
-import AtlasChat from '@site/src/components/AtlasChat';
+import React, {lazy, Suspense, useEffect} from 'react';
 import AccessGate from '@site/src/components/AccessGate';
+
+const AtlasChat = lazy(() => import('@site/src/components/AtlasChat'));
 
 function ImageZoom() {
   useEffect(() => {
@@ -32,12 +33,14 @@ function ImageZoom() {
 }
 
 // Root wraps the entire app — AtlasChat appears on every page
-export default function Root({ children }) {
+export default function Root({children}) {
   return (
     <AccessGate>
       {children}
       <ImageZoom />
-      <AtlasChat />
+      <Suspense fallback={null}>
+        <AtlasChat />
+      </Suspense>
     </AccessGate>
   );
 }

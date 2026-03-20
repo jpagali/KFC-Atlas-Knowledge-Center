@@ -6,9 +6,9 @@ sidebar_label: Overview
 
 # 🎨 Byte Helium Capabilities
 
-**Byte Helium** is the customer-facing front-end — the web and app experience every KFC customer interacts with. It covers everything from sign-in and menu browsing through to checkout, payment, and post-order tracking.
+**Byte Helium** is Yum!'s enterprise design system and front-end foundation. In Atlas, KFC's global front-end is built on Helium and skinned for the KFC brand, covering everything from sign-in and menu browsing through to checkout, payment, and post-order tracking.
 
-Byte Helium renders what the backend provides. It does not own pricing, promo eligibility, order state, or content — those belong to the Commerce Backend, Promo Engine, and CMS respectively. Byte Helium's job is to present information clearly and capture customer intent reliably.
+In the Atlas context, Helium renders what the backend provides. It does not own pricing, promo eligibility, order state, or content — those belong to Byte Commerce, Promo Engine, and CMS respectively. Helium's job is to provide the front-end foundation that Atlas presents through the KFC brand and customer journey.
 
 ---
 

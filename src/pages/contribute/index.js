@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -381,14 +381,21 @@ function convertNodeToMarkdown(node, depth = 0) {
   }
 }
 
-function buildMarkdown(meta, html) {
+function parseArticleHtml(html) {
   if (typeof window === 'undefined') {
-    return '';
+    return null;
   }
 
   const parser = new window.DOMParser();
-  const doc = parser.parseFromString(`<article>${html}</article>`, 'text/html');
-  const body = Array.from(doc.body.firstChild.childNodes)
+  return parser.parseFromString(`<article>${html}</article>`, 'text/html');
+}
+
+function buildMarkdown(meta, articleDoc) {
+  if (!articleDoc?.body?.firstChild) {
+    return '';
+  }
+
+  const body = Array.from(articleDoc.body.firstChild.childNodes)
     .map((node) => convertNodeToMarkdown(node))
     .join('')
     .replace(/\n{3,}/g, '\n\n')
@@ -413,13 +420,29 @@ ${body}
 ${videos.length ? `## Video Links\n\n${videos.map((link) => `- ${link}`).join('\n')}\n\n` : ''}${meta.notes ? `## Notes to Reviewer\n\n${meta.notes.trim()}\n` : ''}`.trim();
 }
 
-function renderPreviewNodes(html, onImageStateChange) {
-  if (typeof window === 'undefined') {
-    return null;
+function collectLinkedImages(articleDoc, imageStatuses) {
+  if (!articleDoc) {
+    return [];
   }
 
-  const parser = new window.DOMParser();
-  const doc = parser.parseFromString(`<article>${html}</article>`, 'text/html');
+  const linkedImages = [];
+  articleDoc.querySelectorAll('img').forEach((img) => {
+    const src = img.getAttribute('src') || '';
+    if (!src) return;
+
+    linkedImages.push({
+      src,
+      status: imageStatuses[src] || 'pending',
+    });
+  });
+
+  return linkedImages;
+}
+
+function renderPreviewNodes(articleDoc, onImageStateChange) {
+  if (!articleDoc?.body?.firstChild) {
+    return null;
+  }
   const voidTags = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr']);
 
   const renderNode = (node, key) => {
@@ -467,7 +490,7 @@ function renderPreviewNodes(html, onImageStateChange) {
     return React.createElement(tag, {key}, children);
   };
 
-  return Array.from(doc.body.firstChild.childNodes).map((node, index) =>
+  return Array.from(articleDoc.body.firstChild.childNodes).map((node, index) =>
     renderNode(node, `preview-${index}`),
   );
 }
@@ -1077,23 +1100,12 @@ export default function ContributePage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [downloaded, setDownloaded] = useState(false);
   const [previewOpen, setPreviewOpen] = useState(false);
-
-  const linkedImages = [];
-  if (typeof window !== 'undefined') {
-    const parser = new window.DOMParser();
-    const doc = parser.parseFromString(`<article>${editorHtml}</article>`, 'text/html');
-    doc.querySelectorAll('img').forEach((img) => {
-      const src = img.getAttribute('src') || '';
-      if (src) {
-        linkedImages.push({
-          src,
-          status: imageStatuses[src] || 'pending',
-        });
-      }
-    });
-  }
-
-  const markdown = buildMarkdown(meta, editorHtml);
+  const parsedArticle = useMemo(() => parseArticleHtml(editorHtml), [editorHtml]);
+  const linkedImages = useMemo(
+    () => collectLinkedImages(parsedArticle, imageStatuses),
+    [parsedArticle, imageStatuses],
+  );
+  const markdown = useMemo(() => buildMarkdown(meta, parsedArticle), [meta, parsedArticle]);
 
   useEffect(() => {
     setDownloaded(false);
@@ -1124,7 +1136,7 @@ export default function ContributePage() {
     setImageStatuses({});
   };
 
-  const updateImageStatus = (src, loaded) => {
+  const updateImageStatus = useCallback((src, loaded) => {
     setImageStatuses((current) => {
       const nextStatus = loaded ? 'loaded' : 'error';
       if (current[src] === nextStatus) {
@@ -1136,7 +1148,11 @@ export default function ContributePage() {
         [src]: nextStatus,
       };
     });
-  };
+  }, []);
+  const previewNodes = useMemo(
+    () => renderPreviewNodes(parsedArticle, updateImageStatus),
+    [parsedArticle, updateImageStatus],
+  );
 
   const downloadMarkdown = () => {
     const blob = new Blob([markdown], {type: 'text/markdown;charset=utf-8'});
@@ -1385,7 +1401,7 @@ export default function ContributePage() {
                         <span>{meta.audience || copy.audiencePending}</span>
                       </div>
                     </header>
-                    {renderPreviewNodes(editorHtml, updateImageStatus)}
+                    {previewNodes}
                     {linkedImages.some((image) => image.status === 'error') ? (
                       <p className={styles.previewWarning}>{copy.linkedImageError}</p>
                     ) : null}

@@ -8,6 +8,10 @@ sidebar_label: プラットフォームレイヤー
 
 Atlas プラットフォームは、3 つの主要レイヤーと外部サービス群で構成されています。このページでは、各レイヤーの役割と、市場側で設定できる範囲とできない範囲をわかりやすく整理します。
 
+:::note Atlas 内での対象範囲
+Atlas Wiki における **Byte 機能** の主対象は、Atlas の **Commerce + Portal** の全体像である **Byte Helium**、**Commerce Backend**、**Byte Portal**、**Byte Connect** です。Byte Portal の詳細な操作手順は引き続き [Admin Portal ガイド](/docs/admin-portal-guide/) で扱います。
+:::
+
 :::caution 重要な原則
 Byte Helium は多くの画面を *表示* しますが、多くの内容を *所有* しているわけではありません。価格、適用可否、状態、コンテンツは主にバックエンドや外部サービス側にあります。アプリで何かが正しく見えない場合、多くはフロントエンドではなくバックエンド設定側に原因があります。
 :::

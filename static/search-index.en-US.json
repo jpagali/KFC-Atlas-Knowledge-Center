@@ -2588,8 +2588,8 @@
     "headings": [
       "Layer Responsibilities",
       "What Each Layer Does in More Detail",
-      "Byte Helium — Front End",
-      "Commerce Backend",
+      "Atlas on Byte Helium — Front End",
+      "Byte Commerce",
       "Byte Portal — Admin Control Plane",
       "Menu Service / Byte Menu",
       "External Services"
@@ -2598,7 +2598,7 @@
     "section": "byte-capabilities",
     "url": "/docs/byte-capabilities/platform-layers/",
     "normalizedTitle": "platform layers",
-    "normalizedHeadings": "layer responsibilities what each layer does in more detail byte helium front end commerce backend byte portal admin control plane menu service byte menu external services",
+    "normalizedHeadings": "layer responsibilities what each layer does in more detail atlas on byte helium front end byte commerce byte portal admin control plane menu service byte menu external services",
     "normalizedSummary": "platform layers",
     "normalizedSection": "byte capabilities"
   },
@@ -4212,13 +4212,15 @@
       "What Changed",
       "System Architecture Diagram",
       "Embedded Explorer Sizing",
+      "Japanese Localisation",
+      "Platform Explorer Localisation",
       "In Plain English"
     ],
     "summary": "Release 2026.03.20",
     "section": "release-notes",
     "url": "/docs/release-notes/2026-03-20/",
     "normalizedTitle": "release 2026 03 20",
-    "normalizedHeadings": "highlights what changed system architecture diagram embedded explorer sizing in plain english",
+    "normalizedHeadings": "highlights what changed system architecture diagram embedded explorer sizing japanese localisation platform explorer localisation in plain english",
     "normalizedSummary": "release 2026 03 20",
     "normalizedSection": "release notes"
   },

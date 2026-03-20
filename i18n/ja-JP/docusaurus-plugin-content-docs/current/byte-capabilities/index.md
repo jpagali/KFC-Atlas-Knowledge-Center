@@ -11,6 +11,10 @@ sidebar_label: はじめに
 
 このセクションは、運用ガイドとは意図的に分けてあります。[フロントエンドガイド](/docs/frontend/overview) と [Admin Portal ガイド](/docs/admin-portal-guide/) はプラットフォームの *運用方法* を説明します。一方で Byte 機能は、*プラットフォームが何であり、何ができるか* を説明します。
 
+:::note Atlas 内での対象範囲
+Atlas Wiki における **Byte 機能** は、意図的に Atlas の **Commerce + Portal** の全体像に対象を絞っています。具体的には **Byte Helium**、**Commerce Backend**、**Byte Portal**、そして非 Byte POS 連携時に重要になる **Byte Connect** です。[Admin Portal ガイド](/docs/admin-portal-guide/) は引き続き日常的な運用手順を扱います。
+:::
+
 ---
 
 ## このセクションの使い方
@@ -30,9 +34,9 @@ sidebar_label: はじめに
 
 ## プラットフォームを一段落で説明すると
 
-**KFC Atlas** は、相互に依存する 3 つのレイヤーで構成されたグローバルなデジタル注文プラットフォームです。**Byte Helium** は顧客が見る Web とアプリのフロントエンドです。**Commerce Backend** は、価格計算、税計算、決済ルーティング、店舗システムへの注文送信を担う中核エンジンです。**Byte Portal** は、各市場や運用チームが店舗、メニュー、プロモーション、税、決済、ユーザーを設定するための管理プレーンです。
+**KFC Atlas** は、顧客接点から店舗実行までを支えるグローバルなデジタル注文プラットフォームです。このセクションでは、その中核を **Byte Helium**（顧客向け Web / アプリ）、**Commerce Backend**（すべての注文を処理する中核エンジン）、**Byte Portal**（市場と運用のコントロールプレーン）、**Byte Connect**（市場 POS が Byte POS でない場合に必要なブリッジ）として扱います。
 
-これら 3 つのレイヤーは、Menu、Identity/SSO、PSP（決済）、Loyalty/Promos、Order Tracking、CMS、Analytics といった外部サービス群に依存しています。これらの連携を理解することが、あらゆるローンチ判断と日常運用の土台になります。
+このスタックは、Menu、Identity/SSO、PSP（決済）、Loyalty/Promos、Order Tracking、CMS、Analytics、そして市場ごとの POS 環境にも依存しています。Atlas におけるローンチ判断や運用判断では、Helium、Commerce Backend、Portal、Connect の連携を理解することが土台になります。
 
 ---
 
@@ -61,6 +65,7 @@ sidebar_label: はじめに
 
 このセクションは意図的に概念説明に絞っています。実際の操作手順を確認したい場合は、該当する運用ガイドを参照してください。
 
+- Byte Portal の日常運用手順 → [Admin Portal ガイド](/docs/admin-portal-guide/)
 - 店舗設定や店舗管理の手順 → [Admin Portal ガイド: Stores](/docs/admin-portal-guide/stores/)
 - プロモーションの作成と設定方法 → [Admin Portal ガイド: Promotions](/docs/admin-portal-guide/promotions/)
 - キャンペーン運用の実務フロー → [プレイブック](/docs/playbooks/onboarding)

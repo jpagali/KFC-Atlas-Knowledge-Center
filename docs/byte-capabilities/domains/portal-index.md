@@ -6,7 +6,7 @@ sidebar_label: Overview
 
 # 🛠 Byte Portal Capabilities
 
-**Byte Portal** is the admin control plane — the tool market and ops teams use to configure and operate the entire Atlas platform. Without Byte Portal, markets cannot go live. Every feature customers experience in Byte Helium depends on something being correctly configured in Byte Portal first.
+**Byte Portal** is the admin control plane paired with Byte Commerce — the tool market and ops teams use to configure and operate the Atlas platform behind the front-end. Without Byte Portal, markets cannot go live. Every feature customers experience in Atlas depends on something being correctly configured in Byte Portal first.
 
 Byte Portal does not author menus (that's Byte Menu), does not process payments (that's the PSP), and does not send push notifications (that's the push provider). It configures, assigns, and controls everything else.
 

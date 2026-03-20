@@ -3793,6 +3793,7 @@
     "title": "\"フロントエンド概要\"",
     "headings": [
       "フロントエンドで扱う内容",
+      "デザインシステム",
       "対象市場",
       "このガイドを読むべき人"
     ],
@@ -3800,7 +3801,7 @@
     "section": "frontend",
     "url": "/ja-JP/docs/frontend/overview/",
     "normalizedTitle": "フロントエンド概要",
-    "normalizedHeadings": "フロントエンドで扱う内容 対象市場 このガイドを読むべき人",
+    "normalizedHeadings": "フロントエンドで扱う内容 デザインシステム 対象市場 このガイドを読むべき人",
     "normalizedSummary": "フロントエンド概要",
     "normalizedSection": "frontend"
   },
@@ -4208,13 +4209,15 @@
       "変更内容",
       "システムアーキテクチャ図",
       "埋め込みエクスプローラーのサイズ調整",
+      "日本語ローカライズ",
+      "プラットフォームエクスプローラーのローカライズ",
       "ひとことで言うと"
     ],
     "summary": "リリース 2026.03.20",
     "section": "release-notes",
     "url": "/ja-JP/docs/release-notes/2026-03-20/",
     "normalizedTitle": "リリース 2026 03 20",
-    "normalizedHeadings": "ハイライト 変更内容 システムアーキテクチャ図 埋め込みエクスプローラーのサイズ調整 ひとことで言うと",
+    "normalizedHeadings": "ハイライト 変更内容 システムアーキテクチャ図 埋め込みエクスプローラーのサイズ調整 日本語ローカライズ プラットフォームエクスプローラーのローカライズ ひとことで言うと",
     "normalizedSummary": "リリース 2026 03 20",
     "normalizedSection": "release notes"
   },

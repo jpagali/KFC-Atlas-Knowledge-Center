@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useDeferredValue, useEffect, useMemo, useRef, useState} from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -6,6 +6,33 @@ import clsx from 'clsx';
 import {normalizeText} from '@site/src/utils/searchNormalization.mjs';
 
 const MAX_RESULTS = 8;
+const searchIndexCache = new Map();
+const searchIndexRequests = new Map();
+
+function getCachedSearchIndex(searchIndexUrl) {
+  if (searchIndexCache.has(searchIndexUrl)) {
+    return Promise.resolve(searchIndexCache.get(searchIndexUrl));
+  }
+
+  if (!searchIndexRequests.has(searchIndexUrl)) {
+    const request = fetch(searchIndexUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        const records = Array.isArray(data) ? data : [];
+        searchIndexCache.set(searchIndexUrl, records);
+        searchIndexRequests.delete(searchIndexUrl);
+        return records;
+      })
+      .catch(() => {
+        searchIndexRequests.delete(searchIndexUrl);
+        return [];
+      });
+
+    searchIndexRequests.set(searchIndexUrl, request);
+  }
+
+  return searchIndexRequests.get(searchIndexUrl);
+}
 
 function scoreRecord(record, query, tokens) {
   const title = record.normalizedTitle || '';
@@ -51,12 +78,12 @@ export default function SearchBox({
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
+  const deferredQuery = useDeferredValue(query);
 
   useEffect(() => {
     let active = true;
 
-    fetch(searchIndexUrl)
-      .then((response) => response.json())
+    getCachedSearchIndex(searchIndexUrl)
       .then((data) => {
         if (active) setSearchIndex(Array.isArray(data) ? data : []);
       })
@@ -95,20 +122,24 @@ export default function SearchBox({
   };
 
   const results = useMemo(() => {
-    const normalizedQuery = normalizeText(query);
+    const normalizedQuery = normalizeText(deferredQuery);
     if (!normalizedQuery) return [];
 
     const tokens = normalizedQuery.split(' ').filter(Boolean);
+    const matches = [];
 
-    return searchIndex
-      .map((record) => ({
+    searchIndex.forEach((record) => {
+      const score = scoreRecord(record, normalizedQuery, tokens);
+      if (score <= 0) return;
+      matches.push({
         ...record,
-        score: scoreRecord(record, normalizedQuery, tokens),
-      }))
-      .filter((record) => record.score > 0)
-      .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
-      .slice(0, MAX_RESULTS);
-  }, [query, searchIndex]);
+        score,
+      });
+    });
+
+    matches.sort((a, b) => b.score - a.score || a.title.localeCompare(b.title));
+    return matches.slice(0, MAX_RESULTS);
+  }, [deferredQuery, searchIndex]);
 
   function handleSubmit(event) {
     if (event.key !== 'Enter' || results.length === 0) return;
