@@ -40,7 +40,7 @@ sidebar_label: Glossary
 | **DLQ** | Dead Letter Queue — where failed webhook events are held for review |
 | **3DS** | 3D Secure — card authentication protocol for fraud prevention |
 | **Byte** | The programme name for the overall KFC e-commerce initiative |
-| **Atlas** | KFC's global front-end for digital ordering, built on Byte Helium and powered by Byte Commerce + Byte Portal |
+| **Atlas** | KFC's global front-end for digital ordering, built on Byte Helium and powered by Byte Commerce + Byte Portal, with Byte Connect included wherever a market POS is not Byte POS |
 | **Context** | The platform's record of a customer's market, language, order mode, and store |
 | **BCOM** | Short form of Commerce Backend — see Commerce Backend |
 | **Patch** | A menu override applied on top of a published menu version — used for price or availability changes at store or group level |

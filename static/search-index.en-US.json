@@ -2455,16 +2455,19 @@
     "locale": "en-US",
     "title": "Byte Connect",
     "headings": [
+      "Atlas Context",
       "The Core Rule",
       "What Byte Connect Does",
+      "Key Capabilities",
       "What This Means for Onboarding",
+      "Operational Caveat",
       "When To Reference This"
     ],
     "summary": "Byte Connect",
     "section": "byte-capabilities",
     "url": "/docs/byte-capabilities/enablement/byte-connect/",
     "normalizedTitle": "byte connect",
-    "normalizedHeadings": "the core rule what byte connect does what this means for onboarding when to reference this",
+    "normalizedHeadings": "atlas context the core rule what byte connect does key capabilities what this means for onboarding operational caveat when to reference this",
     "normalizedSummary": "byte connect",
     "normalizedSection": "byte capabilities"
   },
@@ -2570,7 +2573,7 @@
     "locale": "en-US",
     "title": "Platform Mental Model",
     "headings": [
-      "The Three Layers",
+      "The Atlas Platform Picture",
       "Platform Hierarchy",
       "System Architecture Diagram"
     ],
@@ -2578,7 +2581,7 @@
     "section": "byte-capabilities",
     "url": "/docs/byte-capabilities/mental-model/",
     "normalizedTitle": "platform mental model",
-    "normalizedHeadings": "the three layers platform hierarchy system architecture diagram",
+    "normalizedHeadings": "the atlas platform picture platform hierarchy system architecture diagram",
     "normalizedSummary": "import themesyncediframe from site src components themesyncediframe",
     "normalizedSection": "byte capabilities"
   },
@@ -2586,11 +2589,12 @@
     "locale": "en-US",
     "title": "Platform Layers",
     "headings": [
-      "Layer Responsibilities",
-      "What Each Layer Does in More Detail",
+      "Core Responsibilities",
+      "What Each Core Part Does in More Detail",
       "Atlas on Byte Helium — Front End",
       "Byte Commerce",
       "Byte Portal — Admin Control Plane",
+      "Byte Connect",
       "Menu Service / Byte Menu",
       "External Services"
     ],
@@ -2598,7 +2602,7 @@
     "section": "byte-capabilities",
     "url": "/docs/byte-capabilities/platform-layers/",
     "normalizedTitle": "platform layers",
-    "normalizedHeadings": "layer responsibilities what each layer does in more detail atlas on byte helium front end byte commerce byte portal admin control plane menu service byte menu external services",
+    "normalizedHeadings": "core responsibilities what each core part does in more detail atlas on byte helium front end byte commerce byte portal admin control plane byte connect menu service byte menu external services",
     "normalizedSummary": "platform layers",
     "normalizedSection": "byte capabilities"
   },

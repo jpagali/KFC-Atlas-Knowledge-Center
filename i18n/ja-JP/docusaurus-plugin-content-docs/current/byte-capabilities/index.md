@@ -22,7 +22,7 @@ Atlas Wiki における **Byte 機能** は、意図的に Atlas の **Commerce 
 | したいこと | 参照先 |
 |---|---|
 | 5分でプラットフォーム全体を理解したい | [全体像](/docs/byte-capabilities/mental-model) |
-| 各レイヤー（Byte Helium / Byte Commerce Backend / Byte Portal）の役割を知りたい | [プラットフォームレイヤー](/docs/byte-capabilities/platform-layers) |
+| 各コア要素（Atlas on Byte Helium / Commerce Backend / Byte Portal / Byte Connect）の役割を知りたい | [プラットフォームレイヤー](/docs/byte-capabilities/platform-layers) |
 | 特定の機能を探したい | [ドメイン](/docs/byte-capabilities/domains/identity) から該当分野を選択 |
 | 何ができて何ができないかを知りたい | [機能境界](/docs/byte-capabilities/enablement/capability-boundaries) |
 | 市場ローンチの準備を進めたい | [現実チェック](/docs/byte-capabilities/enablement/reality-check) |

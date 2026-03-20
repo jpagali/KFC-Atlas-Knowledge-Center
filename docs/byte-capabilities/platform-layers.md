@@ -6,7 +6,7 @@ sidebar_label: Platform Layers
 
 # 🌍 Platform Layers
 
-The Atlas platform has three core layers plus a set of external services. This page gives a plain-English breakdown of what each layer does and — critically — what markets can and cannot configure.
+The Atlas platform has four core parts plus a set of external services. This page gives a plain-English breakdown of what each part does and, critically, what markets can and cannot configure.
 
 :::note Scope Within Atlas
 When Atlas Wiki refers to **Byte Capabilities**, the primary scope is the Atlas **Commerce + Portal** picture: Atlas as KFC's global front-end, **Byte Helium** as its Yum! front-end foundation, **Byte Commerce + Byte Portal** as the commerce and configuration layer behind it, and **Byte Connect** as the middle layer for non-Byte POS markets. Detailed operating steps for Byte Portal still belong in the [Admin Portal Guide](/docs/admin-portal-guide/).
@@ -18,13 +18,14 @@ Byte Helium *renders* but doesn't *own* most things. Pricing, eligibility, state
 
 ---
 
-## Layer Responsibilities
+## Core Responsibilities
 
-| Layer | Role | What Markets Configure |
+| Part | Role | What Markets Configure |
 |---|---|---|
 | **Atlas on Byte Helium** | KFC's global front-end, built on Yum!'s shared front-end foundation and branded for KFC customers | Market behavior is configuration-driven, not separately re-built per market |
 | **Byte Commerce** | Processes every order — pricing, tax, payment, POS injection; non-Byte POS markets require Byte Connect | Via Byte Portal — promos, taxes, payment routing, market operations |
 | **Byte Portal** | Admin tool paired with Commerce for markets and ops teams | Store hours, menus, promos, taxes, payments, refunds, users |
+| **Byte Connect** | Middle integration layer between Byte Commerce and non-Byte POS environments | Market/vendor mapping and integration readiness for non-Byte POS order flows |
 | **Menu Service** | Provides item catalogue, prices, options | Via Byte Menu authoring tool (outside Atlas) |
 | **Identity / SSO** | Manages customer accounts and sign-in sessions | OTP, Google, Apple — configured per market |
 | **PSP / Vault** | Handles card tokenisation and payment capture | PSP profiles configured in Byte Portal |
@@ -34,7 +35,7 @@ Byte Helium *renders* but doesn't *own* most things. Pricing, eligibility, state
 
 ---
 
-## What Each Layer Does in More Detail
+## What Each Core Part Does in More Detail
 
 ### Atlas on Byte Helium — Front-End
 Atlas is KFC's global front-end. It is built on **Byte Helium**, Yum!'s enterprise design system and front-end foundation, then skinned and shaped to reflect the KFC brand and customer journey. Atlas receives data from Byte Commerce, Menu Service, CMS, and external services, and renders it into the web and app experience customers actually use. Atlas does not calculate prices, does not evaluate promo eligibility, and does not own order state. It is the customer-facing front-end layer built on Helium.
@@ -48,6 +49,9 @@ Do not assume Atlas can directly integrate with any market POS. The supported me
 
 ### Byte Portal — Admin Control Plane
 Byte Portal is where every market-level configuration lives, alongside the Commerce layer it supports. Markets configure their stores (hours, state, POS mapping), menus (assigning published menu versions, applying patches and price overrides), promotions (eligibility rules, codes, budgets, scoping), tax profiles, payment routing rules, users and access roles, and operational settings. **Without correct Portal configuration, markets cannot go live.**
+
+### Byte Connect
+Byte Connect is not the customer-facing product and not the primary admin surface, but it is still part of the Byte stack in Atlas whenever a market POS is not Byte POS. It handles the integration bridge between Byte Commerce and the market POS environment, and it becomes part of launch readiness, order routing, support boundaries, and troubleshooting for those markets.
 
 ### Menu Service / Byte Menu
 Menu authoring — creating items, setting descriptions and images, managing prices and options — happens in **Byte Menu**, a separate tool outside the Atlas platform. Byte Portal assigns already-published menu versions to markets and channels. Byte Portal can apply patches and overrides on top of a published menu, but it cannot create menu content from scratch.

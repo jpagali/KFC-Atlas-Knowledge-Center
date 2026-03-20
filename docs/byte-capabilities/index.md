@@ -29,7 +29,7 @@ The [Admin Portal Guide](/docs/admin-portal-guide/) still owns the step-by-step 
 | If you want to… | Go to… |
 |---|---|
 | Understand the full platform in 5 minutes | [Mental Model](/docs/byte-capabilities/mental-model) |
-| See what each layer (Byte Helium / Byte Commerce Backend / Byte Portal) does | [Platform Layers](/docs/byte-capabilities/platform-layers) |
+| See what each core part (Atlas on Byte Helium / Byte Commerce / Byte Portal / Byte Connect) does | [Platform Layers](/docs/byte-capabilities/platform-layers) |
 | Find a specific feature | [Domains](/docs/byte-capabilities/domains/identity) — pick your domain |
 | Know what can and can't be done | [Capability Boundaries](/docs/byte-capabilities/enablement/capability-boundaries) |
 | Prepare for a market rollout | [Reality Check](/docs/byte-capabilities/enablement/reality-check) |
@@ -41,9 +41,9 @@ The [Admin Portal Guide](/docs/admin-portal-guide/) still owns the step-by-step 
 
 ## The Platform in One Paragraph
 
-**KFC Atlas** is KFC's global front-end for digital ordering. Behind that front-end sits the **Byte Commerce + Byte Portal** operating picture: Commerce processes orders, pricing, payments, and POS injection, while Byte Portal manages the market and operational configuration that makes Atlas work in production. Atlas itself is built on **Byte Helium**, Yum!'s enterprise design system and front-end foundation, skinned to reflect the KFC brand.
+**KFC Atlas** is KFC's global front-end for digital ordering. Atlas itself is built on **Byte Helium**, Yum!'s enterprise design system and front-end foundation, skinned to reflect the KFC brand. Behind that front-end sits the **Byte Commerce + Byte Portal** operating picture: Commerce processes orders, pricing, payments, and POS injection, while Byte Portal manages the market and operational configuration that makes Atlas work in production.
 
-When a market is not on Byte POS, **Byte Connect** becomes the middle layer between Atlas and the market POS environment. Understanding how Atlas, Helium, Commerce, Portal, and Connect fit together is the foundation for launch and operational decision-making.
+When a market is not on Byte POS, **Byte Connect** becomes the middle layer between Byte Commerce and the market POS environment. Understanding how Atlas, Helium, Commerce, Portal, and Connect fit together is the foundation for launch and operational decision-making.
 
 ---
 

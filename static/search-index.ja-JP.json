@@ -2478,16 +2478,19 @@
     "locale": "ja-JP",
     "title": "Byte Connect",
     "headings": [
+      "Atlas における位置づけ",
       "基本ルール",
       "Byte Connect の役割",
+      "主な機能",
       "オンボーディング上の意味",
+      "運用上の注意",
       "このページを参照する場面"
     ],
     "summary": "Byte Connect",
     "section": "byte-capabilities",
     "url": "/ja-JP/docs/byte-capabilities/enablement/byte-connect/",
     "normalizedTitle": "byte connect",
-    "normalizedHeadings": "基本ルール byte connect の役割 オンボーディング上の意味 このページを参照する場面",
+    "normalizedHeadings": "atlas における位置づけ 基本ルール byte connect の役割 主な機能 オンボーディング上の意味 運用上の注意 このページを参照する場面",
     "normalizedSummary": "byte connect",
     "normalizedSection": "byte capabilities"
   },
@@ -2593,7 +2596,7 @@
     "locale": "ja-JP",
     "title": "プラットフォーム全体像",
     "headings": [
-      "3 つのレイヤー",
+      "Atlas のプラットフォーム全体像",
       "プラットフォーム階層",
       "システムアーキテクチャ図"
     ],
@@ -2601,7 +2604,7 @@
     "section": "byte-capabilities",
     "url": "/ja-JP/docs/byte-capabilities/mental-model/",
     "normalizedTitle": "プラットフォーム全体像",
-    "normalizedHeadings": "3 つのレイヤー プラットフォーム階層 システムアーキテクチャ図",
+    "normalizedHeadings": "atlas のプラットフォーム全体像 プラットフォーム階層 システムアーキテクチャ図",
     "normalizedSummary": "import themesyncediframe from site src components themesyncediframe",
     "normalizedSection": "byte capabilities"
   },
@@ -2609,11 +2612,12 @@
     "locale": "ja-JP",
     "title": "プラットフォームレイヤー",
     "headings": [
-      "各レイヤーの責務",
-      "各レイヤーの詳細",
+      "各コア要素の責務",
+      "各コア要素の詳細",
       "Byte Helium フロントエンド",
       "Commerce Backend",
       "Byte Portal 管理コントロールプレーン",
+      "Byte Connect",
       "Menu Service / Byte Menu",
       "外部サービス"
     ],
@@ -2621,7 +2625,7 @@
     "section": "byte-capabilities",
     "url": "/ja-JP/docs/byte-capabilities/platform-layers/",
     "normalizedTitle": "プラットフォームレイヤー",
-    "normalizedHeadings": "各レイヤーの責務 各レイヤーの詳細 byte helium フロントエンド commerce backend byte portal 管理コントロールプレーン menu service byte menu 外部サービス",
+    "normalizedHeadings": "各コア要素の責務 各コア要素の詳細 byte helium フロントエンド commerce backend byte portal 管理コントロールプレーン byte connect menu service byte menu 外部サービス",
     "normalizedSummary": "プラットフォームレイヤー",
     "normalizedSection": "byte capabilities"
   },

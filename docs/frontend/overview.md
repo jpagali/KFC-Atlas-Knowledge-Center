@@ -7,6 +7,8 @@ sidebar_position: 1
 
 **KFC Atlas** is KFC's global front-end for digital ordering — what your guests interact with when they order online, through the KFC app, or via a third-party aggregator.
 
+Atlas is built on **Byte Helium**, Yum!'s enterprise design system and front-end foundation. In the broader Atlas platform picture, Atlas works with **Byte Commerce + Byte Portal**, and with **Byte Connect** whenever a market POS is not Byte POS.
+
 This guide is for **restaurant teams and BMUs** who need to understand what the platform delivers to customers, how it behaves in each market, and what is configurable without requiring a product deployment.
 
 ## What the Front-end Covers
