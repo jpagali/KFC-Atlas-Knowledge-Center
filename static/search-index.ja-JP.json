@@ -4201,13 +4201,14 @@
       "日本語ローカライズ",
       "プラットフォームエクスプローラーのローカライズ",
       "Byte Capability の参照リンク改善",
+      "Admin Portal Guide",
       "ひとことで言うと"
     ],
     "summary": "リリース 2026.03.20",
     "section": "release-notes",
     "url": "/ja-JP/docs/release-notes/2026-03-20/",
     "normalizedTitle": "リリース 2026 03 20",
-    "normalizedHeadings": "ハイライト 変更内容 システムアーキテクチャ図 埋め込みエクスプローラーのサイズ調整 日本語ローカライズ プラットフォームエクスプローラーのローカライズ byte capability の参照リンク改善 ひとことで言うと",
+    "normalizedHeadings": "ハイライト 変更内容 システムアーキテクチャ図 埋め込みエクスプローラーのサイズ調整 日本語ローカライズ プラットフォームエクスプローラーのローカライズ byte capability の参照リンク改善 admin portal guide ひとことで言うと",
     "normalizedSummary": "リリース 2026 03 20",
     "normalizedSection": "release notes"
   },

@@ -3,33 +3,132 @@ title: Changelog
 sidebar_position: 3
 ---
 
-# Changelog
+<div className="release-notes-page">
+  <div className="release-notes-hero">
+    <div className="release-notes-kicker">Curated release stream</div>
+    <h1>Changelog</h1>
+    <p className="release-notes-lead">
+      Atlas is shipping fast, so this page now leads with the meaningful story first and pushes the full audit trail lower
+      in the page. Think product newsletter on top, release archive underneath.
+    </p>
+    <div className="release-pill-row">
+      <span className="release-pill release-pill--live">Latest: 2026.03.20</span>
+      <span className="release-pill">Format: calendar version</span>
+      <span className="release-pill">Audience: internal Atlas readers</span>
+    </div>
+  </div>
 
-This section is the living changelog for the Atlas Wiki.
+  <section className="release-section">
+    <div className="release-section-heading">
+      <span className="release-section-label">Featured release</span>
+      <h2>Start with the biggest change window</h2>
+    </div>
 
-It keeps a simple, human-readable record of what changed, when it changed, and what those updates mean in practice.
+    <article className="release-card release-card--featured">
+      <div className="release-card-topline">
+        <span className="release-card-date">March 20, 2026</span>
+        <span className="release-status release-status--live">Live</span>
+      </div>
+      <h3>Release 2026.03.20</h3>
+      <p>
+        Pinned architecture notes now stay visible while people keep exploring the diagram, Japanese coverage spans the
+        full docs set, and Byte capability references now deep-link back to source requirements.
+      </p>
+      <div className="release-pill-row">
+        <span className="release-pill">Diagram UX</span>
+        <span className="release-pill">Japanese localisation</span>
+        <span className="release-pill">Traceability</span>
+      </div>
+      <a className="release-link" href="/docs/release-notes/2026-03-20">
+        Open release 2026.03.20
+      </a>
+    </article>
+  </section>
 
-For now, releases are tracked using a lightweight calendar version:
+  <section className="release-section">
+    <div className="release-section-heading">
+      <span className="release-section-label">Recent windows</span>
+      <h2>Grouped for scan speed</h2>
+    </div>
 
-- `2026.03.20` for the March 20, 2026 release
-- `2026.03.19` for the March 19, 2026 release
-- `2026.03.17` for the March 17, 2026 release
-- `2026.03.16` for the March 16, 2026 release
-- `2026.03.15` for the March 15, 2026 release
-- `2026.03.14` for the March 14, 2026 release
-- `2026.03.13` for the March 13, 2026 release
-- `2026.03.12` for the March 12, 2026 release
-- `2026.03.13` for the March 13, 2026 release
+    <div className="release-card-grid">
+      <article className="release-card">
+        <div className="release-card-topline">
+          <span className="release-card-date">March 19, 2026</span>
+          <span className="release-status">Shipped</span>
+        </div>
+        <h3>Release 2026.03.19</h3>
+        <p>
+          Terminology cleanup, daypart and platform-reference docs expansion, and navbar behavior fixes for more stable
+          desktop browsing.
+        </p>
+        <a className="release-link" href="/docs/release-notes/2026-03-19">
+          View details
+        </a>
+      </article>
 
-As the site matures, this can evolve into a more formal release cadence. For now, the goal is clarity over ceremony.
+      <article className="release-card">
+        <div className="release-card-topline">
+          <span className="release-card-date">March 17, 2026</span>
+          <span className="release-status">Shipped</span>
+        </div>
+        <h3>Release 2026.03.17</h3>
+        <p>
+          Real light and dark mode arrived across the site, plus theme toggles, better alert readability, and cleaner
+          homepage polish.
+        </p>
+        <a className="release-link" href="/docs/release-notes/2026-03-17">
+          View details
+        </a>
+      </article>
 
-## Recent Releases
+      <article className="release-card">
+        <div className="release-card-topline">
+          <span className="release-card-date">March 16, 2026</span>
+          <span className="release-status">Shipped</span>
+        </div>
+        <h3>Release 2026.03.16</h3>
+        <p>
+          The homepage moved to a more cinematic KFC-branded hero while Byte Portal navigation became easier to browse
+          and understand.
+        </p>
+        <a className="release-link" href="/docs/release-notes/2026-03-16">
+          View details
+        </a>
+      </article>
 
-- [Release 2026.03.20](/docs/release-notes/2026-03-20)
-- [Release 2026.03.19](/docs/release-notes/2026-03-19)
-- [Release 2026.03.17](/docs/release-notes/2026-03-17)
-- [Release 2026.03.16](/docs/release-notes/2026-03-16)
-- [Release 2026.03.15](/docs/release-notes/2026-03-15)
-- [Release 2026.03.14](/docs/release-notes/2026-03-14)
-- [Release 2026.03.13](/docs/release-notes/2026-03-13)
-- [Release 2026.03.12](/docs/release-notes/2026-03-12)
+      <article className="release-card">
+        <div className="release-card-topline">
+          <span className="release-card-date">March 15, 2026</span>
+          <span className="release-status">Shipped</span>
+        </div>
+        <h3>Release 2026.03.15</h3>
+        <p>
+          A dedicated <code>What's New</code> experience launched and was wired into the main navigation for both
+          English and Japanese readers.
+        </p>
+        <a className="release-link" href="/docs/release-notes/2026-03-15">
+          View details
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section className="release-section">
+    <div className="release-section-heading">
+      <span className="release-section-label">Archive</span>
+      <h2>Full release log</h2>
+    </div>
+
+    <div className="release-archive">
+      <a href="/docs/release-notes/2026-03-20">2026.03.20</a>
+      <a href="/docs/release-notes/2026-03-19">2026.03.19</a>
+      <a href="/docs/release-notes/2026-03-17">2026.03.17</a>
+      <a href="/docs/release-notes/2026-03-16">2026.03.16</a>
+      <a href="/docs/release-notes/2026-03-15">2026.03.15</a>
+      <a href="/docs/release-notes/2026-03-14">2026.03.14</a>
+      <a href="/docs/release-notes/2026-03-13">2026.03.13</a>
+      <a href="/docs/release-notes/2026-03-12">2026.03.12</a>
+    </div>
+  </section>
+</div>

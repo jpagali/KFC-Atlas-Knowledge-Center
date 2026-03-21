@@ -4198,36 +4198,25 @@
   {
     "locale": "en-US",
     "title": "Release 2026.03.20",
-    "headings": [
-      "Highlights",
-      "What Changed",
-      "System Architecture Diagram",
-      "Embedded Explorer Sizing",
-      "Japanese Localisation",
-      "Platform Explorer Localisation",
-      "Byte Capability Source Linking",
-      "In Plain English"
-    ],
-    "summary": "Release 2026.03.20",
+    "headings": [],
+    "summary": "<div className=\"release notes page\" <div className=\"release detail hero\" <div className=\"release card topline\" <span className=\"release card date\" March 20, 2026</span <span cla...",
     "section": "release-notes",
     "url": "/docs/release-notes/2026-03-20/",
     "normalizedTitle": "release 2026 03 20",
-    "normalizedHeadings": "highlights what changed system architecture diagram embedded explorer sizing japanese localisation platform explorer localisation byte capability source linking in plain english",
-    "normalizedSummary": "release 2026 03 20",
+    "normalizedHeadings": "",
+    "normalizedSummary": "div classname release notes page div classname release detail hero div classname release card topline span classname release card date march 20 2026 span span cla",
     "normalizedSection": "release notes"
   },
   {
     "locale": "en-US",
     "title": "Changelog",
-    "headings": [
-      "Recent Releases"
-    ],
-    "summary": "Changelog",
+    "headings": [],
+    "summary": "<div className=\"release notes page\" <div className=\"release notes hero\" <div className=\"release notes kicker\" Curated release stream</div <h1 Changelog</h1 <p className=\"release...",
     "section": "release-notes",
     "url": "/docs/release-notes/",
     "normalizedTitle": "changelog",
-    "normalizedHeadings": "recent releases",
-    "normalizedSummary": "changelog",
+    "normalizedHeadings": "",
+    "normalizedSummary": "div classname release notes page div classname release notes hero div classname release notes kicker curated release stream div h1 changelog h1 p classname release",
     "normalizedSection": "release notes"
   }
 ]
