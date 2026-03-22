@@ -1,44 +1,45 @@
 ---
-title: a 店舗's Beneficiariesを確認する
-sidebar_label: a 店舗's Beneficiariesを確認する
+title: 店舗の Beneficiaries を確認する
+sidebar_label: 店舗の Beneficiaries を確認する
 ---
 
-# a 店舗's Beneficiariesを確認する
+# 店舗の Beneficiaries を確認する
 
 ## このガイドで扱う内容
 
-このガイドでは、Byte Commerce Admin Portal でa 店舗's Beneficiariesを確認する手順を説明します。
+特定の店舗に紐付いている beneficiaries を確認し、内容を把握するための手順です。
 
 ## 手順
 
-**ステップ 1:** まず、こちらをクリックして Stores 画面に移動します。
-**ステップ 2:** 店舗は名称、番号、またはフランチャイズコードで検索できます。
+**ステップ 1:** 左側のナビゲーションから **Stores** セクションに移動します。
+
+**ステップ 2:** 検索ボックスを使って、**Name**、**Store Number**、**Franchise Code** のいずれかで店舗を検索します。
 
 ![Step 2](./img/step-2.png)
 
-**ステップ 3:** Once you find the store you are looking for, click on the stacked dots to open the option window.
+**ステップ 3:** 対象店舗が見つかったら、**3 点メニュー**（•••）をクリックしてオプションを開きます。
 
-**ステップ 4:** on Beneficiaries をクリックします。
+**ステップ 4:** ドロップダウンから **Beneficiaries** をクリックします。選択した店舗に紐付く beneficiary 一覧が表示されます。
 
-**ステップ 5:** Search for the beneficiary by name.
+**ステップ 5:** beneficiary が多い場合は、検索ボックスで **name** を使って絞り込みます。
 
 ![Step 3](./img/step-3.png)
 
 ## 注意事項
 
 :::note
-There are other options in the window  but for this step we are just looking at Beneficiaries. Others are discussed else where. Please go to the Table of Contents to find where.
+この画面には他の操作項目もありますが、この手順では Beneficiaries の確認だけを扱います。
 :::
 
 :::note
-If you are looking to delete a Beneficiary from a store, please follow the steps on Edit a Beneficiary and delete the store from the Associated Stores list.
+特定の店舗から beneficiary を外したい場合は、[Beneficiary を編集または削除する](/docs/admin-portal-guide/stores/editdelete-a-beneficiary/) に進み、Associated Stores からその店舗を外してください。
 :::
 
-## 追加情報
+## 関連ガイド
 
-- 店舗 - a 店舗’s Beneficiariesを確認する
-- A stores beneficiary list
+- [Beneficiary を作成する](/docs/admin-portal-guide/stores/create-a-beneficiary/) - 新しい beneficiary を登録します
+- [Beneficiary を編集または削除する](/docs/admin-portal-guide/stores/editdelete-a-beneficiary/) - beneficiary の更新や削除を行います
 
 ---
 
-*[管理ポータルガイド](/docs/admin-portal-guide) の一部 · セクション: 店舗*
+*[Admin Portal ガイド](/docs/admin-portal-guide) の一部 · セクション: 店舗*

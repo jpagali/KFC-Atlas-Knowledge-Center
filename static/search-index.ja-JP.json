@@ -4214,16 +4214,34 @@
   },
   {
     "locale": "ja-JP",
-    "title": "変更履歴",
+    "title": "リリース 2026.03.22",
     "headings": [
-      "最近のリリース"
+      "ハイライト",
+      "変更内容",
+      "Brand Experience org chart",
+      "Current Team の表示挙動",
+      "Byte Engineering / Shared Support",
+      "Future Team とページ整理",
+      "ひとことで言うと"
     ],
-    "summary": "変更履歴",
+    "summary": "リリース 2026.03.22",
+    "section": "release-notes",
+    "url": "/ja-JP/docs/release-notes/2026-03-22/",
+    "normalizedTitle": "リリース 2026 03 22",
+    "normalizedHeadings": "ハイライト 変更内容 brand experience org chart current team の表示挙動 byte engineering shared support future team とページ整理 ひとことで言うと",
+    "normalizedSummary": "リリース 2026 03 22",
+    "normalizedSection": "release notes"
+  },
+  {
+    "locale": "ja-JP",
+    "title": "変更履歴",
+    "headings": [],
+    "summary": "<div className=\"release notes page\" <div className=\"release notes hero\" <div className=\"release notes kicker\" 更新の流れをひと目で把握</div <h1 変更履歴</h1 <p className=\"release notes lead\" At...",
     "section": "release-notes",
     "url": "/ja-JP/docs/release-notes/",
     "normalizedTitle": "変更履歴",
-    "normalizedHeadings": "最近のリリース",
-    "normalizedSummary": "変更履歴",
+    "normalizedHeadings": "",
+    "normalizedSummary": "div classname release notes page div classname release notes hero div classname release notes kicker 更新の流れをひと目で把握 div h1 変更履歴 h1 p classname release notes lead at",
     "normalizedSection": "release notes"
   }
 ]

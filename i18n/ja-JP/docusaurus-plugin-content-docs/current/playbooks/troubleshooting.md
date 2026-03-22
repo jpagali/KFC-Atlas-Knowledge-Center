@@ -9,32 +9,32 @@ sidebar_position: 2
 
 ---
 
-## Common Issues & Fixes
+## よくある問題と対処
 
-### Restaurant not appearing in the customer app
+### 店舗が顧客向けアプリに表示されない
 
-| Check | How |
+| 確認項目 | 確認方法 |
 |---|---|
-| Is the restaurant set to Live? | Admin Portal → Profile → Status |
-| Are all channels disabled? | Channel Settings — at least one must be active |
-| Were GPS coordinates set correctly? | Profile → Location — confirm pin placement |
+| 店舗が Live になっているか | Admin Portal → Profile → Status |
+| すべてのチャネルが無効化されていないか | Channel Settings — 少なくとも 1 つは有効である必要があります |
+| GPS 座標が正しく設定されているか | Profile → Location — ピン位置を確認します |
 
-If all checks pass and the restaurant is still not visible after 30 minutes, escalate to your BMU.
+すべて確認しても 30 分後に店舗が表示されない場合は、BMU にエスカレーションしてください。
 
 ---
 
-### Customer cannot complete checkout
+### 顧客がチェックアウトを完了できない
 
-**Most common causes:**
+**よくある原因:**
 1. The selected item has been deactivated since the customer added it to cart
 2. A promo code has expired or reached its usage limit
 3. The delivery address is outside the restaurant's delivery radius
 
-**Franchisee action:** Check Menu → Items for any recently deactivated items. Check Channel Settings → Delivery Radius if delivery orders are failing.
+**フランチャイジー側の対応:** Menu → Items で最近無効化された商品がないか確認します。配達注文が失敗している場合は Channel Settings → Delivery Radius も確認します。
 
 ---
 
-### Menu item showing incorrect price
+### メニュー商品に誤った価格が表示される
 
 1. Check **Menu → Items → [Item] → Pricing** to confirm the price in the portal
 2. If the portal price is correct but the app shows differently, wait 15 minutes for cache refresh
@@ -42,15 +42,15 @@ If all checks pass and the restaurant is still not visible after 30 minutes, esc
 
 ---
 
-### Franchisee locked out of Admin Portal
+### フランチャイジーが Admin Portal にログインできない
 
-1. Go to the login page and use **Forgot Password** — this sends a reset link to their registered email
-2. If the email is not received within 5 minutes, check spam folders
-3. If the account has been deactivated, a Regional Admin must reinstate it under Settings → Users
+1. ログインページで **Forgot Password** を使います。登録メールアドレスにリセットリンクが送信されます
+2. 5 分以内にメールが届かない場合は、迷惑メールフォルダを確認します
+3. アカウントが無効化されている場合は、Regional Admin が Settings → Users で再有効化する必要があります
 
 ---
 
-### 注文 not coming through on delivery
+### 配達注文が入ってこない
 
 1. Confirm the Delivery channel is **enabled** in Channel Settings
 2. Check that operating hours include the current time for the Delivery channel
@@ -59,9 +59,9 @@ If all checks pass and the restaurant is still not visible after 30 minutes, esc
 
 ---
 
-## Escalation Path
+## エスカレーション経路
 
-Use this path when self-service does not resolve the issue:
+セルフ対応で解決しない場合は、次の経路でエスカレーションします。
 
 ```
 Franchisee
@@ -73,9 +73,9 @@ Atlas Platform Support (JIRA Service Desk)
 Yum! Brands Tech — Emergency Line
 ```
 
-### Severity Levels
+### 重要度レベル
 
-| Level | Definition | Target Response |
+| レベル | 定義 | 目標初動時間 |
 |---|---|---|
 | **P1** | Restaurant fully unable to take orders | 30 minutes |
 | **P2** | One channel down, others working | 2 hours |
@@ -84,9 +84,9 @@ Yum! Brands Tech — Emergency Line
 
 ### JIRA Service Desk
 
-Raise tickets at: `support.atlas.yum.com`
+チケット起票先: `support.atlas.yum.com`
 
-Include in every ticket:
+すべてのチケットに次を含めてください:
 - Restaurant ID
 - Market (Japan / Australia)
 - Issue description

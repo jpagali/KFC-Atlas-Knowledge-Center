@@ -37,7 +37,7 @@ const HOME_CONTENT = {
     ],
     stats: [
       { value: 2000, suffix: '+', label: 'Stores', sub: 'Stores Onboard' },
-      { value: '3', label: 'Core Modules', sub: 'Front-End Byte Commerce Byte Connect' },
+      { value: '3', label: 'Core Modules', subItems: ['Front-End', 'Byte Commerce', 'Byte Connect'] },
       { value: '1', label: 'Platform', sub: 'Atlas by KFC Global - Brand Experience Team' },
     ],
     sections: [
@@ -77,10 +77,10 @@ const HOME_CONTENT = {
   'ja-JP': {
     description: 'KFC Atlas Platform Wiki',
     badge: 'Atlas Platform ・ Wiki',
-    titleLead: 'プラットフォーム運用に必要な',
-    titleAccent: 'すべてを、ひとつに。',
+    titleLead: 'Atlas.',
+    titleAccent: '正しく進めるために。',
     summary:
-      'KFC Atlas Platformの総合ガイドです。お客様の注文体験から、日々の店舗運営まで、日本とオーストラリアの運用情報をまとめて確認できます。',
+      'Atlas の立ち上げ、運用、拡張に必要なすべてをまとめています。顧客体験から店舗運用までをカバーします。',
     heroSearchPlaceholder: 'ガイド、記事、見出しを検索',
     heroPrimaryCta: 'フロントエンドガイドから始める →',
     heroSecondaryCta: 'Byte Portal ガイドから始める →',
@@ -90,11 +90,11 @@ const HOME_CONTENT = {
     prototypeCardEyebrow: 'インタラクティブ プレビュー',
     prototypeCardTitle: 'Atlas Peek',
     prototypeCardBody:
-      '直線的なスライドではなく、小さなアプリのように動く多言語の顧客体験プロトタイプを確認できます。',
-    prototypeCardCta: 'Atlas Peek を開く',
+      '直線的なスライドショーではなく、小さなアプリのように動作する、状態を持った多言語の顧客ジャーニープロトタイプを確認できます。',
+    prototypeCardCta: 'スニークピークを開く',
     marketsLabel: '市場',
     marketsSublabel: '導入中 ー 2026年末まで順次展開予定',
-    upcomingMarketsLabel: '今後対応予定',
+    upcomingMarketsLabel: 'その後に展開予定',
     upcomingMarkets: [
       { flagCode: 'ca', name: 'カナダ' },
       { flagCode: 'fr', name: 'フランス' },
@@ -103,16 +103,16 @@ const HOME_CONTENT = {
       { flagCode: 'th', name: 'タイ' },
     ],
     stats: [
-      { value: 2000, suffix: '+', label: '店舗数', sub: '導入済み店舗' },
-      { value: '3', label: '主要モジュール', sub: 'フロントエンド ・ Admin ・ Martech' },
-      { value: '1', label: 'プラットフォーム', sub: 'Atlas by KFC Global' },
+      { value: 2000, suffix: '+', label: '店舗数', sub: '導入済み店舗数' },
+      { value: '3', label: 'コアモジュール', subItems: ['フロントエンド', 'Byte Commerce', 'Byte Connect'] },
+      { value: '1', label: 'プラットフォーム', sub: 'Atlas by KFC Global - Brand Experience Team' },
     ],
     sections: [
       {
         emoji: '🖥️',
         label: 'フロントエンドガイド',
         title: 'お客様が体験する内容',
-        desc: '発見からチェックアウトまで、注文体験全体を理解できます。日本とオーストラリアにおけるロイヤルティ、プロモーション、注文チャネルの市場別設定もカバーしています。',
+        desc: '発見からチェックアウトまで、エンドツーエンドの注文ジャーニーを理解できます。日本とオーストラリアにおけるロイヤルティ、プロモーション、注文チャネルの市場別設定もカバーしています。',
         link: '/docs/frontend/overview',
         cta: 'ガイドを見る',
         items: ['カスタマージャーニー', '注文チャネル', '顧客エンゲージメント調査'],
@@ -121,7 +121,7 @@ const HOME_CONTENT = {
         emoji: '⚙️',
         label: 'Admin Portal ガイド',
         title: 'プラットフォームの運用方法',
-        desc: 'Byte Commerce Admin Portalの利用方法を、店舗チームと地域チーム向けに手順で案内します。店舗設定、メニュー管理、アクセス権限を確認できます。',
+        desc: 'Byte Commerce Admin Portal の使い方を、店舗チームと地域チーム向けにステップごとに案内します。店舗設定、メニュー管理、アクセス制御をカバーします。',
         link: '/docs/admin-portal-guide/',
         cta: 'ガイドを見る',
         items: ['店舗プロフィール設定', 'メニュー管理', 'ユーザーと権限'],
@@ -130,7 +130,7 @@ const HOME_CONTENT = {
         emoji: '📋',
         label: 'プレイブック',
         title: 'KFC向けキャンペーン実行プレイブック',
-        desc: 'Atlasでのプロモーション作成から、Brazeでのライフサイクル施策配信まで、KFC向けの実務フローをまとめたプレイブックです。',
+        desc: 'Atlas でのプロモーション作成から、Braze でのライフサイクル報酬の配信まで、キャンペーン実行のための運用プレイブックをまとめています。',
         link: '/docs/playbooks/onboarding',
         cta: 'プレイブックを見る',
         items: ['プロモーションを作成する', '1つ買うと1つ無料プロモ', 'Braze歓迎特典キャンバス'],
@@ -233,7 +233,19 @@ export default function Home() {
           <div key={stat.label} className={styles.statCard}>
             <div className={styles.statValue}>{formatStatValue(stat, locale)}</div>
             <div className={localeClass(styles.statLabel, isJapanese)}>{stat.label}</div>
-            <div className={styles.statSub}>{stat.sub}</div>
+            <div className={styles.statSub}>
+              {stat.subItems ? (
+                <span className={styles.statSubList}>
+                  {stat.subItems.map((item) => (
+                    <span key={item} className={styles.statSubItem}>
+                      {item}
+                    </span>
+                  ))}
+                </span>
+              ) : (
+                stat.sub
+              )}
+            </div>
           </div>
         ))}
       </div>

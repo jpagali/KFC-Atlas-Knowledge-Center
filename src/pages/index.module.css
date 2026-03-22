@@ -221,6 +221,28 @@
   font-size: 0.72rem;
 }
 
+.statSubList {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.statSubItem {
+  display: inline-flex;
+  align-items: center;
+}
+
+.statSubItem:not(:last-child)::after {
+  content: '';
+  width: 0.24rem;
+  height: 0.24rem;
+  margin-left: 0.45rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+}
+
 .marketsSection {
   padding: 48px 24px;
   text-align: center;

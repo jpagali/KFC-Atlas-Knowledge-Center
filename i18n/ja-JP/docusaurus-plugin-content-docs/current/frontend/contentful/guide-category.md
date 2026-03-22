@@ -8,7 +8,7 @@ sidebar_position: 3
 カテゴリは、KFC のメニューを Chicken、Sides、Drinks、Desserts などの単位で整理するための仕組みです。Contentful では、カテゴリ内の商品**表示順**や、より細かい構造のための**サブカテゴリ**を管理できます。
 
 :::info
-カテゴリ自体の作成と管理は **Byte Admin Portal** 側で行います。Contentful では並び順とサブカテゴリ構造を管理します。Contentful 側で設定されていない商品は **メニューに表示されません**。
+カテゴリ自体の作成と管理は **Byte Commerce Admin Portal** 側で行います。Contentful では並び順とサブカテゴリ構造を管理します。Contentful 側で設定されていない商品は **メニューに表示されません**。
 :::
 
 ---
@@ -19,7 +19,7 @@ sidebar_position: 3
 
 **Subcategories** — カテゴリページ内では、サブカテゴリがタブまたは絞り込みグループとして機能します。たとえば「Chicken」の中に「Original Recipe」「Zinger」「Wraps」などを持たせられます。
 
-**Product sequence** — カテゴリやサブカテゴリ内での商品表示順は Contentful 側で制御されます。Contentful で順序を設定していない場合は、Byte Admin Portal 側の順序に従います。
+**Product sequence** — カテゴリやサブカテゴリ内での商品表示順は Contentful 側で制御されます。Contentful で順序を設定していない場合は、Byte Commerce Admin Portal 側の順序に従います。
 
 ---
 
@@ -27,7 +27,7 @@ sidebar_position: 3
 
 ### カテゴリ内の商品順を設定する
 
-1. Byte Admin Portal でカテゴリ作成と商品紐付けが終わったら、Contentful の **Category** エントリを開く
+1. Byte Commerce Admin Portal でカテゴリ作成と商品紐付けが終わったら、Contentful の **Category** エントリを開く
 2. **Menu Items** セクションまでスクロールする
 3. **Add Existing Content** を押して表示したい商品またはバンドルを追加し、**Select Entries** で確定する
 4. 各エントリ右側のハンドルをドラッグして順序を並べ替える
@@ -65,7 +65,7 @@ sidebar_position: 3
 
 ## 利用例
 
-**新商品追加** — Byte Admin Portal で新商品を追加したあと、Contentful 側で正しいカテゴリと位置に入れることで、メニュー上の見せ方を整えられます。
+**新商品追加** — Byte Commerce Admin Portal で新商品を追加したあと、Contentful 側で正しいカテゴリと位置に入れることで、メニュー上の見せ方を整えられます。
 
 **季節メニュー再編** — 期間限定で「Holiday Specials」を上部へ持ってくるなど、コード変更なしで構成を調整できます。
 

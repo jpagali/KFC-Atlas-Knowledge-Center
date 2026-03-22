@@ -1,9 +1,9 @@
 ---
-title: デイパート
-sidebar_label: デイパート
+title: Dayparts / デイパート
+sidebar_label: Dayparts / デイパート
 ---
 
-# デイパート
+# Dayparts / デイパート
 
 ## デイパートとは
 

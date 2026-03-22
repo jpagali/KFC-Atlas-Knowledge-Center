@@ -1,43 +1,45 @@
 ---
-title: a メニューを割り当てる
-sidebar_label: a メニューを割り当てる
+title: メニューを割り当てる
+sidebar_label: メニューを割り当てる
 ---
 
-# a メニューを割り当てる
+# メニューを割り当てる
 
 ## このガイドで扱う内容
 
-このガイドでは、Byte Commerce Admin Portal でa メニューを割り当てる手順を説明します。
+特定の店舗と注文チャネルにメニューを紐付け、顧客に正しいカタログが表示されるようにする手順です。
 
 ## 手順
 
-**ステップ 1:** まず、こちらをクリックして Menu 画面に移動します。
-**ステップ 2:** this ボタン in the same row the menu you’re looking for is in and then hit Assign をクリックします。
+**ステップ 1:** 左側のナビゲーションから **Menus** セクションに移動します。
+
+**ステップ 2:** メニュー一覧から割り当てたいメニューを探し、同じ行にある **アクションメニュー**（3 点アイコン）をクリックして **Assign** を選択します。
 
 ![Step 2](./img/step-2.png)
 
-**ステップ 3:** stores to assign menu to を選択します。
+**ステップ 3:** **Stores** ステップで、このメニューを使用する店舗またはストアグループを選択します。必要に応じて検索やストアグループの絞り込みを使います。
 
 ![Step 3](./img/step-3.png)
 
-**ステップ 4:** what channels that menu will be tied to を選択します。
+**ステップ 4:** **Channels** ステップで、このメニューを紐付ける注文チャネルを選択します。Web、Mobile、Delivery Platform など、複数選択できます。
 
 ![Step 4](./img/step-4.png)
 
-**ステップ 5:** assign をクリックします。
+**ステップ 5:** **Summary** タブで店舗とチャネルの内容を確認し、**Assign** をクリックして保存します。
 
 ![Step 5](./img/step-5.png)
 
 ## 注意事項
 
 :::note
-Here’s an overview of everything you’ve done in this flow.
+メニューは割り当てただけではすぐに店舗へ反映されません。選択したチャネルで公開状態にするには、メニューの Publish も必要です。
 :::
 
-## 追加情報
+## 関連ガイド
 
-- メニュー - a メニューを割り当てる
+- [メニューを公開する](/docs/admin-portal-guide/menus/publish-a-menu/) - 割り当てたメニューを注文チャネルで有効化します
+- [メニューを編集する](/docs/admin-portal-guide/menus/edit-a-menu/) - 店舗へ割り当てる前にメニュー内容を更新します
 
 ---
 
-*[管理ポータルガイド](/docs/admin-portal-guide) の一部 · セクション: メニュー*
+*[Admin Portal ガイド](/docs/admin-portal-guide) の一部 · セクション: メニュー*

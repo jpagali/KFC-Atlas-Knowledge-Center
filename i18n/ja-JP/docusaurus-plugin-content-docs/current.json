@@ -88,7 +88,7 @@
     "description": "The label for category 'Admin Portal Guide' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-root-stores": {
-    "message": "店舗",
+    "message": "Stores / 店舗",
     "description": "The label for category 'Stores' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.Publish History": {
@@ -96,7 +96,7 @@
     "description": "The label for category 'Publish History' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-stores-section": {
-    "message": "店舗",
+    "message": "Stores / 店舗",
     "description": "The label for category 'Stores' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.Beneficaries": {
@@ -104,7 +104,7 @@
     "description": "The label for category 'Beneficaries' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-root-menus": {
-    "message": "メニュー",
+    "message": "Menus / メニュー",
     "description": "The label for category 'Menus' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.Named Prices": {
@@ -120,15 +120,15 @@
     "description": "The label for category 'Patches' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-menus-section": {
-    "message": "メニュー",
+    "message": "Menus / メニュー",
     "description": "The label for category 'Menus' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-root-products": {
-    "message": "商品",
+    "message": "Products / 商品",
     "description": "The label for category 'Products' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-products-section": {
-    "message": "商品",
+    "message": "Products / 商品",
     "description": "The label for category 'Products' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.Options": {
@@ -156,15 +156,15 @@
     "description": "The label for category 'Variants' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-root-promotions": {
-    "message": "プロモーション",
+    "message": "Promotions / プロモーション",
     "description": "The label for category 'Promotions' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-promotions-section": {
-    "message": "プロモーション",
+    "message": "Promotions / プロモーション",
     "description": "The label for category 'Promotions' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-promotions-store-groups-section": {
-    "message": "ストアグループ",
+    "message": "Store Groups / ストアグループ",
     "description": "The label for category 'Store Groups' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.Advanced Promotions Search": {
@@ -172,7 +172,7 @@
     "description": "The label for category 'Advanced Promotions Search' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-root-store-groups": {
-    "message": "ストアグループ",
+    "message": "Store Groups / ストアグループ",
     "description": "The label for category 'Store Groups' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.Store Groups - Taxes": {
@@ -184,15 +184,15 @@
     "description": "The label for category 'Store Groups - Promotions' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.In-Store Devices": {
-    "message": "店内デバイス",
+    "message": "In-Store Devices / 店内デバイス",
     "description": "The label for category 'In-Store Devices' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-root-bundles": {
-    "message": "バンドル",
+    "message": "Bundles / バンドル",
     "description": "The label for category 'Bundles' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.admin-bundles-section": {
-    "message": "バンドル",
+    "message": "Bundles / バンドル",
     "description": "The label for category 'Bundles' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.Choices": {
@@ -200,11 +200,11 @@
     "description": "The label for category 'Choices' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.Agents": {
-    "message": "エージェント",
+    "message": "Agents / エージェント",
     "description": "The label for category 'Agents' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.Customer Support": {
-    "message": "カスタマーサポート",
+    "message": "Customer Support / カスタマーサポート",
     "description": "The label for category 'Customer Support' in sidebar 'adminSidebar'"
   },
   "sidebar.adminSidebar.category.Orders": {
