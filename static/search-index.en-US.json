@@ -2203,6 +2203,22 @@
   },
   {
     "locale": "en-US",
+    "title": "Brand Experience Team",
+    "headings": [
+      "Diagram",
+      "Global KFC Experience Team",
+      "Global KFC Engineering Team"
+    ],
+    "summary": "import ThemeSyncedIframe from '@site/src/components/ThemeSyncedIframe';",
+    "section": "brand-experience-team.md",
+    "url": "/docs/brand-experience-team/",
+    "normalizedTitle": "brand experience team",
+    "normalizedHeadings": "diagram global kfc experience team global kfc engineering team",
+    "normalizedSummary": "import themesyncediframe from site src components themesyncediframe",
+    "normalizedSection": "brand experience team md"
+  },
+  {
+    "locale": "en-US",
     "title": "Credits",
     "headings": [],
     "summary": "Credits",
