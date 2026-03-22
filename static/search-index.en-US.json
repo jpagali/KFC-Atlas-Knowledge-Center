@@ -2205,15 +2205,13 @@
     "locale": "en-US",
     "title": "Brand Experience Team",
     "headings": [
-      "Diagram",
-      "Global KFC Experience Team",
-      "Global KFC Engineering Team"
+      "Diagram"
     ],
     "summary": "import ThemeSyncedIframe from '@site/src/components/ThemeSyncedIframe';",
     "section": "brand-experience-team.md",
     "url": "/docs/brand-experience-team/",
     "normalizedTitle": "brand experience team",
-    "normalizedHeadings": "diagram global kfc experience team global kfc engineering team",
+    "normalizedHeadings": "diagram",
     "normalizedSummary": "import themesyncediframe from site src components themesyncediframe",
     "normalizedSection": "brand experience team md"
   },
@@ -4221,6 +4219,18 @@
     "normalizedTitle": "release 2026 03 20",
     "normalizedHeadings": "",
     "normalizedSummary": "div classname release notes page div classname release detail hero div classname release card topline span classname release card date march 20 2026 span span cla",
+    "normalizedSection": "release notes"
+  },
+  {
+    "locale": "en-US",
+    "title": "Release 2026.03.22",
+    "headings": [],
+    "summary": "<div className=\"release notes page\" <div className=\"release detail hero\" <div className=\"release card topline\" <span className=\"release card date\" March 22, 2026</span <span cla...",
+    "section": "release-notes",
+    "url": "/docs/release-notes/2026-03-22/",
+    "normalizedTitle": "release 2026 03 22",
+    "normalizedHeadings": "",
+    "normalizedSummary": "div classname release notes page div classname release detail hero div classname release card topline span classname release card date march 22 2026 span span cla",
     "normalizedSection": "release notes"
   },
   {

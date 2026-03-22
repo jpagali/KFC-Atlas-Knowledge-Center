@@ -12,7 +12,7 @@ sidebar_position: 3
       in the page. Think product newsletter on top, release archive underneath.
     </p>
     <div className="release-pill-row">
-      <span className="release-pill release-pill--live">Latest: 2026.03.20</span>
+      <span className="release-pill release-pill--live">Latest: 2026.03.22</span>
       <span className="release-pill">Format: calendar version</span>
       <span className="release-pill">Audience: internal Atlas readers</span>
     </div>
@@ -26,21 +26,21 @@ sidebar_position: 3
 
     <article className="release-card release-card--featured">
       <div className="release-card-topline">
-        <span className="release-card-date">March 20, 2026</span>
+        <span className="release-card-date">March 22, 2026</span>
         <span className="release-status release-status--live">Live</span>
       </div>
-      <h3>Release 2026.03.20</h3>
+      <h3>Release 2026.03.22</h3>
       <p>
-        Pinned architecture notes now stay visible while people keep exploring the diagram, Japanese coverage spans the
-        full docs set, and Byte capability references now deep-link back to source requirements.
+        The Brand Experience org chart now reads more clearly, focused team views drill down directly under Jim, and
+        the embedded chart stays synced to the site theme.
       </p>
       <div className="release-pill-row">
-        <span className="release-pill">Diagram UX</span>
-        <span className="release-pill">Japanese localisation</span>
-        <span className="release-pill">Traceability</span>
+        <span className="release-pill">Org chart clarity</span>
+        <span className="release-pill">Focus drill-down</span>
+        <span className="release-pill">Theme sync</span>
       </div>
-      <a className="release-link" href="/docs/release-notes/2026-03-20">
-        Open release 2026.03.20
+      <a className="release-link" href="/docs/release-notes/2026-03-22">
+        Open release 2026.03.22
       </a>
     </article>
   </section>
@@ -52,6 +52,21 @@ sidebar_position: 3
     </div>
 
     <div className="release-card-grid">
+      <article className="release-card">
+        <div className="release-card-topline">
+          <span className="release-card-date">March 20, 2026</span>
+          <span className="release-status">Shipped</span>
+        </div>
+        <h3>Release 2026.03.20</h3>
+        <p>
+          Pinned architecture notes now stay visible while people keep exploring the diagram, Japanese coverage spans
+          the full docs set, and Byte capability references now deep-link back to source requirements.
+        </p>
+        <a className="release-link" href="/docs/release-notes/2026-03-20">
+          View details
+        </a>
+      </article>
+
       <article className="release-card">
         <div className="release-card-topline">
           <span className="release-card-date">March 19, 2026</span>
@@ -121,6 +136,7 @@ sidebar_position: 3
     </div>
 
     <div className="release-archive">
+      <a href="/docs/release-notes/2026-03-22">2026.03.22</a>
       <a href="/docs/release-notes/2026-03-20">2026.03.20</a>
       <a href="/docs/release-notes/2026-03-19">2026.03.19</a>
       <a href="/docs/release-notes/2026-03-17">2026.03.17</a>
