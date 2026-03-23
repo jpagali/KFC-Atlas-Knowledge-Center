@@ -3,13 +3,30 @@
 /** @type {import('@docusaurus/types').Config} */
 const isGitHubPagesBuild =
   process.env.GITHUB_PAGES === 'true' || process.env.GITHUB_ACTIONS === 'true';
+const isGitLabPagesBuild = process.env.GITLAB_CI === 'true';
 const githubRepository = process.env.GITHUB_REPOSITORY ?? 'jpagali/KFCAtlas-Wiki';
 const [, githubProjectName = 'KFCAtlas-Wiki'] = githubRepository.split('/');
+const gitlabProjectPath = process.env.CI_PROJECT_PATH ?? 'jpagali/kfc-atlas-wiki';
+const gitlabNamespace = process.env.CI_PROJECT_NAMESPACE ?? 'jpagali';
+const [, gitlabProjectName = 'kfc-atlas-wiki'] = gitlabProjectPath.split('/');
+const gitLabPagesHost = `https://${gitlabNamespace}.gitlab.io`;
 const buildUpdatedDate = new Intl.DateTimeFormat('en-US', {
   month: '2-digit',
   day: '2-digit',
   year: 'numeric',
 }).format(new Date());
+
+const siteUrl = isGitHubPagesBuild
+  ? 'https://jpagali.github.io'
+  : isGitLabPagesBuild
+    ? gitLabPagesHost
+    : 'https://kfc-atlas-portal.vercel.app';
+
+const siteBaseUrl = isGitHubPagesBuild
+  ? `/${githubProjectName}/`
+  : isGitLabPagesBuild
+    ? `/${gitlabProjectName}/`
+    : '/';
 
 const config = {
   title: 'KFC Atlas Wiki',
@@ -21,10 +38,8 @@ const config = {
   organizationName: 'jpagali',
   projectName: githubProjectName,
 
-  url: isGitHubPagesBuild
-    ? 'https://jpagali.github.io'
-    : 'https://kfc-atlas-portal.vercel.app',
-  baseUrl: isGitHubPagesBuild ? `/${githubProjectName}/` : '/',
+  url: siteUrl,
+  baseUrl: siteBaseUrl,
 
   onBrokenLinks: 'warn',
   markdown: {
