@@ -37,7 +37,7 @@ const LOCATION_PRESETS = [
     path: '/docs/byte-capabilities/',
     label: {
       'en-US': 'Byte Capabilities',
-      'ja-JP': 'Byte Capabilities',
+      'ja-JP': 'Byte Capabilities / 機能一覧',
     },
   },
   {
@@ -45,7 +45,7 @@ const LOCATION_PRESETS = [
     path: '/docs/admin-portal-guide/',
     label: {
       'en-US': 'Byte Admin Portal',
-      'ja-JP': 'Byte Admin Portal',
+      'ja-JP': 'Byte Admin Portal / 管理ポータル',
     },
   },
   {
@@ -53,7 +53,7 @@ const LOCATION_PRESETS = [
     path: '/docs/frontend/overview',
     label: {
       'en-US': 'Front-End Guide',
-      'ja-JP': 'Front-End Guide',
+      'ja-JP': 'Front-End Guide / フロントエンドガイド',
     },
   },
   {
@@ -61,7 +61,7 @@ const LOCATION_PRESETS = [
     path: '/docs/playbooks/',
     label: {
       'en-US': 'Playbooks',
-      'ja-JP': 'Playbooks',
+      'ja-JP': 'Playbooks / プレイブック',
     },
   },
   {
@@ -69,7 +69,7 @@ const LOCATION_PRESETS = [
     path: '/docs/release-notes/',
     label: {
       'en-US': 'Release Notes',
-      'ja-JP': 'Release Notes',
+      'ja-JP': 'Release Notes / 変更履歴',
     },
   },
   {
@@ -77,7 +77,7 @@ const LOCATION_PRESETS = [
     path: '/docs/brand-experience-team',
     label: {
       'en-US': 'Brand Experience Team',
-      'ja-JP': 'Brand Experience Team',
+      'ja-JP': 'Brand Experience Team / チーム構成',
     },
   },
   {
@@ -85,7 +85,7 @@ const LOCATION_PRESETS = [
     path: '/docs/deployment-runbook',
     label: {
       'en-US': 'Deployment Runbook',
-      'ja-JP': 'Deployment Runbook',
+      'ja-JP': 'Deployment Runbook / デプロイ手順',
     },
   },
 ];
@@ -170,10 +170,10 @@ const COPY = {
     subtitle:
       '親しみやすい編集画面で記事を作成し、プレビュー確認後に Markdown とメールで公開依頼を送信できます。',
     metadata: '記事設定',
-    content: 'Contribution Studio',
-    editor: 'Editor',
-    preview: 'Preview',
-    markup: 'Markup',
+    content: '投稿スタジオ',
+    editor: '編集',
+    preview: 'プレビュー',
+    markup: 'マークアップ',
     readiness: '公開依頼の準備状況',
     modalTitle: '公開依頼を送信',
     download: 'Markdown をダウンロード',
@@ -201,11 +201,11 @@ const COPY = {
     },
     fieldHelp: {
       location:
-        'まず Atlas Wiki の文書ツリーから近い場所を選択してください。該当がない場合は Other を選び、正確な URL を入力します。',
+        'まず Atlas Wiki の文書ツリーから近い場所を選択してください。該当がない場合は「その他」を選び、正確な URL を入力します。',
       videoLinks: '録画やデモを参照する場合は、1 行に 1 件ずつ URL を入力してください。',
     },
     locationPlaceholder: 'ドキュメントツリーを選択',
-    locationOther: 'Other',
+    locationOther: 'その他',
     readinessItems: {
       metadata: '必須メタデータの入力完了',
       location: '掲載先 URL が有効',
@@ -219,7 +219,7 @@ const COPY = {
       '公開依頼メールを送信します。',
     ],
     helperBar:
-      '現在の WYSIWYG editor をそのまま使いながら、Preview で最終表示を確認し、必要なら Markup に直接 Markdown を貼り付けて同期できます。',
+      'WYSIWYG 編集画面を使いながら、プレビューで最終表示を確認し、必要ならマークアップに直接 Markdown を貼り付けて同期できます。',
     imageHealthEmpty: 'まだ画像リンクは追加されていません。',
     close: '閉じる',
     draftTitle: '無題の下書き',
@@ -229,8 +229,8 @@ const COPY = {
     audiencePending: '想定読者未入力',
     checking: '確認中...',
     ready: '準備完了',
-    heroEyebrow: 'Atlas Wiki Publishing Studio',
-    heroFlow: 'Editor ↔ Preview ↔ Markup',
+    heroEyebrow: 'Atlas Wiki 公開スタジオ',
+    heroFlow: '編集 ↔ プレビュー ↔ マークアップ',
     required: '必須',
     live: 'ライブ',
     rendered: 'レンダリング',
@@ -238,7 +238,7 @@ const COPY = {
     modalReminderDownload: '先に Markdown ファイルをダウンロードすると、メール下書きボタンが有効になります。',
     emailNone: '未入力',
     editorBadge: 'WYSIWYG',
-    previewBadge: 'Rendered',
+    previewBadge: '表示',
     markupBadge: 'Markdown',
   },
 };

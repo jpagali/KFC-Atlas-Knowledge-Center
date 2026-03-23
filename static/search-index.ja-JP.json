@@ -4235,6 +4235,18 @@
   },
   {
     "locale": "ja-JP",
+    "title": "リリース 2026.03.23",
+    "headings": [],
+    "summary": "<div className=\"release notes page\" <div className=\"release detail hero\" <div className=\"release card topline\" <span className=\"release card date\" 2026年3月23日</span <span classNa...",
+    "section": "release-notes",
+    "url": "/ja-JP/docs/release-notes/2026-03-23/",
+    "normalizedTitle": "リリース 2026 03 23",
+    "normalizedHeadings": "",
+    "normalizedSummary": "div classname release notes page div classname release detail hero div classname release card topline span classname release card date 2026年3月23日 span span classna",
+    "normalizedSection": "release notes"
+  },
+  {
+    "locale": "ja-JP",
     "title": "変更履歴",
     "headings": [],
     "summary": "<div className=\"release notes page\" <div className=\"release notes hero\" <div className=\"release notes kicker\" 更新の流れをひと目で把握</div <h1 変更履歴</h1 <p className=\"release notes lead\" At...",

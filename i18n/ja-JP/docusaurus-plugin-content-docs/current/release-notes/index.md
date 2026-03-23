@@ -12,7 +12,7 @@ sidebar_position: 3
       下では過去のリリースをすばやくたどれます。
     </p>
     <div className="release-pill-row">
-      <span className="release-pill release-pill--live">最新: 2026.03.22</span>
+      <span className="release-pill release-pill--live">最新: 2026.03.23</span>
       <span className="release-pill">形式: calendar version</span>
       <span className="release-pill">対象: Atlas 関係者向け</span>
     </div>
@@ -26,21 +26,21 @@ sidebar_position: 3
 
     <article className="release-card release-card--featured">
       <div className="release-card-topline">
-        <span className="release-card-date">2026年3月22日</span>
+        <span className="release-card-date">2026年3月23日</span>
         <span className="release-status release-status--live">公開中</span>
       </div>
-      <h3>リリース 2026.03.22</h3>
+      <h3>リリース 2026.03.23</h3>
       <p>
-        Brand Experience org chart の reporting line を整理し、Current Team の focus view を Jim 直下の drill-down
-        に変更し、埋め込み図が light / dark theme に追従するよう改善しました。
+        Atlas Assistant が根拠付きで Atlas Wiki を案内するようになり、Contribution Studio が本格的な投稿フローに進化し、
+        日本語ロケールもその新しい体験に追従しました。
       </p>
       <div className="release-pill-row">
-        <span className="release-pill">Org chart clarity</span>
-        <span className="release-pill">Focus drill-down</span>
-        <span className="release-pill">Theme sync</span>
+        <span className="release-pill">Atlas Assistant</span>
+        <span className="release-pill">Contribution Studio</span>
+        <span className="release-pill">JP locale polish</span>
       </div>
-      <a className="release-link" href="/docs/release-notes/2026-03-22">
-        リリース 2026.03.22 を開く
+      <a className="release-link" href="/docs/release-notes/2026-03-23">
+        リリース 2026.03.23 を開く
       </a>
     </article>
   </section>
@@ -52,6 +52,21 @@ sidebar_position: 3
     </div>
 
     <div className="release-card-grid">
+      <article className="release-card">
+        <div className="release-card-topline">
+          <span className="release-card-date">2026年3月22日</span>
+          <span className="release-status">公開済み</span>
+        </div>
+        <h3>リリース 2026.03.22</h3>
+        <p>
+          Brand Experience org chart の reporting line を整理し、Current Team の focus view を Jim 直下の drill-down
+          に変更し、埋め込み図が light / dark theme に追従するよう改善しました。
+        </p>
+        <a className="release-link" href="/docs/release-notes/2026-03-22">
+          詳細を見る
+        </a>
+      </article>
+
       <article className="release-card">
         <div className="release-card-topline">
           <span className="release-card-date">2026年3月20日</span>
@@ -118,6 +133,7 @@ sidebar_position: 3
     </div>
 
     <div className="release-archive">
+      <a href="/docs/release-notes/2026-03-23">2026.03.23</a>
       <a href="/docs/release-notes/2026-03-22">2026.03.22</a>
       <a href="/docs/release-notes/2026-03-20">2026.03.20</a>
       <a href="/docs/release-notes/2026-03-19">2026.03.19</a>
